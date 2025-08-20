@@ -5,7 +5,6 @@ Thumbs.db
 /output
 /temp
 /template
-_*.*
 *.bak
 ig-template/includes/.index.json
 ig-template/includes/.index.db
