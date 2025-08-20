@@ -61,7 +61,7 @@ dependencies:
 #     simpleExamples.xml:
 #     complexExamples.xml:
 #
-pages:
+#pages:
   # index.md:
   #   title: Home
   # index-cs.md:
@@ -109,7 +109,7 @@ pages:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
 parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-  special-url:
+#  special-url:
 #  pin-canonicals: pin-multiples
 #  path-expansion-params: '../../expansion-params.json'
 #    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
@@ -161,27 +161,27 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 menu:
   Home:
     Home (en): index.html
-    Home (cs): index-cs.html
-  Introduction:
-    Basic FHIR elements (en): elements-FHIR-en.html
-    Basic FHIR elements (cs): elements-FHIR-cs.html
-  Function view:
-    Subjects (en): subjects-en.html
-    Subjects (cs): subjects-cs.html
-    Objects (en): objects-en.html
-    Objects (cs): objects-cs.html
-    Identifiers (en): identifiers-en.html
-    Identifiers (cs): identifiers-cs.html
-  About:
-    Authors (en): authors.html
-    Authors (cs): authors-cs.html
-    Downloads (en): downloads.html
-    Downloads (cs): downloads-cs.html
-    Dependencies (en): dependencies.html
-    Dependencies (cs): dependencies-cs.html
-    Copyright (en): copyright.html
-    Copyright (cs): copyright-cs.html
-  Artifacts: artifacts.html
+#    Home (cs): index-cs.html
+#  Introduction:
+  #   Basic FHIR elements (en): elements-FHIR-en.html
+  #   Basic FHIR elements (cs): elements-FHIR-cs.html
+  # Function view:
+  #   Subjects (en): subjects-en.html
+  #   Subjects (cs): subjects-cs.html
+  #   Objects (en): objects-en.html
+  #   Objects (cs): objects-cs.html
+  #   Identifiers (en): identifiers-en.html
+  #   Identifiers (cs): identifiers-cs.html
+  # About:
+  #   Authors (en): authors.html
+  #   Authors (cs): authors-cs.html
+  #   Downloads (en): downloads.html
+  #   Downloads (cs): downloads-cs.html
+  #   Dependencies (en): dependencies.html
+  #   Dependencies (cs): dependencies-cs.html
+  #   Copyright (en): copyright.html
+  #   Copyright (cs): copyright-cs.html
+  # Artifacts: artifacts.html
   IG Base EU: https://build.fhir.org/ig/hl7-eu/base/index.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
