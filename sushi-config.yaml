@@ -249,8 +249,33 @@ menu:
 # resource entries with the corresponding groupIds. If a resource
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
-#
-# groups:
+groups:
+  obligations:
+    name:  Actors and Obligations (Informative)
+    description: Actors and Obligations used to describe the OER functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - ActorDefinition/actor-consumer-amb-L1
+      - ActorDefinition/actor-creator-amb-L1
+      - ActorDefinition/actor-consumer-amb-L2
+      - ActorDefinition/actor-creator-amb-L2
+      - ActorDefinition/actor-consumer-amb-L3
+      - ActorDefinition/actor-creator-amb-L3
+  czech-logical-model:
+    name:  Czech logical model (Informative)
+    description: Logical model in czech language. Informative for this version of the guide.
+    resources:
+      - StructureDefinition/logAdmissionEvaluationCz
+      - StructureDefinition/logAdvanceDirectivesCz
+      - StructureDefinition/logAlertsCz
+      - StructureDefinition/logAttachmentsCz
+      - StructureDefinition/logEncounterCz
+      - StructureDefinition/logHeaderAmbCz
+      - StructureDefinition/logOutpatientEncounterReportCz
+      - StructureDefinition/logOutpatientStayCz
+      - StructureDefinition/logMedicationSummaryCz
+      - StructureDefinition/logPlanOfCareCz
+      - StructureDefinition/logPatientHistoryCz
+      - StructureDefinition/logPresentedFormCz
 #   GroupA:
 #     name: Group A
 #     description: The Alpha Group
