@@ -12,7 +12,7 @@ status: draft # draft | active | retired | unknown
 version: 0.1.0
 #language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2024+
+copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -36,9 +36,9 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.cz.core: current #0.3.0-ballot
+  hl7.fhir.cz.core: current
   hl7.fhir.cz.terminology: current
-  hl7.fhir.eu.extensions: 0.1.1-ballot
+  hl7.fhir.eu.base: 0.1.0-ballot
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -61,9 +61,9 @@ dependencies:
 #     simpleExamples.xml:
 #     complexExamples.xml:
 #
-#pages:
-  # index.md:
-  #   title: Home
+pages:
+  index.md:
+    title: Home
   # index-cs.md:
   #   title: Domovská stránka
   # elements-FHIR-en.md:
@@ -181,8 +181,7 @@ menu:
   #   Dependencies (cs): dependencies-cs.html
   #   Copyright (en): copyright.html
   #   Copyright (cs): copyright-cs.html
-  # Artifacts: artifacts.html
-  IG Base EU: https://build.fhir.org/ig/hl7-eu/base/index.html
+  Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
