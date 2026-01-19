@@ -11,6 +11,12 @@ Ambulantní zpráva (AMB) má dvě hlavní složky:
 
 **Tělo** obsahuje základní klinické údaje týkající se návštěvy pacienta, jeho léčby a plánu léčby.
 
+{% include MindmapAmbReportCz.svg %}
+
 #### Hlavička dokumentu
 
-#### Tělo
+{% include MindmapHeaderCz.svg %}
+
+#### Tělo dokumentu
+
+{% include MindmapBodyCz.svg %}
