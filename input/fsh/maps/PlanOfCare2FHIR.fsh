@@ -1,15 +1,15 @@
 Instance: planOfCare2FHIR-cz-amb
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/hdr/ConceptMap/planOfCare2FHIR-cz-amb"
+* url = "https://hl7.cz/fhir/amb/ConceptMap/planOfCare2FHIR-cz-amb"
 * name = "PlanOfCare2FHIRCzAmb"
 * title = "CZ Plan of Care Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """AMB Plan of Care Model to this guide mapping"""
 
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/PlanOfCareCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-carePlan-hdr"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/PlanOfCareCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-carePlan-amb"
 * group[=].element[+].code = #PlanOfCare.title
 * group[=].element[=].display = "A.2.9.1.1 - Title"
 * group[=].element[=].target.code = #CarePlan.title

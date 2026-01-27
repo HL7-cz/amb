@@ -1,14 +1,14 @@
 Instance: advanceDirectives2FHIR-cz-amb
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/hdr/ConceptMap/advanceDirectives2FHIR-cz-amb"
+* url = "https://hl7.cz/fhir/amb/ConceptMap/advanceDirectives2FHIR-cz-amb"
 * name = "AdvanceDirectives2FHIRCzAmb"
 * title = "CZ Advance Directives Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """AMB Advance Directives Model to this guide mapping"""
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AdvanceDirectivesCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr" 
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AdvanceDirectivesCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-compositionAmb" 
 * group[=].element[+].code = #AdvanceDirectives.livingWill
 * group[=].element[=].display = "A.2.1.1 - Living will"
 * group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives.text
@@ -20,7 +20,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Composition.section:sectionAdvanceDirectives.entry.ofType(Consent)"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AdvanceDirectivesCz"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AdvanceDirectivesCz"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Consent"
 * group[=].element[+].code = #AdvanceDirectives.livingWill.date
 * group[=].element[=].display = "A.2.1.1.1 - Date and time"

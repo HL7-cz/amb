@@ -1,14 +1,14 @@
 Instance: alerts2FHIR-cz-amb
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/hdr/ConceptMap/alerts2FHIR-cz-amb"
+* url = "https://hl7.cz/fhir/amb/ConceptMap/alerts2FHIR-cz-amb"
 * name = "Alerts2FHIRCzAmb"
 * title = "CZ Alerts Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """AMB Alerts Model to this guide mapping"""
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-allergyIntolerance-hdr"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AlertsCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-allergyIntolerance-hdr"
 
 * group[=].element[+].code = #Alerts.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
@@ -77,8 +77,8 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 
 
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-composition-hdr"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AlertsCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-compositionAmb"
 * group[=].element[+].code = #Alerts.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
 * group[=].element[=].target.code = #Composition.section:sectionAllergies
