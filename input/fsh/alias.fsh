@@ -7,6 +7,8 @@ Alias: $mkn-10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
 Alias: $dlp_lecivePripravky = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
 Alias: $dlp_formy_cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
 Alias: $mime = urn:ietf:bcp:13
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+
 
 // ValueSet
 Alias: $dlp_lecprip = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs

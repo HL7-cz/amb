@@ -29,7 +29,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * meta
   * security 0..* MS
 
-* identifier 1..1
+* identifier 0..1
   * ^short = "Report identifier"
   * ^definition = "Identifiers assigned to this report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the OrderInformation.identifier, if at least one exists"
@@ -60,7 +60,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // SECTIONS)
 // =======================================================
 
-* section 1..*
+* section 0..*
 * section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "code"
 * section ^slicing.rules = #open
