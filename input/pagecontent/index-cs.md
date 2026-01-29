@@ -12,8 +12,26 @@ Tento dokument představuje koncepty českého použití definované prostředni
 
 Tato příručka je rozdělena do několika stránek, které jsou uvedeny v horní části každé stránky v nabídce:
 
-- [Home](index-cs.html): Tato stránka poskytuje úvod a rozsah této příručky.
-- [Artifacts](artifacts.html): Tato stránka uvádí podrobné popisy a formální definice všech českých AMB artefaktů a logického modelu definovaného v této příručce.
+- [Home - Domovská stránka](index-cs.html): Tato stránka poskytuje úvodní informace, stručný rozsah použití, reference, závislosti, rozdílovou analýzu verzí a prohlášení o duševním vlastnictví.
+- Introduction:
+  - [Rozsah použití a obsah](scope-and-content-cs.html): Tento segment obsahuje úvodní obecné informace o obrazové zprávě.
+  - [Background](background-cs.html): Tento segment obsahuje obecné informace o původu definice obrazové zprávy.
+- Functional:
+  - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití.
+  - [Workflow](workflow-cs.html): Tento segment obsahuje informace o pracovním postupu.
+  - [Logické modely](logical-models-cs.html): Tento segment obsahuje informace o logických modelech.
+  - [Terminologické aspekty](terminology-considerations-cs.html): Tento segment obsahuje informace o terminologii.
+- Implementation:
+  - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové zprávy.
+  - [Příklady](examples-cs.html): Tento segment obsahuje informace o příkladech.
+  - [Povinnosti](obligations-cs.html): Tento segment obsahuje informace o povinnostech.
+  - [Poznámky k implementaci](implementation-notes-cs.html): Tento segment obsahuje informace pro implementaci.
+- About:
+  - [Autoři](authors-cs.html): Tento segment obsahuje informace o autorech.
+  - [Downloads](downloads-cs.html): Tento segment obsahuje informace o možnostech stahování obsahu implementační specifikace.
+  - [Závislosti](dependencies-cs.html): Tento segment obsahuje informace o závislostech.
+  - [Autorská práva](copyright-cs.html): Tento segment obsahuje informace o autorských právech.
+- [Artifacts](artifacts.html): Tato stránka poskytuje seznam FHIR artefaktů definovaných jako součást této implementační příručky.
 
 ### Závislosti
 

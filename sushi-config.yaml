@@ -112,6 +112,33 @@ pages:
     title: Copyright
   copyright-cs.md:
     title: Autorská práva
+
+  # === MAP ===
+  AdvanceDirectives-map.xml:
+    title: Mapping of AdvanceDirectives
+  Alerts-map.xml:
+    title: Mapping of Alerts
+  AmbulatoryEncounterInformation-map.xml:
+    title: Mapping of AmbulatoryEncounterInformation
+  Attachements-map.xml:
+    title: Mapping of Attachments
+  CarePlan-map.xml:
+    title: Mapping of CarePlan
+  EncounterCourse-map.xml:
+    title: Mapping of EncounterCourse
+  Header-map.xml:
+    title: Mapping of Header
+  InPatientEncounter-map.xml:
+    title: Mapping of InPatientEncounter
+  MedicationSummary-map.xml:
+    title: Mapping of MedicationSummary
+  OutpatientEncounterReport-map.xml:
+    title: Mapping of OutpatientEncounterReport
+  PatientHistory-map.xml:
+    title: Mapping of PatientHistory
+  PresentedForm-map.xml:
+    title: Mapping of PresentedForm
+
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide

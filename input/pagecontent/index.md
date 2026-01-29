@@ -6,15 +6,30 @@ Its main objective is to define the content components and the preferred structu
 
 This includes both national and cross-border scenarios.
 
-
 ### Scope
 
-**This IG does not cover Hospital Discharge Reports**, i.e. reports from inpatient encounters. For Hospital discharge report please refer to the relevant IG.
-<!-- TODO: add link to IG once it will be published -->
+This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-**This guide does not cover exchange of clinical documents.** For this information please refer to the relevant IG.
-<!-- TODO: add link to IG once it will be published -->
-
+- [Home](index.html): This page provides the introduction, scope short, references, dependencies, cross version analysis and IP statement for this guide.
+- Introduction:
+  - [Scope and content](scope-and-content.html): This segment contains general information about Imaging report.
+  - [Background](background.html): This segment contains background information about Imaging report.
+- Functional:
+  - [Use cases](use-cases.html): This segment contains information about use cases.
+  - [Workflow](workflow.html): This segment contains information about workflow.
+  - [Logical models](logical-models.html): This segment contains information about logical models.
+  - [Terminology considerations](terminology-considerations.html): This segment contains information about terminology.
+- Implementation:
+  - [Mapping to profiles](model-map.html): This segment contains information about logical model maps to profiles.
+  - [Examples](examples.html): This segment contains information about examples.
+  - [Obligations](obligations.html): This segment contains information about obligations.
+  - [Implementation notes](implementation-notes.html): This segment contains information for implementation.
+- About:
+  - [Authors](authors.html): This segment contains informaction about authors.
+  - [Downloads](downloads.html): This segment contains informaction about downloads.
+  - [Dependencies](dependencies.html): This segment contains informaction about dependencies.
+  - [Copyright](copyright.html): This segment contains informaction about copyright.
+- [Artifacts](artifacts.html): This page provides a list of the FHIR artifacts defined as part of this implementation guide.
 
 ### Dependencies
 
