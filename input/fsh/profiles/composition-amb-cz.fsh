@@ -70,10 +70,10 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   sectionAdvanceDirectives 0..1 and
   sectionAllergies 0..1 and
   sectionAlerts 0..1 and
-  // sectionEncounter 1..1 and
-  sectionAdmissionEval 0..1 and
+  // sectionEncounter 1..1 and - není samostatná sekce je obsaženo v .encounter
+  sectionClinicalStatusAtPresentation 0..1 and
   sectionPatientHistory 0..1 and
-  sectionOutpatientStay 0..1 and
+  sectionEncounterSummary 0..1 and
   sectionMedicationSummary 0..1 and
   sectionPlanOfCare 0..1 and
   sectionAttachments 0..1
@@ -96,7 +96,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and intolerances"
 * section[sectionAllergies].text 1..
 * section[sectionAllergies].entry 0..*
-* section[sectionAllergies].entry only Reference(CZ_AllergyIntoleranceAmb or AllergyIntolerance or DocumentReference)
+* section[sectionAllergies].entry only Reference(CZ_AllergyIntoleranceAmb or CZ_AllergyIntolerance or AllergyIntolerance or DocumentReference)
 
 // -------------------------------
 // Alerts
@@ -109,28 +109,236 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAlerts].entry only Reference(CZ_FlagAmb or Flag or DocumentReference)
 
 // -------------------------------
-// Addmission Evaluation
+// Clinical Status at Presentation
 // -------------------------------
-
-// -------------------------------
-// Encounter
-// -------------------------------
+* section[sectionClinicalStatusAtPresentation].title 1..
+* section[sectionClinicalStatusAtPresentation].code 1..
+* section[sectionClinicalStatusAtPresentation].code = $loinc#51848-0 "Evaluation note"
+* section[sectionClinicalStatusAtPresentation].text 1..
+* section[sectionClinicalStatusAtPresentation].entry 0..*
+* section[sectionClinicalStatusAtPresentation].entry only Reference(Observation or DocumentReference) 
 
 // -------------------------------
 // Patient History
 // -------------------------------
+* section[sectionPatientHistory].title 1..
+* section[sectionPatientHistory].code 1..
+* section[sectionPatientHistory].code = $loinc#35090-0 "Patient history"
 
+// SLICING PRO VNOŘENÉ SECTION
+* section[sectionPatientHistory].section ^slicing.discriminator[0].type = #pattern
+* section[sectionPatientHistory].section ^slicing.discriminator[0].path = "code"
+* section[sectionPatientHistory].section ^slicing.rules = #open
+* section[sectionPatientHistory].section ^slicing.ordered = false
+
+* section[sectionPatientHistory].section contains
+      PastIllnessHx 0..1 and
+      HistoryMedicalDevices 0..1 and
+      ProceduresHx 0..1 and
+      Immunizations 0..* and
+      InfectiousContacts 0..* and
+      TravelHx 0..* and
+      FamilyHistory 0..* and
+      SocialHistory 0..1 and
+      AlcoholUse 0..1 and
+      TobaccoUse 0..1 and
+      DrugUse 0..1 and 
+      OtherAddictions 0..1
+
+* section[sectionPatientHistory].section[PastIllnessHx]
+  * title = "Past illness history"
+  * code = $loinc#11348-0 "Past illness history"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Condition or DocumentReference)
+
+* section[sectionPatientHistory].section[HistoryMedicalDevices]
+  * title = "History of medical devices"
+  * code = $loinc#46264-8 "History of medical device use"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Device or DeviceUseStatement or DocumentReference)
+
+* section[sectionPatientHistory].section[ProceduresHx]
+  * title = "Procedures history"
+  * code = $loinc#11369-6 "Procedures history"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Procedure or DocumentReference)
+
+* section[sectionPatientHistory].section[Immunizations]
+  * title = "Immunizations"
+  * code = $loinc#11369-6 "Immunizations history"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Immunization or DocumentReference)
+
+* section[sectionPatientHistory].section[InfectiousContacts]
+  * title = "Infectious contacts"
+  * code = $loinc#11348-0 "Infectious disease contact"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+
+* section[sectionPatientHistory].section[TravelHx]
+  * title = "Travel history"
+  * code = $loinc#11347-2 "Travel history"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+
+
+* section[sectionPatientHistory].section[FamilyHistory]
+  * title = "Family history"
+  * code = $loinc#10157-6 "Family history"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(FamilyMemberHistory or DocumentReference)
+
+* section[sectionPatientHistory].section[SocialHistory]
+  * title = "Sociální anamnéza"
+  * code = $loinc#29762-2 "Social history"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+
+* section[sectionPatientHistory].section[AlcoholUse]
+  * title = "Alcohol use"
+  * code = $loinc#72163-9 "Alcohol use"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+
+* section[sectionPatientHistory].section[TobaccoUse]
+  * title = "Tobacco use"
+  * code = $loinc#72164-7 "Tobacco use"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+
+* section[sectionPatientHistory].section[DrugUse]
+  * title = "Drug use"
+  * code = $loinc#72165-4 "Drug use"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+
+* section[sectionPatientHistory].section[OtherAddictions]
+  * title = "Other addictions"
+  * code = $loinc#72166-2 "Other addictions"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DocumentReference)
+     
 // -------------------------------
-// Outpatient Stay
+// Encouter Summary
 // -------------------------------
+// --- container section
+* section[sectionEncounterSummary].title 1..
+* section[sectionEncounterSummary].code 1..
+* section[sectionEncounterSummary].code = $loinc#67781-5 "Summarization of encounter note"
+
+// SLICING PRO VNOŘENÉ SECTION
+* section[sectionEncounterSummary].section ^slicing.discriminator[0].type = #pattern
+* section[sectionEncounterSummary].section ^slicing.discriminator[0].path = "code"
+* section[sectionEncounterSummary].section ^slicing.rules = #open
+* section[sectionEncounterSummary].section ^slicing.ordered = false
+
+* section[sectionEncounterSummary].section contains
+      ProblemList 0..1 and
+      ProceduresAndTreatments 0..1 and
+      MedicalDevices 0..1 and
+      MedicationDuring 0..* and
+      Results 0..* and
+      ClinicalSummary 0..*
+
+// ------------------------------------------------------------
+// A.2.7.1 Diagnostický souhrn (problémy/diagnózy/příznaky)
+// ------------------------------------------------------------
+* section[sectionEncounterSummary].section[ProblemList]
+  * title = "Diagnostický souhrn"
+  * code = $loinc#11450-4 "Problem list"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Condition or ClinicalImpression)
+
+// ------------------------------------------------------------
+// A.2.7.2 Výkony
+// ------------------------------------------------------------
+* section[sectionEncounterSummary].section[ProceduresAndTreatments]
+  * title = "Výkony"
+  * code = $loinc#29554-3 "Procedure Narrative"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Procedure or MedicationAdministration)
+
+// ------------------------------------------------------------
+// A.2.7.3 Zdravotní pomůcky a implantáty
+// ------------------------------------------------------------
+* section[sectionEncounterSummary].section[MedicalDevices]
+  * title = "Zdravotní pomůcky a implantáty"
+  * code = $loinc#46264-8 "History of medical device use"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Device or DeviceUseStatement)
+
+// ------------------------------------------------------------
+// A.2.7.4 Další významná léčba (chemo, radio, dialýza, transfúze…)
+// ------------------------------------------------------------
+//JE ZAHRNUTO V section[sectionEncounterSummary].section[Procedures]
+
+// ------------------------------------------------------------
+// A.2.7.5 Medikace během ambulantního kontaktu (vybraná)
+// ------------------------------------------------------------
+* section[sectionEncounterSummary].section[MedicationDuring]
+  * title = "Medikace během ambulantního kontaktu"
+  * code = $loinc#29549-3 "Medication administered Narrative"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(MedicationAdministration or MedicationStatement)
+
+// Pozn.: Medikace doporučená po propuštění patří typicky do bloku Medication Summary.
+
+// ------------------------------------------------------------
+// A.2.7.6 Výsledky vyšetření
+// ------------------------------------------------------------
+* section[sectionEncounterSummary].section[Results]
+  * title = "Výsledky vyšetření"
+  * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(Observation or DiagnosticReport or ImagingStudy)
+
+// ------------------------------------------------------------
+// A.2.7.7 Klinické shrnutí
+// ------------------------------------------------------------
+* section[sectionEncounterSummary].section[ClinicalSummary]
+  * title = "Klinické shrnutí"
+  * code = $loinc#51848-0 "Evaluation note"
+  * text 1..1
+  * entry 0..*
+  * entry only Reference(ClinicalImpression)
+
 
 // -------------------------------
 // Medication Summary
 // -------------------------------
+* section[sectionMedicationSummary].title 1..
+* section[sectionMedicationSummary].code 1..
+* section[sectionMedicationSummary].code = $loinc#10160-0 "History of medication use"
+* section[sectionMedicationSummary].text 1..
+* section[sectionMedicationSummary].entry 0..*
+* section[sectionMedicationSummary].entry only Reference(MedicationStatement or MedicationRequest or DocumentReference)
 
 // -------------------------------
 // Plan of Care
 // -------------------------------
+* section[sectionPlanOfCare].title 1..
+* section[sectionPlanOfCare].code 1..
+* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care"
+* section[sectionPlanOfCare].text 1..
+* section[sectionPlanOfCare].entry 0..*
+* section[sectionPlanOfCare].entry only Reference(CarePlan or DocumentReference)
 
 // -------------------------------
 // Attachments
