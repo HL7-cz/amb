@@ -37,6 +37,8 @@ publisher:
 #     version: 1.0.0
 dependencies:
   hl7.fhir.cz.core: current
+  hl7.fhir.cz.hdr: current
+  hl7.fhir.cz.img: current
   hl7.fhir.cz.terminology: current
   hl7.fhir.eu.base: 0.1.0-ballot
 #
@@ -64,42 +66,79 @@ dependencies:
 pages:
   index.md:
     title: Home
-  # index-cs.md:
-  #   title: Domovská stránka
-  # elements-FHIR-en.md:
-  #   title: Basic FHIR elements in English
-  # elements-FHIR-cs.md:
-  #   title: Basic FHIR elements in Czech
-  # subjects-en.md:
-  #   title: Subjects in English
-  # subjects-cs.md:
-  #   title: Subjects in Czech
-  # objects-en.md:
-  #   title: Objects in English
-  # objects-cs.md:
-  #   title: Objects in Czech
-  # identifiers-en.md:
-  #   title: Identifiers in English
-  # identifiers-cs.md:
-  #   title: Identifiers in Czech
-  # artifacts.xml:
-  #   title: Summary artifacts
-  # downloads.md:
-  #   title: Download
-  # downloads-cs.md:
-  #   title: Download
-  # authors.md:
-  #   title: Authors
-  # authors-cs.md:
-  #   title: Autoři
-  # copyright.md:
-  #   title: Copyright
-  # copyright-cs.md:
-  #   title: Autorská práva
-  # dependencies.md:
-  #   title: Dependencies
-  # dependencies-cs.md:
-  #   title: Závislosti
+  index-cs.md:
+    title: Domovská stránka
+  scope-and-content.md:
+    title: Scope and content
+  scope-and-content-cs.md:
+    title: Oblasti a obsah
+  background.md:
+    title: Background
+  background-cs.md:
+    title: Background
+  logical-models.md:
+    title: Logical models
+  logical-models-cs.md:
+    title: Datová sada - logické modely CZ
+  model-map.md:
+    title: Model maps
+  model-map-cs.md:
+    title: Mapování logického modelu
+  examples.md:
+    title: Examples
+  examples-cs.md:
+    title: Příklady
+  obligations.md:
+    title: Obligations
+  obligations-cs.md:
+    title: Obligations
+  implementation-notes.md:
+    title: Implementation notes
+  implementation-notes-cs.md:
+    title: Implementační poznámky
+  authors.md:
+    title: Authors
+  authors-cs.md:
+    title: Autoři
+  downloads.md:
+    title: Downloads
+  downloads-cs.md:
+    title: Ke stažení
+  dependencies.md:
+    title: Dependencies
+  dependencies-cs.md:
+    title: Závislosti
+  copyright.md:
+    title: Copyright
+  copyright-cs.md:
+    title: Autorská práva
+
+  # === MAP ===
+  AdvanceDirectives-map.xml:
+    title: Mapping of AdvanceDirectives
+  Alerts-map.xml:
+    title: Mapping of Alerts
+  AmbulatoryEncounterInformation-map.xml:
+    title: Mapping of AmbulatoryEncounterInformation
+  Attachements-map.xml:
+    title: Mapping of Attachments
+  CarePlan-map.xml:
+    title: Mapping of CarePlan
+  EncounterCourse-map.xml:
+    title: Mapping of EncounterCourse
+  Header-map.xml:
+    title: Mapping of Header
+  InPatientEncounter-map.xml:
+    title: Mapping of InPatientEncounter
+  MedicationSummary-map.xml:
+    title: Mapping of MedicationSummary
+  OutpatientEncounterReport-map.xml:
+    title: Mapping of OutpatientEncounterReport
+  PatientHistory-map.xml:
+    title: Mapping of PatientHistory
+  PresentedForm-map.xml:
+    title: Mapping of PresentedForm
+
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -108,25 +147,25 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-#  special-url:
-#  pin-canonicals: pin-multiples
-#  path-expansion-params: '../../expansion-params.json'
-#    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
-# path-resource:
-#    - input/resources
-#    - fsh-generated/resources
-#  path-pages:
-#    - input/pagecontentinformation-reci
-#    - input/intro-notes
-#  path-tx-cache:
-#  expansion-parameter:
-#  rule-broken-links:
-#  generate-xml:
-#  generate-json:
-#  generate-turtle:
-#  html-template:
-#  active-tables: false
+parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  #  special-url:
+  #  pin-canonicals: pin-multiples
+  #  path-expansion-params: '../../expansion-params.json'
+  #    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
+  # path-resource:
+  #    - input/resources
+  #    - fsh-generated/resources
+  #  path-pages:
+  #    - input/pagecontentinformation-reci
+  #    - input/intro-notes
+  #  path-tx-cache:
+  #  expansion-parameter:
+  #  rule-broken-links:
+  #  generate-xml:
+  #  generate-json:
+  #  generate-turtle:
+  #  html-template:
+  #  active-tables: false
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
@@ -137,15 +176,15 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
   # excludejson: false
   # excludettl: true
   # excludemap: true
- # no-narrative:
- #   - Patient/example-targeted-provenance
- #   - Bundle/docref-example-1
+  # no-narrative:
+  #   - Patient/example-targeted-provenance
+  #   - Bundle/docref-example-1
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
- # version-comparison:
- #    - 5.0.1
- #    - 4.0.0
+  # version-comparison:
+  #    - 5.0.1
+  #    - 4.0.0
 
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
@@ -161,26 +200,33 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 menu:
   Home:
     Home (en): index.html
-#    Home (cs): index-cs.html
-#  Introduction:
-  #   Basic FHIR elements (en): elements-FHIR-en.html
-  #   Basic FHIR elements (cs): elements-FHIR-cs.html
-  # Function view:
-  #   Subjects (en): subjects-en.html
-  #   Subjects (cs): subjects-cs.html
-  #   Objects (en): objects-en.html
-  #   Objects (cs): objects-cs.html
-  #   Identifiers (en): identifiers-en.html
-  #   Identifiers (cs): identifiers-cs.html
-  # About:
-  #   Authors (en): authors.html
-  #   Authors (cs): authors-cs.html
-  #   Downloads (en): downloads.html
-  #   Downloads (cs): downloads-cs.html
-  #   Dependencies (en): dependencies.html
-  #   Dependencies (cs): dependencies-cs.html
-  #   Copyright (en): copyright.html
-  #   Copyright (cs): copyright-cs.html
+    Home (cs): index-cs.html
+  Introduction:
+    Scope and content (en): scope-and-content.html
+    Scope and content (cs): scope-and-content-cs.html
+    Background (en): background.html
+    Background (cs): background-cs.html
+  Functional:
+    Logical models (en): logical-models.html
+    Logical models (cs): logical-models-cs.html
+  Implementation:
+    Mapping to profiles (en): model-map.html
+    Mapping to profiles (cs): model-map-cs.html
+    Examples (en): examples.html
+    Examples (cs): examples-cs.html
+    Obligations (en): obligations.html
+    Obligations (cs): obligations-cs.html
+    Implementation notes (en): implementation-notes.html
+    Implementation notes (cs): implementation-notes-cs.html
+  About:
+    Authors (en): authors.html
+    Authors (cs): authors-cs.html
+    Downloads (en): downloads.html
+    Downloads (cs): downloads-cs.html
+    Dependencies (en): dependencies.html
+    Dependencies (cs): dependencies-cs.html
+    Copyright (en): copyright.html
+    Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -251,8 +297,8 @@ menu:
 # URL when generating the IG JSON.
 groups:
   obligations:
-    name:  Actors and Obligations (Informative)
-    description: Actors and Obligations used to describe the OER functional requirements for the specified data elements. Informative for this version of the guide.
+    name: Actors and Obligations (Informative)
+    description: Actors and Obligations used to describe the Outpatient Encounter Report functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
       - ActorDefinition/actor-consumer-amb-L1
       - ActorDefinition/actor-creator-amb-L1
@@ -260,8 +306,9 @@ groups:
       - ActorDefinition/actor-creator-amb-L2
       - ActorDefinition/actor-consumer-amb-L3
       - ActorDefinition/actor-creator-amb-L3
+      - StructureDefinition/cz-flag-obl-amb
   czech-logical-model:
-    name:  Czech logical model (Informative)
+    name: Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
       - StructureDefinition/logAdmissionEvaluationCz
@@ -328,6 +375,7 @@ groups:
 #
 instanceOptions:
   manualSliceOrdering: true # true | false
+
 
 # instanceOptions:
 #   Determines for which types of Instances SUSHI will automatically set meta.profile

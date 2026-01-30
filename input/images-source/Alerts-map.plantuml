@@ -1,0 +1,33 @@
+@startuml Alerts-map
+hide circle
+hide stereotype
+hide members    
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Alerts" <<LogicalModel>> [[StructureDefinition-AlertsCz.html]]
+note top #PaleTurquoise [[alerts2FHIR-cz-amb.html]]
+Concept Map
+endnote
+' --- Profiles mapping Alerts ---
+class "cz-composition-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+class "cz-allergyIntolerance-amb" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-amb.html]]
+class "cz-flag-amb" <<Profile>> [[StructureDefinition-cz-flag-amb.html]]
+
+' --- Realization links ---
+"Alerts" <|. "cz-composition-amb"
+"Alerts" <|. "cz-allergyIntolerance-amb"
+"Alerts" <|. "cz-flag-amb"
+
+' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
+"cz-allergyIntolerance-amb" -d[hidden]-> "cz-composition-amb"
+"cz-composition-amb" -d[hidden]-> "cz-allergyIntolerance-amb"
+"cz-composition-amb" -d[hidden]-> "cz-flag-amb"
+@enduml

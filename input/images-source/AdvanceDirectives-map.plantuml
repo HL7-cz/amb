@@ -1,0 +1,24 @@
+@startuml AdvanceDirectives-map
+hide circle
+hide stereotype
+hide members    
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "AdvanceDirectives" <<LogicalModel>> [[StructureDefinition-AdvanceDirectivesCz.html]]
+note top #PaleTurquoise [[advanceDirectives2FHIR-cz-amb.html]]
+Concept Map
+endnote
+class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+"AdvanceDirectives" <|. "composition-cz-amb"
+class "consent-cz-amb" <<Profile>> [[StructureDefinition-cz-consent-amb.html]]
+"AdvanceDirectives" <|. "consent-cz-amb"
+"composition-cz-amb" -d[hidden]-> "consent-cz-amb"
+@enduml

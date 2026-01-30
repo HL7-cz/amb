@@ -32,20 +32,68 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
   * response ..0
 
 * entry.resource 1..
-* entry contains
+* entry contains 
     composition 1..1 and
     patient 1..* and
+    allergyIntolerance 0..* and
+    condition 0..* and
+    device 0..* and
+    deviceUseStatement 0..* and
+    diagnosticReport 0..* and
     encounter 0..* and
+    imagingStudy 0..* and
+    immunization 0..* and
+    media 0..* and
+    medication 0..* and
+    medicationRequest 0..* and
+    medicationStatement 0..* and
     practitioner 0..* and
     practitionerRole 0..* and
-    organization 0..*
+    procedure 0..* and
+    organization 0..* and
+    observation 0..* and
+    specimen 0..* and
+    medicationDispense 0..* and
+    medicationAdministration  0..* and
+    familyMemberHistory 0..* and
+    documentReference 0..* and
+    flag 0..* and
+    carePlan 0..* and
+    goal 0..* and
+    consent 0..* and
+    provenance 0..* and
+    coverage 0..*
   
 * entry[composition].resource only CZ_CompositionAmb
 * entry[patient].resource only CZ_PatientCore
-* entry[encounter].resource only CZ_Encounter
+* entry[allergyIntolerance].resource only CZ_AllergyIntoleranceAmb
+* entry[condition].resource only CZ_ConditionHdr //TODO to AMB?
+* entry[device].resource only CZ_MedicalDevice
+* entry[deviceUseStatement].resource only CZ_DeviceUseStatementHdr // TODO to AMB?
+* entry[diagnosticReport].resource only CZ_DiagnosticReport
+* entry[encounter].resource only CZ_EncounterHdr //TODO to AMB?
+* entry[imagingStudy].resource only CZ_StudyImaging
+* entry[immunization].resource only CZ_ImmunizationHdr // TODO to AMB?
+* entry[media].resource only Media // $Media-observation-uv-ips
+* entry[medication].resource only CZ_Medication
+* entry[medicationRequest].resource only CZ_MedicationRequestHdr //TODO to AMB?
+* entry[medicationStatement].resource only CZ_MedicationStatement
+* entry[medicationAdministration].resource only MedicationAdministration
+* entry[medicationDispense].resource only MedicationDispense
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
+* entry[procedure].resource only CZ_ProcedureHdr //TODO to AMB?
 * entry[organization].resource only CZ_OrganizationCore
+* entry[observation].resource only Observation // $Observation-results-uv-ips
+* entry[specimen].resource only CZ_Specimen
+* entry[flag].resource only CZ_FlagAmb
+* entry[familyMemberHistory].resource only FamilyMemberHistory
+* entry[documentReference].resource only DocumentReference
+* entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?
+* entry[goal].resource only Goal
+* entry[consent].resource only Consent
+* entry[provenance].resource only CZ_Provenance
+* entry[coverage].resource only CZ_Coverage
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
@@ -57,4 +105,3 @@ Invariant: bdl-amb-1
 Description: "A document must have no additional Composition (including Composition subclass) resources besides the first."
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
-
