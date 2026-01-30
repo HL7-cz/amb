@@ -300,12 +300,12 @@ groups:
     name: Actors and Obligations (Informative)
     description: Actors and Obligations used to describe the Outpatient Encounter Report functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
-      - ActorDefinition/actor-consumer-amb-L1
-      - ActorDefinition/actor-creator-amb-L1
-      - ActorDefinition/actor-consumer-amb-L2
-      - ActorDefinition/actor-creator-amb-L2
-      - ActorDefinition/actor-consumer-amb-L3
-      - ActorDefinition/actor-creator-amb-L3
+      # - ActorDefinition/actor-consumer-amb-L1
+      # - ActorDefinition/actor-creator-amb-L1
+      # - ActorDefinition/actor-consumer-amb-L2
+      # - ActorDefinition/actor-creator-amb-L2
+      # - ActorDefinition/actor-consumer-amb-L3
+      # - ActorDefinition/actor-creator-amb-L3
       - StructureDefinition/cz-flag-obl-amb
   czech-logical-model:
     name: Czech logical model (Informative)

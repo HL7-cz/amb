@@ -67,7 +67,7 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) or
 Encounter.participant.individual.ofType(PractitionerRole).practitioner"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounterCz"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/InPatientEncounterCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * group[=].element[+].code = #Encounter.admission.admitter.identifier
 * group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
@@ -81,8 +81,8 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "and where participant.type is 'REF'"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounterCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-encounter-hdr"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/InPatientEncounterCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-encounter-amb"
 * group[=].element[+].code = #Encounter.type
 * group[=].element[=].display = "A.2.3.1 - Encounter type"
 * group[=].element[=].target.code = #Encounter.class
@@ -199,7 +199,7 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.code = #Encounter.location.period
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounterCz"
+* group[+].source = "https://hl7.cz/fhir/amd/StructureDefinition/InPatientEncounterCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-location-core"
 * group[=].element[+].code = #Encounter.location.organization
 * group[=].element[=].display = "Organization"

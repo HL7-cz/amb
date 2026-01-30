@@ -2,7 +2,7 @@ Tato stránka obsahuje seznam stránek dokumentujících s grafickým znázorně
 
 | Logický model                                                     | Odkaz                                                                              |
 | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Amvulantní zpráva                                                 | [OutpatientEncounterReport-map.html](OutpatientEncounterReport-map.html)           |
+| Ambulantní zpráva                                                 | [OutpatientEncounterReport-map.html](OutpatientEncounterReport-map.html)           |
 | Administrativní údaje - hlavička                                  | [Header-map.html](Header-map.html)                                                 |
 | Dříve vyslovaná přání                                             | [AdvanceDirectives-map.html](AdvanceDirectives-map.html)                           |
 | Urgentní informace                                                | [Alerts-map.html](Alerts-map.html)                                                 |

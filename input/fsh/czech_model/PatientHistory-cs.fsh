@@ -1,4 +1,4 @@
-Logical: LogCsPatientHistoryCz
+Logical: LogCzPatientHistoryCz
 Id: logPatientHistoryCz
 Title: "A.2.6 - Anamnéza pacienta"
 Description: """Anamnéza pacienta"""

@@ -1,4 +1,4 @@
-Logical: LogCsPlanOfCareCz
+Logical: LogCzPlanOfCareCz
 Id: logPlanOfCareCz
 Title: "A.2.9.1 - Plán péče"
 Description: """Plán péče po ambulantním kontaktu"""
