@@ -1,4 +1,4 @@
-Logical: LogCsPresentedFormCz
+Logical: LogCzPresentedFormCz
 Id: logPresentedFormCz
 Title: "A.3 - Prezentační forma"
 Description: """Ambulantní zpráva - čitelná lidským okem, je požadován PDF formát. Obsahuje informace o průběhu hospitalizace v rozsahu vydané zprávy."""

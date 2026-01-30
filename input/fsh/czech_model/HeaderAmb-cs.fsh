@@ -1,4 +1,4 @@
-Logical: LogCsHeaderAmbCz
+Logical: LogCzHeaderAmbCz
 Id: logHeaderAmbCz
 Title: "A.1 - Hlavička dokumentu"
 Description: """Záhlaví dokumentu s administrativními údaji"""

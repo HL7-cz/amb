@@ -1,4 +1,4 @@
-Logical: LogCsOutpatientEncounterReportCz
+Logical: LogCzOutpatientEncounterReportCz
 Id: logOutpatientEncounterReportCz
 Title: "A - Ambulantní zpráva"
 Description: """Ambulantní zpráva"""

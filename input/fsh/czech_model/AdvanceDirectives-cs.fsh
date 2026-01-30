@@ -1,4 +1,4 @@
-Logical: LogCsAdvanceDirectivesCz
+Logical: LogCzAdvanceDirectivesCz
 Id: logAdvanceDirectivesCz
 Title: "A.2.1 - Dříve vyslovená přání"
 Description: """Ambulantní zpráva - Dříve vyslovená přání """
