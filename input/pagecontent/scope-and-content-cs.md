@@ -17,7 +17,7 @@ Ambulantní zpráva (AMB) má dvě hlavní složky:
 
 Komponenta Hlavičky ambulantní zprávy z nemocnice poskytuje dokumentaci pro:
 
-- Obsahuje důležité identifikační údaje, jako je _jméno_, _příjmení_, _datum narození_ a _identifikační číslo pacienta ve zdravotnictví_. Zahrnuje také _národnost_, _pohlaví_ a _zemi příslušnosti pacienta_.
+- **Identifikace pacienta:** Obsahuje důležité identifikační údaje, jako je _jméno_, _příjmení_, _datum narození_ a _identifikační číslo pacienta ve zdravotnictví_. Zahrnuje také _národnost_, _pohlaví_ a _zemi příslušnosti pacienta_.
 - **Kontaktní údaje týkající se pacienta/subjektu:** Zahrnují _adresu pacienta_ a _telekomunikační kontaktní údaje_ (např. telefonní čísla a e-mailové adresy). Může také zahrnovat údaje o _preferovaném zdravotnickém pracovníkovi_ (jméno, identifikátor, role, organizace).
 - **Informace o zdravotním pojištění:** Klíčové údaje týkající se zdravotního pojištění, včetně _kódu pojišťovny_, _jména zdravotní pojišťovny_ a _čísla zdravotní pojišťovny pacienta_.
 - **Příjemce dokumentu:** Označuje zamýšleného příjemce ambulantní zprávy z nemocnice. Zahrnuje _jméno příjemce_, _organizaci_, _adresu_ a _telefonní údaje_.
