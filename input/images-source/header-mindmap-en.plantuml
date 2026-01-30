@@ -1,0 +1,11 @@
+@startmindmap MindmapHeaderEn
+* Header of document
+** Patient identification
+** Patient contact information
+** Health insurance
+** Recipient of document
+** Author
+** Verified by
+** Responsible person
+** Document metadata
+@endmindmap

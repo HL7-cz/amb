@@ -1,4 +1,4 @@
-Logical: LogCsOutpatientStayCz
+Logical: LogCzOutpatientStayCz
 Id: logOutpatientStayCz
 Title: "A.2.7 - Průběh ambulantního kontaktu"
 Description: "Popis průběhu ambulantního kontaktu zahrnující diagnostické souhrny, výkony, léčbu, vyšetření i klinické shrnutí."

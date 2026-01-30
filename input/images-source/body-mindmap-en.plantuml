@@ -1,0 +1,32 @@
+    @startmindmap MindmapBodyEn
+* Body of document
+** Advance directives
+** Alerts
+***_ Allergies and intolerance
+***_ Alert
+** Encounter information
+***_ Admission
+***_ Reason for outpatient contact 
+***_ Provider of outpatient service
+** Clinical Status at Presentation
+***_ Objective findings
+***_ Functional status
+** Patient History
+***_ Personal anamnesis
+***_ Family anamnesis
+***_ Social anamnesis
+***_ Abusus
+** Encounter summary
+***_ Diagnostic summary
+***_ Procedures
+***_ Services
+***_ Health aids and implants
+***_ Other significant treatment
+***_ Medication
+***_ Examination results
+***_ Clinical summary
+** Medication summary
+** Recommendations
+***_ Care plan
+** Attachments
+@endmindmap

@@ -1,4 +1,4 @@
-Logical: LogCsEncounterCz
+Logical: LogCzEncounterCz
 Id: logEncounterCz
 Title: "A.2.3 - Údaje o ambulantním kontaktu"
 Description: """Záznam o ambulantním kontaktu v rámci ambulantní zprávy."""
