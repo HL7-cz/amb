@@ -15,31 +15,31 @@ Outpatient Encounter Report (OER) has two main components:
 
 #### Header
 
-Komponenta Hlavičky ambulantní zprávy z nemocnice poskytuje dokumentaci pro:
+The Header component of the outpatient report from the hospital provides documentation for:
 
-- Obsahuje důležité identifikační údaje, jako je _jméno_, _příjmení_, _datum narození_ a _identifikační číslo pacienta ve zdravotnictví_. Zahrnuje také _národnost_, _pohlaví_ a _zemi příslušnosti pacienta_.
-- **Kontaktní údaje týkající se pacienta/subjektu:** Zahrnují _adresu pacienta_ a _telekomunikační kontaktní údaje_ (např. telefonní čísla a e-mailové adresy). Může také zahrnovat údaje o _preferovaném zdravotnickém pracovníkovi_ (jméno, identifikátor, role, organizace).
-- **Informace o zdravotním pojištění:** Klíčové údaje týkající se zdravotního pojištění, včetně _kódu pojišťovny_, _jména zdravotní pojišťovny_ a _čísla zdravotní pojišťovny pacienta_.
-- **Příjemce dokumentu:** Označuje zamýšleného příjemce ambulantní zprávy z nemocnice. Zahrnuje _jméno příjemce_, _organizaci_, _adresu_ a _telefonní údaje_.
-- **Autor:** Dokumentuje _autora zprávy_, včetně jeho identifikátoru (např. čísla licence), jména a organizačních údajů. Autor je odpovědný za podepsání obsahu zprávy.
-- **Ověřil:** zdravotnický pracovník, který ověřuje obsah zprávy. Obsahuje _identifikátor atestujícího_, _jméno_, _organizaci_ a _datum a čas atestace_.
-- **Zodpovídá:** Osoba, která přebírá právní odpovědnost za zprávu. Obsahuje _identifikátor_, _jméno_, _organizaci_ a _datum ověření_.
-- **Metadata dokumentu:** Obsahuje jedinečný _identifikátor_ dokumentu, _typ_ a metadata, jako je _datum a čas_ vytvoření nebo změny, která zajišťují správné sledování zprávy.
+- **Identification of the patient/subject:** This includes critical identification information like the patient's _given name_, _family name_, _date of birth_, and _national healthcare patient ID_. It also covers _nationality_, _gender_, and the patient’s _country of affiliation_.
+- **Patient/subject related contact information:** This involves the patient’s _address_ and _telecommunication contact details_ (e.g., phone numbers and email addresses). It may also include details of a _preferred healthcare professional_ (name, identifier, role, organization).
+- **Health insurance and payment information:** Key data related to health insurance, including the _insurance code_, _name of the health insurance provider_, and the _patient's health insurance number_.
+- **Information recipient:** Refers to the intended recipient of the outpatient encounter report. This includes _recipient's name_, _organization_, _address_, and _telecom details_.
+- **Author:** Documents the _author of the report_, including their identifier (e.g., license number), name, and organizational information. The author is responsible for signing off on the content of the report.
+- **Attester:** The healthcare professional who verifies the content of the report. This includes the _attester’s identifier_, _name_, _organization_, and the _date and time of attestation_.
+- **Legal authenticator:** The person taking legal responsibility for the report. Includes the _identifier_, _name_, _organization_, and _date of authentication_.
+- **Document metadata:** Contains the document's unique _identifier_, _type_, and metadata such as the _date and time_ of creation or modification, ensuring proper tracking of the report.
 
 {% include MindmapHeaderEn.svg %}
 
 #### Body
 
-Součást těla zprávy o ambulantní z nemocnice obsahuje:
+The Outpatient Encounter Report Body component includes:
 
-- **Dříve vyslovená přání:** Právní dokumenty, jako jsou závěti nebo příkazy DNR, kterými se řídí rozhodnutí o léčbě.
-- **Urgentní informace:** Důležitá lékařská upozornění, jako jsou alergie nebo jiné kritické stavy pacienta.
-- **Údaje o ambulantním kontaktu:** Podrobnosti o příjmu, včetně data vyšetření, důvod ambulatního kontaktu a identifikace poskytovatele ambulantní služby.
-- **Stav při přijetí:** Tato sekce má za cíl výstižně popsat klinický stav pacienta s důrazem na patologické projevy. Má zásadní význam zejména tehdy, pokud je důvodem ambulantního kontaktu akutní stav nebo zhoršení stávajícího základního onemocnění  
-  Stav při přijetí by měl uváděn výjimečně, pouze pokud bude mít význam pro zajištění kontinuity péče.
-- **Anamnéza pacienta:** Komplexní záznam anamnézy pacienta.
-- **Průběh ambulantního kontaktu** Průběh pacienta během návštěvy, včetně léčby a zákroků.
-- **Souhrn medikace:** Souhrnná informace o medikaci, doporučené na období po propuštění, s vyznačením, zda se jedná o medikaci pokračující, změněnou či nově zahájenou. Přehled je oproti dosavadním zvyklostem doplněn o medikaci ukončenou.
-- **Doporučení:** Plán následné péče a doporučení terapie.
+- **Advance Directives:** Legal documents, such as wills or DNR orders, that guide treatment decisions.
+- **Alerts:** Important medical alerts like allergies or other critical patient conditions.
+- **Encounter:** Details of the visit, including the examination date, reason for the outpatient contact, and identification of the outpatient service provider.
+- **Clinical Status at Presentation:** This section aims to concisely describe the patient's clinical status with emphasis on pathological manifestations. It is particularly important when the reason for the outpatient contact is an acute condition or deterioration of an existing underlying disease.
+  The status upon admission should be documented exceptionally, only if it will be important for ensuring continuity of care.
+- **Patient History:** Comprehensive record of the patient's medical history and anamnesis.
+- **Encounter Summary** The course of the patient during the visit, including treatment and procedures.
+- **Medication Summary:** A consolidated overview of medications recommended for the post-discharge period, specifying whether the medication is continued, modified, newly initiated, or discontinued. In contrast to previous practice, this overview also includes discontinued medications.
+- **Plan of Care:** Follow-up care plan and recommendations.
 
 {% include MindmapBodyEn.svg %}
