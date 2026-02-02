@@ -1,86 +1,76 @@
 Profile: CZ_EncounterAmb
-Parent: Encounter
-Id: cz-encounter-amb
-//Id: encounter-cz-amb
-Title:    "Encounter (AMB CZ)"
-Description: "This profile defines how to represent Inpatient Encounter in HL7 FHIR for the scope of this guide."
-
-// this statement says that this profile conforms with the eu lab one
-* insert ImposeProfile($Encounter-eu-amb,0)
+Parent: CZ_Encounter
+Id: cz-encounter-ambulatory
+Title: "Encounter - Ambulatory (CZ)"
+Description: "Ambulatory encounter specialization of the Czech national Encounter profile (CZ_Encounter) for outpatient/ambulatory reports."
 
 * insert SetFmmandStatusRule (1, draft)
 
+* ^experimental = false
 
-* status from ActEncounterCode
-  * ^short = "Status of this Hospital stay"
-  * ^definition = "At the discharge report status of the encounter should be always = \"finished\""
+// --- A.2.3.1 Typ ambulantního kontaktu
+// cz-core má Encounter.class 1..1; tady ho zafixujeme na AMB
+* class 1..1
+* class from $v3-ActEncounterCode (required)
+* class ^short = "Classification of encounter (recommended: AMB for ambulatory contact)."
 
-* class from $v3-ActClassAMB (extensible)
-  * ^definition = "Concepts representing classification of inpatient encounter such as inpatient, emergency or others due to local variations."
-// * type from EncounterTypeHdrVS (example)
-//   * ^short = "Specific type of Hospital stay"
-//   * ^definition = "Allows to classify encounter using information about care provision regimen during an inpatient encounter."
-* serviceType
-  * ^short = "Specific type of service." // voc binding needs to be discussed as it is only example
-* priority from $v3-AdmissionUrgencyAmb (preferred)
-  * ^short = "Encounter priority" // add voc binding
 
-* subject only Reference (CZ_PatientCore)
-* subject 1..1
+// --- A.2.3.2 Poznámka
+// FHIR je 0..*; v profilu to můžeš zúžit na 0..1
+//* note 0..1
+* extension contains CZ_ExtEncounterNote named note 0..1
 
-  * ^short = "The patient present at the encounter"
-* basedOn ^short = "The request for which this encounter has been made"
+// --- A.2.3.3 Datum a čas vyšetření (Encounter.period)
+// Doporučení: period.start povinný, end volitelný
 * period 1..1
-  * ^short = "The start and end time of this encounter."
-  * ^definition = "The start and end time of this inpatient stay."
-// * reasonCode from ConditionHdrVS (preferred)
-//   * ^short = "Coded reason the encounter takes place"
-* reasonReference only Reference ( Observation or Condition or Procedure)
+* period.start 1..1
+* period.end 0..1
+
+// --- A.2.3.4.1 Urgentnost (akutní / plánovaný)
+* priority 0..1
+* priority from $v3-AdmissionUrgencyAmb (required)  // <— pokud máte VS, odkomentuj a uprav canonical
+
+// --- A.2.3.4.x Doporučující lékař (referrer)
+// Slicing participant podle participant.type (open)
+* participant ^slicing.discriminator.type = #value
+* participant ^slicing.discriminator.path = "type"
+* participant ^slicing.rules = #open
+* participant ^slicing.ordered = false
+
+* participant contains referrer 0..1
+
+* participant[referrer].type 1..1
+// Doporučující/odesílající – v3 ParticipationType
+* participant[referrer].type = $v3-ParticipationType#REF "referrer" (exactly)
+
+// V Encounteru je reference
+* participant[referrer].individual 1..1
+* participant[referrer].individual only Reference(CZ_PractitionerRoleCore)
+
+// --- A.2.3.5 Důvod ambulantního kontaktu
+* reasonCode 0..*
+* reasonCode.text 0..1
+// pokud chcete omezit coding systémy (ICD-10 / Orpha), dělejte to přes VS nebo invarianty;
+// ve FHIRu se to typicky řeší VS na reasonCode, ne pevnými system=... (kvůli mixu text+kód).
+
+// --- A.2.3.6 Poskytovatel ambulantní služby s od–do
+* location 0..*
+* location.location 1..1
+* location.location only Reference(CZ_LocationCore)
+* location.period 1..1
+* location.period.start 1..1
+* location.period.end 0..1
+
+// serviceProvider dle CZ_Encounter (1..1 Reference(Organization (CZ core))).
 
 
-* participant
-  * individual 0..1
-  * individual only Reference (CZ_PractitionerCore or CZ_PractitionerRoleCore or RelatedPerson)
+Extension: CZ_ExtEncounterNote
+Id: cz-ext-encounter-note
+Title: "Encounter note (CZ)"
+Description: "Free-text note related to the encounter."
 
-* participant
-  * ^short = "List of participants involved in the encounters"
-  * ^definition = """Slice per type of participant: admitter, discharger,.."""
-  * ^slicing.discriminator[0].type = #value
-  * ^slicing.discriminator[0].path = "type"
-  * ^slicing.ordered = false
-  * ^slicing.rules = #open
+* ^context.type = #element
+* ^context.expression = "Encounter"
 
-
-* participant contains admitter 0..*
-* participant[admitter]
-  * ^short = "Admitting professional"
-  * type = $v3-ParticipationType#ADM
-
-
-* participant contains discharger 0..*
-* participant[discharger]
-  * ^short = "Discharging professional"
-  * type = $v3-ParticipationType#DIS
-
-* participant contains referrer 0..*
-* participant[referrer]
-  * ^short = "Referring professional"
-  * type = $v3-ParticipationType#REF
-
-
-* diagnosis ^short = "The list of diagnosis relevant to this encounter, see comment"
-* diagnosis ^comment = "While Encounter.diagnosis could be optionally populated, mainly for administrative purposes, we strongly recommend to put all clinical relevant diagnoses, stated at start, during and at the end of the hospital stay, into the corresponding section(s) of the HDR."
-//TODO nevím jestli potřebujeme * diagnosis.condition only Reference(CZ_ConditionAmb)  // Should we create a core profile for the Czech Condition with MKN-10 codes?
-
-// * hospitalization
-//   * admitSource ^short = "From where patient was admitted (physician referral, transfer)."
-//   * dischargeDisposition ^short = "Category or kind of location after discharge"
-//   * destination only Reference (CZ_OrganizationCore or CZ_LocationCore)
-//   // add voc binding
-
-* location ^short = "Locations where the patient stayed"
-  * location only Reference ( CZ_LocationCore )
-  * period ^short = "Location period"
-
-* serviceProvider 1..1
-* serviceProvider only Reference ( CZ_OrganizationCore ) 
+* value[x] 1..1
+* value[x] only string

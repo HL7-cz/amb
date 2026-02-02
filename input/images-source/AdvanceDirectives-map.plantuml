@@ -16,9 +16,13 @@ class "AdvanceDirectives" <<LogicalModel>> [[StructureDefinition-AdvanceDirectiv
 note top #PaleTurquoise [[advanceDirectives2FHIR-cz-amb.html]]
 Concept Map
 endnote
+
 class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
 "AdvanceDirectives" <|. "composition-cz-amb"
+
 class "consent-cz-amb" <<Profile>> [[StructureDefinition-cz-consent-amb.html]]
 "AdvanceDirectives" <|. "consent-cz-amb"
+
+
 "composition-cz-amb" -d[hidden]-> "consent-cz-amb"
 @enduml
