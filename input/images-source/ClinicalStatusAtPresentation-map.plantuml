@@ -1,0 +1,32 @@
+@startuml ClinicalStatusAtPresentation-map
+hide circle
+hide stereotype
+hide members    
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "ClinicalStatusAtPresentation" <<LogicalModel>> [[StructureDefinition-ClinicalStatusAtPresentationCz.html]]
+note top #PaleTurquoise [[clinicalStatusAtPresentation2FHIR-cz-amb.html]]
+Concept Map
+endnote
+
+class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+class "observation" <<Profile>> [[StructureDefinition-observation.html]]
+class "vital-signs" <<Profile>> [[StructureDefinition-vital-signs.html]]
+
+' --- Mappings per groups
+"ClinicalStatusAtPresentation" ..> "composition-cz-amb"
+"ClinicalStatusAtPresentation" ..> "observation"
+"ClinicalStatusAtPresentation" ..> "vital-signs"
+
+' --- Layout helpers (optional)
+"composition-cz-amb" -d[hidden]-> "observation"
+"composition-cz-amb" -d[hidden]-> "vital-signs"
+@enduml

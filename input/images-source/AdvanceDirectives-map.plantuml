@@ -18,11 +18,13 @@ Concept Map
 endnote
 
 class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
-"AdvanceDirectives" <|. "composition-cz-amb"
-
 class "consent-cz-amb" <<Profile>> [[StructureDefinition-cz-consent-amb.html]]
-"AdvanceDirectives" <|. "consent-cz-amb"
 
 
+' --- Mappings per groups
+"AdvanceDirectives" ..> "composition-cz-amb"
+"AdvanceDirectives" ..> "consent-cz-amb"
+
+' --- Layout helpers (optional)
 "composition-cz-amb" -d[hidden]-> "consent-cz-amb"
 @enduml

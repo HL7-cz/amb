@@ -36,6 +36,7 @@ Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
 Alias: $DiagnosticReport-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips
 Alias: $ImagingStudy-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips
 Alias: $Immunization-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips
+Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 
 // EU Profiles
 Alias: $Encounter-eu-amb = http://hl7.eu/fhir/amb/StructureDefinition/encounter-eu-amb

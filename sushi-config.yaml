@@ -128,12 +128,12 @@ pages:
     title: Mapping of EncounterCourse
   Header-map.xml:
     title: Mapping of Header
-  InPatientEncounter-map.xml:
-    title: Mapping of InPatientEncounter
+  ClinicalStatusAtPresentation-map.xml:
+    title: Mapping of ClinicalStatusAtPresentation
   MedicationSummary-map.xml:
     title: Mapping of MedicationSummary
-  OutpatientEncounterReport-map.xml:
-    title: Mapping of OutpatientEncounterReport
+  EncounterSummary-map.xml:
+    title: Mapping of EncounterSummary
   PatientHistory-map.xml:
     title: Mapping of PatientHistory
   PresentedForm-map.xml:
@@ -312,7 +312,7 @@ groups:
     name: Czech logical model (Informative)
     description: Logical model in czech language. Informative for this version of the guide.
     resources:
-      - StructureDefinition/logAdmissionEvaluationCz
+      - StructureDefinition/logClinicalStatusAtPresentationCz
       - StructureDefinition/logAdvanceDirectivesCz
       - StructureDefinition/logAlertsCz
       - StructureDefinition/logAttachmentsCz
