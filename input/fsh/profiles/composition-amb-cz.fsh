@@ -116,7 +116,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionClinicalStatusAtPresentation].code = $loinc#51848-0 "Evaluation note"
 * section[sectionClinicalStatusAtPresentation].text 1..
 * section[sectionClinicalStatusAtPresentation].entry 0..*
-* section[sectionClinicalStatusAtPresentation].entry only Reference(Observation or DocumentReference) 
+* section[sectionClinicalStatusAtPresentation].entry only Reference($vitalsigns or CZ_ObservationBMIHdr or CZ_ObservationWeightHdr or Observation or DocumentReference) 
 
 // -------------------------------
 // Patient History
@@ -135,7 +135,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
       PastIllnessHx 0..1 and
       HistoryMedicalDevices 0..1 and
       ProceduresHx 0..1 and
-      Immunizations 0..* and
+      ImmunizationHx 0..* and
       InfectiousContacts 0..* and
       TravelHx 0..* and
       FamilyHistory 0..* and
@@ -150,35 +150,35 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#11348-0 "Past illness history"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Condition or DocumentReference)
+  * entry only Reference(CZ_ConditionHdr or DocumentReference)
 
 * section[sectionPatientHistory].section[HistoryMedicalDevices]
   * title = "History of medical devices"
   * code = $loinc#46264-8 "History of medical device use"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Device or DeviceUseStatement or DocumentReference)
+  * entry only Reference(CZ_MedicalDevice or DeviceUseStatement or DocumentReference)
 
 * section[sectionPatientHistory].section[ProceduresHx]
   * title = "Procedures history"
   * code = $loinc#11369-6 "Procedures history"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Procedure or DocumentReference)
+  * entry only Reference(CZ_ProcedureHdr or DocumentReference)
 
-* section[sectionPatientHistory].section[Immunizations]
+* section[sectionPatientHistory].section[ImmunizationHx]
   * title = "Immunizations"
   * code = $loinc#11369-6 "Immunizations history"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Immunization or DocumentReference)
+  * entry only Reference(CZ_ImmunizationHdr or DocumentReference)
 
 * section[sectionPatientHistory].section[InfectiousContacts]
   * title = "Infectious contacts"
   * code = $loinc#11348-0 "Infectious disease contact"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Observation or DocumentReference)
+  * entry only Reference(CZ_ObservationInfectiousContactHdr or DocumentReference)
 
 * section[sectionPatientHistory].section[TravelHx]
   * title = "Travel history"
