@@ -120,7 +120,7 @@ pages:
     title: Mapping of Alerts
   Encounter-map.xml:
     title: Mapping of Encounter
-  Attachements-map.xml:
+  Attachments-map.xml:
     title: Mapping of Attachments
   CarePlan-map.xml:
     title: Mapping of CarePlan

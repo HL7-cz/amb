@@ -14,5 +14,5 @@ aaa
 | Průběh ambulantního kontaktu (poskytnutá péče a klinické shrnutí) | [EncounterCourse-map.html](EncounterCourse-map.html)                           |
 | Medikace                                                          | [MedicationSummary-map.html](MedicationSummary-map.html)                       |
 | Doporučení                                                        | [CarePlan-map.html](CarePlan-map.html)                                         |
-| Přílohy                                                           | [Attachements-map.html](Attachements-map.html)                                 |
+| Přílohy                                                           | [Attachments-map.html](Attachments-map.html)                                 |
 | Zobrazitelná forma dokumentu                                      | [PresentedForm-map.html](PresentedForm-map.html)                               | -->
