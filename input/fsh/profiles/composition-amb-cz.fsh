@@ -71,7 +71,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   sectionAllergies 0..1 and
   sectionAlerts 0..1 and
   // sectionEncounter 1..1 and - není samostatná sekce je obsaženo v .encounter
-  sectionClinicalStatusAtPresentation 0..1 and
+  sectionAdmissionEvaluation 0..1 and
   sectionPatientHistory 0..1 and
   sectionEncounterSummary 0..1 and
   sectionMedicationSummary 0..1 and
@@ -109,14 +109,14 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAlerts].entry only Reference(CZ_FlagAmb or Flag or DocumentReference)
 
 // -------------------------------
-// Clinical Status at Presentation
+// Admission Evaluation
 // -------------------------------
-* section[sectionClinicalStatusAtPresentation].title 1..
-* section[sectionClinicalStatusAtPresentation].code 1..
-* section[sectionClinicalStatusAtPresentation].code = $loinc#51848-0 "Evaluation note"
-* section[sectionClinicalStatusAtPresentation].text 1..
-* section[sectionClinicalStatusAtPresentation].entry 0..*
-* section[sectionClinicalStatusAtPresentation].entry only Reference($vitalsigns or CZ_ObservationBMIHdr or CZ_ObservationWeightHdr or Observation or DocumentReference) 
+* section[sectionAdmissionEvaluation].title 1..
+* section[sectionAdmissionEvaluation].code 1..
+* section[sectionAdmissionEvaluation].code = $loinc#51848-0 "Evaluation note"
+* section[sectionAdmissionEvaluation].text 1..
+* section[sectionAdmissionEvaluation].entry 0..*
+* section[sectionAdmissionEvaluation].entry only Reference($vitalsigns or CZ_ObservationBMIHdr or CZ_ObservationWeightHdr or Observation or DocumentReference) 
 
 // -------------------------------
 // Patient History

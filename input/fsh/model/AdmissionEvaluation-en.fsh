@@ -1,7 +1,7 @@
-Logical: LogEnClinicalStatusAtPresentationCz
-Id: ClinicalStatusAtPresentationCz
-Title: "A.2.4 - Clinical Status At Presentation"
-Description: """Clinical Status At Presentation"""
+Logical: LogEnAdmissionEvaluationCz
+Id: AdmissionEvaluationCz
+Title: "A.2.4 - Admission Evaluation"
+Description: """Admission Evaluation"""
 
 * objectiveFindings 0..1 Base "A.2.4.1 - Objective findings" """Objective findings"""
 * objectiveFindings.date 0..1 dateTime "A.2.4.1.1 - Date and time" """Date and time of the examination"""

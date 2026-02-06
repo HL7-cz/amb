@@ -35,7 +35,7 @@ The Outpatient Encounter Report Body component includes:
 - **Advance Directives:** Legal documents, such as wills or DNR orders, that guide treatment decisions.
 - **Alerts:** Important medical alerts like allergies or other critical patient conditions.
 - **Encounter:** Details of the visit, including the examination date, reason for the outpatient contact, and identification of the outpatient service provider.
-- **Clinical Status at Presentation:** This section aims to concisely describe the patient's clinical status with emphasis on pathological manifestations. It is particularly important when the reason for the outpatient contact is an acute condition or deterioration of an existing underlying disease.
+- **Admission Evaluation:** This section aims to concisely describe the patient's clinical status with emphasis on pathological manifestations. It is particularly important when the reason for the outpatient contact is an acute condition or deterioration of an existing underlying disease.
   The status upon admission should be documented exceptionally, only if it will be important for ensuring continuity of care.
 - **Patient History:** Comprehensive record of the patient's medical history and anamnesis.
 - **Encounter Summary** The course of the patient during the visit, including treatment and procedures.

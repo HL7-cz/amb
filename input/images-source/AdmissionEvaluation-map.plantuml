@@ -1,4 +1,4 @@
-@startuml ClinicalStatusAtPresentation-map
+@startuml AdmissionEvaluation-map
 hide circle
 hide stereotype
 hide members    
@@ -12,8 +12,8 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "ClinicalStatusAtPresentation" <<LogicalModel>> [[StructureDefinition-ClinicalStatusAtPresentationCz.html]]
-note top #PaleTurquoise [[clinicalStatusAtPresentation2FHIR-cz-amb.html]]
+class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-AdmissionEvaluationCz.html]]
+note top #PaleTurquoise [[AdmissionEvaluation2FHIR-cz-amb.html]]
 Concept Map
 endnote
 
@@ -22,9 +22,9 @@ class "observation" <<Profile>> [[StructureDefinition-observation.html]]
 class "vital-signs" <<Profile>> [[StructureDefinition-vital-signs.html]]
 
 ' --- Mappings per groups
-"ClinicalStatusAtPresentation" ..> "composition-cz-amb"
-"ClinicalStatusAtPresentation" ..> "observation"
-"ClinicalStatusAtPresentation" ..> "vital-signs"
+"AdmissionEvaluation" ..> "composition-cz-amb"
+"AdmissionEvaluation" ..> "observation"
+"AdmissionEvaluation" ..> "vital-signs"
 
 ' --- Layout helpers (optional)
 "composition-cz-amb" -d[hidden]-> "observation"

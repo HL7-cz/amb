@@ -9,7 +9,7 @@ aaa
 | Dříve vyslovaná přání                                             | [AdvanceDirectives-map.html](AdvanceDirectives-map.html)                       |
 | Urgentní informace                                                | [Alerts-map.html](Alerts-map.html)                                             |
 | Údaje o ambulantím kontaktu                                       | [Encounter-map.html](Encounter-map.html)                                       |
-| Stav při přijetí                                                  | [ClinicalStatusAtPresentation-map.html](ClinicalStatusAtPresentation-map.html) |
+| Stav při přijetí                                                  | [AdmissionEvaluation-map.html](AdmissionEvaluation-map.html) |
 | Anamnéza                                                          | [PatientHistory-map.html](PatientHistory-map.html)                             |
 | Průběh ambulantního kontaktu (poskytnutá péče a klinické shrnutí) | [EncounterCourse-map.html](EncounterCourse-map.html)                           |
 | Medikace                                                          | [MedicationSummary-map.html](MedicationSummary-map.html)                       |
