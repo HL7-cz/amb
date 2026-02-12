@@ -143,7 +143,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
       AlcoholUse 0..1 and
       TobaccoUse 0..1 and
       DrugUse 0..1 and 
-      OtherAddictions 0..1
+      SubstanceUse 0..1
 
 * section[sectionPatientHistory].section[PastIllnessHx]
   * title = "Past illness history"
@@ -185,7 +185,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#11347-2 "Travel history"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Observation or DocumentReference)
+  * entry only Reference(CZ_ObservationTravelHdr or DocumentReference)
 
 
 * section[sectionPatientHistory].section[FamilyHistory]
@@ -200,7 +200,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#29762-2 "Social history"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Observation or DocumentReference)
+  * entry only Reference(CZ_ObservationSdohHdr or DocumentReference)
 
 * section[sectionPatientHistory].section[AlcoholUse]
   * title = "Alcohol use"
@@ -223,7 +223,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * entry 0..*
   * entry only Reference(Observation or DocumentReference)
 
-* section[sectionPatientHistory].section[OtherAddictions]
+* section[sectionPatientHistory].section[SubstanceUse]
   * title = "Other addictions"
   * code = $loinc#72166-2 "Other addictions"
   * text 1..1
