@@ -9,5 +9,5 @@ Hereafter a browseable diagram showing how the xxx model is realized by the HL7 
     </p>
 
     <h4 id="model">Model Overview</h4>
-    <!-- <p>{% include Alerts-map.svg %}</p> -->
+    <p>{% include OutpatientEncounterReport-map.svg %}</p>
 </div>

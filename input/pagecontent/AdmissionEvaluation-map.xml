@@ -9,5 +9,5 @@ Hereafter a browseable diagram showing how the Admission Evaluation model is rea
     </p>
 
     <h4 id="model">Model Overview</h4>
-    <!-- <p>{% include AdmissionEvaluation-map.svg %}</p> -->
+    <p>{% include AdmissionEvaluation-map.svg %}</p>
 </div>

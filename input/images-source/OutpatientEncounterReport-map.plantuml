@@ -1,0 +1,38 @@
+@startuml OutpatientEncounterReport-map
+hide circle
+hide stereotype
+hide members
+hide methods
+
+skinparam linetype ortho
+skinparam class {
+  BackgroundColor<<LogicalModel>> #APPLICATION
+  BackgroundColor<<Profile>> #TECHNOLOGY
+}
+
+legend right
+| <#APPLICATION> Logical Model |
+| <#TECHNOLOGY> Profile / Resource |
+endlegend
+
+' -----------------------------
+' Source logical model
+' -----------------------------
+class "OutpatientEncounterReport" <<LogicalModel>> [[StructureDefinition-OutpatientEncounterReportCz.html]]
+
+note top #PaleTurquoise [[ConceptMap-outpatientEncounterReport2FHIR-cz-amb.html]]
+Concept Map
+endnote
+
+' -----------------------------
+' Target Composition (container)
+' -----------------------------
+class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+class "bundle-cz-amb" <<Profile>> [[StructureDefinition-cz-bundle-amb.html]]
+
+
+' --- Realization links ---
+"OutpatientEncounterReport" ..> "bundle-cz-amb"
+"bundle-cz-amb" ..> "composition-cz-amb"
+
+@enduml

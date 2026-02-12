@@ -9,5 +9,5 @@ Hereafter a browseable diagram showing how the Encounter Summary model is realiz
     </p>
 
     <h4 id="model">Model Overview</h4>
-    <!-- <p>{% include Alerts-map.svg %}</p> -->
+    <p>{% include EncounterSummary-map.svg %}</p>
 </div>

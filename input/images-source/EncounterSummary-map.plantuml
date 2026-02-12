@@ -1,0 +1,48 @@
+@startuml EncounterSummary-map
+hide circle
+hide stereotype
+hide members
+hide methods
+
+skinparam linetype ortho
+skinparam class {
+  BackgroundColor<<LogicalModel>> #APPLICATION
+  BackgroundColor<<Profile>> #TECHNOLOGY
+}
+
+legend right
+| <#APPLICATION> Logical Model |
+| <#TECHNOLOGY> Profile / Resource |
+endlegend
+
+' -----------------------------
+' Source logical model
+' -----------------------------
+class "EncounterSummary" <<LogicalModel>> [[StructureDefinition-EncounterSummaryCz.html]]
+
+note top #PaleTurquoise [[ConceptMap-encounterSummary2FHIR-cz-amb.html]]
+Concept Map
+endnote
+
+' -----------------------------
+' Target Composition (container)
+' -----------------------------
+class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+
+class "sectionEncounterSummary.ProblemList.Condition" <<Profile>>
+class "sectionEncounterSummary.ProceduresAndTreatments.Procedure" <<Profile>>
+class "sectionEncounterSummary.MedicalDevices.Medical Device (CZ)" <<Profile>>
+class "sectionEncounterSummary.MedicationDuring.MedicationAdministration" <<Profile>>
+class "sectionEncounterSummary.Results.Observation" <<Profile>>
+class "sectionEncounterSummary.ClinicalSummary.ClinicalImpression" <<Profile>>
+
+' --- Realization links ---
+"EncounterSummary" ..> "composition-cz-amb"
+"composition-cz-amb" ..> "Condition"
+"composition-cz-amb" ..> "Procedure"
+"composition-cz-amb" ..> "Medical Device (CZ)"
+"composition-cz-amb" ..> "MedicationAdministration"
+"composition-cz-amb" ..> "Observation"
+"composition-cz-amb" ..> "ClinicalImpression"
+
+@enduml

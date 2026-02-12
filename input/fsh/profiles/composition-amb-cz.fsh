@@ -335,7 +335,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionPlanOfCare].title 1..
 * section[sectionPlanOfCare].code 1..
-* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care Narrative"
+* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text 1..
 * section[sectionPlanOfCare].entry 0..*
 * section[sectionPlanOfCare].entry only Reference(CarePlan or DocumentReference)
