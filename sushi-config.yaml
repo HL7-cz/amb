@@ -319,7 +319,7 @@ groups:
       - StructureDefinition/logEncounterCz
       - StructureDefinition/logHeaderAmbCz
       - StructureDefinition/logOutpatientEncounterReportCz
-      - StructureDefinition/logOutpatientStayCz
+      - StructureDefinition/logEncounterSummaryCz
       - StructureDefinition/logMedicationSummaryCz
       - StructureDefinition/logPlanOfCareCz
       - StructureDefinition/logPatientHistoryCz
