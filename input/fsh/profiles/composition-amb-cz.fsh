@@ -113,7 +113,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionAdmissionEvaluation].title 1..
 * section[sectionAdmissionEvaluation].code 1..
-* section[sectionAdmissionEvaluation].code = $loinc#51848-0 "Evaluation note"
+* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text 1..
 * section[sectionAdmissionEvaluation].entry 0..*
 * section[sectionAdmissionEvaluation].entry only Reference($vitalsigns or CZ_ObservationBMIHdr or CZ_ObservationWeightHdr or Observation or DocumentReference) 
@@ -314,7 +314,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // ------------------------------------------------------------
 * section[sectionEncounterSummary].section[ClinicalSummary]
   * title = "Klinické shrnutí"
-  * code = $loinc#51848-0 "Evaluation note"
+  * code = $loinc#67781-5 "Summarization of encounter note"
   * text 1..1
   * entry 0..*
   * entry only Reference(ClinicalImpression)
