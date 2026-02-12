@@ -83,7 +83,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionAdvanceDirectives].title 1..
 * section[sectionAdvanceDirectives].code 1..
-* section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance directives"
+* section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text 1..
 * section[sectionAdvanceDirectives].entry 0..*
 * section[sectionAdvanceDirectives].entry only Reference(CZ_ConsentHdr or Consent or DocumentReference)
@@ -93,7 +93,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionAllergies].title 1..
 * section[sectionAllergies].code 1..
-* section[sectionAllergies].code = $loinc#48765-2 "Allergies and intolerances"
+* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text 1..
 * section[sectionAllergies].entry 0..*
 * section[sectionAllergies].entry only Reference(CZ_AllergyIntoleranceAmb or CZ_AllergyIntolerance or AllergyIntolerance or DocumentReference)
@@ -103,7 +103,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionAlerts].title 1..
 * section[sectionAlerts].code 1..
-* section[sectionAlerts].code = $loinc#104605-1 "Alerts"
+* section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text 1..
 * section[sectionAlerts].entry 0..*
 * section[sectionAlerts].entry only Reference(CZ_FlagAmb or Flag or DocumentReference)
@@ -147,7 +147,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[PastIllnessHx]
   * title = "Past illness history"
-  * code = $loinc#11348-0 "Past illness history"
+  * code = $loinc#11348-0 "History of Past illness note"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ConditionHdr or DocumentReference)
@@ -161,14 +161,14 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[ProceduresHx]
   * title = "Procedures history"
-  * code = $loinc#47519-4 "Procedures history"
+  * code = $loinc#47519-4 "History of Procedures Document"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ProcedureHdr or DocumentReference)
 
 * section[sectionPatientHistory].section[ImmunizationHx]
   * title = "Immunizations"
-  * code = $loinc#11369-6 "Immunizations history"
+  * code = $loinc#11369-6 "History of Immunization note"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ImmunizationHdr or DocumentReference)
@@ -182,7 +182,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[TravelHx]
   * title = "Travel history"
-  * code = $loinc#11347-2 "Travel history"
+  * code = $loinc#10182-4 "History of Travel note"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ObservationTravelHdr or DocumentReference)
@@ -190,42 +190,42 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[FamilyHistory]
   * title = "Family history"
-  * code = $loinc#10157-6 "Family history"
+  * code = $loinc#10157-6 "History of family member diseases note"
   * text 1..1
   * entry 0..*
   * entry only Reference(FamilyMemberHistory or DocumentReference)
 
 * section[sectionPatientHistory].section[SocialHistory]
   * title = "Sociální anamnéza"
-  * code = $loinc#29762-2 "Social history"
+  * code = $loinc#29762-2 "Social history note"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ObservationSdohHdr or DocumentReference)
 
 * section[sectionPatientHistory].section[AlcoholUse]
   * title = "Alcohol use"
-  * code = $loinc#72163-9 "Alcohol use"
+  * code = $loinc#11331-6 "History of Alcohol use"
   * text 1..1
   * entry 0..*
   * entry only Reference(Observation or DocumentReference)
 
 * section[sectionPatientHistory].section[TobaccoUse]
   * title = "Tobacco use"
-  * code = $loinc#72164-7 "Tobacco use"
+  * code = $loinc#11367-0 "History of Tobacco use"
   * text 1..1
   * entry 0..*
   * entry only Reference(Observation or DocumentReference)
 
 * section[sectionPatientHistory].section[DrugUse]
   * title = "Drug use"
-  * code = $loinc#72165-4 "Drug use"
+  * code = $loinc#11343-1 "History of Other nonmedical drug use"
   * text 1..1
   * entry 0..*
   * entry only Reference(Observation or DocumentReference)
 
 * section[sectionPatientHistory].section[SubstanceUse]
   * title = "Other addictions"
-  * code = $loinc#72166-2 "Other addictions"
+  * code = $loinc#108229-6 "Use of substance note"
   * text 1..1
   * entry 0..*
   * entry only Reference(Observation or DocumentReference)
@@ -257,7 +257,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // ------------------------------------------------------------
 * section[sectionEncounterSummary].section[ProblemList]
   * title = "Diagnostický souhrn"
-  * code = $loinc#11450-4 "Problem list"
+  * code = $loinc#11450-4 "Problem list - Reported"
   * text 1..1
   * entry 0..*
   * entry only Reference(Condition or ClinicalImpression)
@@ -277,7 +277,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // ------------------------------------------------------------
 * section[sectionEncounterSummary].section[MedicalDevices]
   * title = "Zdravotní pomůcky a implantáty"
-  * code = $loinc#57080-4 "Implanted medical device"
+  * code = $loinc#57080-4 "Implanted medical device Narrative"
   * text 1..1
   * entry 0..*
   * entry only Reference(Device or DeviceUseStatement)
@@ -314,7 +314,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // ------------------------------------------------------------
 * section[sectionEncounterSummary].section[ClinicalSummary]
   * title = "Klinické shrnutí"
-  * code = $loinc#67781-5 "Summarization of encounter note"
+  * code = $loinc#51848-0 "Evaluation note"
   * text 1..1
   * entry 0..*
   * entry only Reference(ClinicalImpression)
@@ -325,7 +325,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionMedicationSummary].title 1..
 * section[sectionMedicationSummary].code 1..
-* section[sectionMedicationSummary].code = $loinc#10160-0 "History of medication use"
+* section[sectionMedicationSummary].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedicationSummary].text 1..
 * section[sectionMedicationSummary].entry 0..*
 * section[sectionMedicationSummary].entry only Reference(MedicationStatement or MedicationRequest or DocumentReference)
@@ -335,7 +335,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // -------------------------------
 * section[sectionPlanOfCare].title 1..
 * section[sectionPlanOfCare].code 1..
-* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care"
+* section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care Narrative"
 * section[sectionPlanOfCare].text 1..
 * section[sectionPlanOfCare].entry 0..*
 * section[sectionPlanOfCare].entry only Reference(CarePlan or DocumentReference)

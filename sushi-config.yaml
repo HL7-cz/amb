@@ -38,11 +38,7 @@ publisher:
 dependencies:
   hl7.fhir.cz.core: current
   hl7.fhir.cz.hdr: current
-  hl7.fhir.eu.imaging-r4:
-    current
-    # id: hl7.fhir.eu.imaging-r4
-    # uri: https://build.fhir.org/ig/hl7-eu/imaging-r4
-    # version: current
+  hl7.fhir.eu.imaging-r4: current #nutné uvádět pro překlad, jinak je balíček nejednozančný a volá se chybně https://build.fhir.org/ig/oijauregui/ehdsimaging-r4/branches/main/package.tgz (Not Found) (No response content)
   hl7.fhir.cz.img: current
   hl7.fhir.cz.terminology: current
   hl7.fhir.eu.base: 0.1.0-ballot
