@@ -115,28 +115,28 @@ pages:
     title: Autorská práva
 
   # === MAP ===
+  OutpatientEncounterReport-map.xml:
+    title: Mapping of OutpatientEncounterReport
+  Header-map.xml:
+    title: Mapping of Header
   AdvanceDirectives-map.xml:
     title: Mapping of AdvanceDirectives
   Alerts-map.xml:
     title: Mapping of Alerts
   Encounter-map.xml:
     title: Mapping of Encounter
-  Attachments-map.xml:
-    title: Mapping of Attachments
-  CarePlan-map.xml:
-    title: Mapping of CarePlan
-  EncounterCourse-map.xml:
-    title: Mapping of EncounterCourse
-  Header-map.xml:
-    title: Mapping of Header
   AdmissionEvaluation-map.xml:
     title: Mapping of AdmissionEvaluation
-  MedicationSummary-map.xml:
-    title: Mapping of MedicationSummary
-  EncounterSummary-map.xml:
-    title: Mapping of EncounterSummary
   PatientHistory-map.xml:
     title: Mapping of PatientHistory
+  EncounterSummary-map.xml:
+    title: Mapping of EncounterSummary
+  MedicationSummary-map.xml:
+    title: Mapping of MedicationSummary
+  CarePlan-map.xml:
+    title: Mapping of CarePlan
+  Attachments-map.xml:
+    title: Mapping of Attachments
   PresentedForm-map.xml:
     title: Mapping of PresentedForm
 
