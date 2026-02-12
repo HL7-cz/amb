@@ -1,7 +1,7 @@
 Logical: LogEnEncounterCz
 Id: EncounterCz
 Title: "A.2.3 - Encounter"
-Description: """Encounter"""
+Description: """Encounter information"""
 
 * type 1..1 CodeableConcept "A.2.3.1 - Encounter type" """The type of the encounter whether inpatient or short stay encounter."""
 * note 0..1 string "A.2.3.2 - Encounter note" """A narrative description of the encounter course."""

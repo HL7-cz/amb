@@ -17,17 +17,17 @@ note top #PaleTurquoise [[alerts2FHIR-cz-amb.html]]
 Concept Map
 endnote
 ' --- Profiles mapping Alerts ---
-class "cz-composition-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
-class "cz-allergyIntolerance-amb" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-amb.html]]
-class "cz-flag-amb" <<Profile>> [[StructureDefinition-cz-flag-amb.html]]
+class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+class "allergyIntolerance-cz-amb" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-amb.html]]
+class "flag-cz-amb" <<Profile>> [[StructureDefinition-cz-flag-amb.html]]
 
 ' --- Realization links ---
-"Alerts" <|. "cz-composition-amb"
-"Alerts" <|. "cz-allergyIntolerance-amb"
-"Alerts" <|. "cz-flag-amb"
+"Alerts" <|. "composition-cz-amb"
+"Alerts" <|. "allergyIntolerance-cz-amb"
+"Alerts" <|. "flag-cz-amb"
 
 ' ' (volitelné – skryté vazby jen pro rozložení v diagramu)
-"cz-allergyIntolerance-amb" -d[hidden]-> "cz-composition-amb"
-"cz-composition-amb" -d[hidden]-> "cz-allergyIntolerance-amb"
-"cz-composition-amb" -d[hidden]-> "cz-flag-amb"
+"Alerts" -d[hidden]-> "composition-cz-amb"
+"composition-cz-amb" -d[hidden]-> "allergyIntolerance-cz-amb"
+"composition-cz-amb" -d[hidden]-> "flag-cz-amb"
 @enduml

@@ -118,9 +118,9 @@ pages:
     title: Mapping of AdvanceDirectives
   Alerts-map.xml:
     title: Mapping of Alerts
-  AmbulatoryEncounterInformation-map.xml:
-    title: Mapping of AmbulatoryEncounterInformation
-  Attachements-map.xml:
+  Encounter-map.xml:
+    title: Mapping of Encounter
+  Attachments-map.xml:
     title: Mapping of Attachments
   CarePlan-map.xml:
     title: Mapping of CarePlan
@@ -128,12 +128,12 @@ pages:
     title: Mapping of EncounterCourse
   Header-map.xml:
     title: Mapping of Header
-  InPatientEncounter-map.xml:
-    title: Mapping of InPatientEncounter
+  AdmissionEvaluation-map.xml:
+    title: Mapping of AdmissionEvaluation
   MedicationSummary-map.xml:
     title: Mapping of MedicationSummary
-  OutpatientEncounterReport-map.xml:
-    title: Mapping of OutpatientEncounterReport
+  EncounterSummary-map.xml:
+    title: Mapping of EncounterSummary
   PatientHistory-map.xml:
     title: Mapping of PatientHistory
   PresentedForm-map.xml:
@@ -306,6 +306,7 @@ groups:
       # - ActorDefinition/actor-creator-amb-L2
       # - ActorDefinition/actor-consumer-amb-L3
       # - ActorDefinition/actor-creator-amb-L3
+      - StructureDefinition/cz-encounter-obl-amb
       - StructureDefinition/cz-flag-obl-amb
   czech-logical-model:
     name: Czech logical model (Informative)

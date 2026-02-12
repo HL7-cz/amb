@@ -7,203 +7,166 @@ Usage: #definition
 * status = #draft
 * experimental = true
 * description = """AMB Encounter Model to this guide mapping"""
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounterCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"
-* group[=].element[+].code = #Encounter.admission.admitter.organizationID
-* group[=].element[=].display = "A.2.3.3.5 - Admitting organisation ID"
-* group[=].element[=].target.code = #Organization.identifier
+
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/logEncounterCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-composition-amb"
+* group[=].element[+].code = #logEncounterCz
+* group[=].element[=].display = "A.2.3 - Údaje o ambulantním kontaktu"
+* group[=].element[=].target.code = #Composition.Encounter
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is 'ADM'"
-* group[=].element[+].code = #Encounter.admission.referringHP.organizationID
-* group[=].element[=].display = "A.2.3.3.10 - Referring organisation ID"
-* group[=].element[=].target.code = #Organization.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(PractitionerRole).organization and where participant.type is 'REF'"
-* group[=].element[+].code = #Encounter.location.organization.identifier
-* group[=].element[=].display = "A.2.3.6.2 - Organisation Part ID"
-* group[=].element[=].target.code = #Organization.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.location.location.managingOrganization"
-* group[=].element[+].code = #Encounter.location.organization.name
-* group[=].element[=].display = "A.2.3.6.3 - Organisation Part Name"
-* group[=].element[=].target.code = #Organization.name
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Encounter.location.location.managingOrganization"
-* group[=].element[+].code = #Encounter.location.organization.details
-* group[=].element[=].display = "A.2.3.6.4 - Organisation Part Details"
-* group[=].element[=].target.code = #Organization
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Encounter.location.location.managingOrganization; to be checked"
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/InPatientEncounterCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"
-* group[=].element[+].code = #Encounter.admission.admitter.identifier
-* group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
-* group[=].element[=].target.code = #Practitioner.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) and where participant.type is 'ADM'"
-* group[=].element[+].code = #Encounter.admission.admitter.name
-* group[=].element[=].display = "A.2.3.3.4 - Admitting professional name"
-* group[=].element[=].target.code = #Practitioner.name
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) or
-Encounter.participant.individual.ofType(PractitionerRole).practitioner"
-* group[=].element[+].code = #Encounter.admission.referringHP.identifier
-* group[=].element[=].display = "A.2.3.3.8 - Referring professional ID"
-* group[=].element[=].target.code = #Practitioner.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) and where participant.type is 'REF'"
-* group[=].element[+].code = #Encounter.admission.referringHP.name
-* group[=].element[=].display = "A.2.3.3.9 - Referring professional name"
-* group[=].element[=].target.code = #Practitioner.name
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) or
-Encounter.participant.individual.ofType(PractitionerRole).practitioner"
-* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/InPatientEncounterCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* group[=].element[+].code = #Encounter.admission.admitter.identifier
-* group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
-* group[=].element[=].target.code = #PractitionerRole.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "and where participant.type is 'ADM'"
-* group[=].element[+].code = #Encounter.admission.referringHP.identifier
-* group[=].element[=].display = "A.2.3.3.8 - Referring professional ID"
-* group[=].element[=].target.code = #PractitionerRole.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "and where participant.type is 'REF'"
-* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/InPatientEncounterCz"
+
+
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/logEncounterCz"
 * group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-encounter-amb"
-* group[=].element[+].code = #Encounter.type
-* group[=].element[=].display = "A.2.3.1 - Encounter type"
+* group[=].element[+].code = #Typ
+* group[=].element[=].display = "A.2.3.1 - Typ ambulantního kontaktu"
 * group[=].element[=].target.code = #Encounter.class
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.note
-* group[=].element[=].display = "A.2.3.2 - Encounter note"
+
+* group[=].element[+].code = #Poznamka
+* group[=].element[=].display = "A.2.3.2 - Poznámka"
 * group[=].element[=].target.code = #Encounter.extension:note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admission
-* group[=].element[=].display = "A.2.3.3 - Admission"
-* group[=].element[=].target.code = #Encounter
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admission.urgency
-* group[=].element[=].display = "A.2.3.3.1 - Admission urgency"
-* group[=].element[=].target.code = #Encounter.priority
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Encounter.admission.date
-* group[=].element[=].display = "A.2.3.3.2 - Admission date"
+
+* group[=].element[+].code = #Datum
+* group[=].element[=].display = "A.2.3.3 - Datum a čas vyšetření"
 * group[=].element[=].target.code = #Encounter.period.start
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admission.admitter
-* group[=].element[=].display = "Admitting professional"
-* group[=].element[=].target.code = #Encounter.participant.individual
+
+* group[=].element[+].code = #Prijem.Urgentni
+* group[=].element[=].display = "A.2.3.4.1 - Urgentnost ambulantního kontaktu"
+* group[=].element[=].target.code = #Encounter.priority
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "where participant.type is 'ADM'"
-* group[=].element[+].code = #Encounter.admission.admitter.organization
-* group[=].element[=].display = "A.2.3.3.6 - Admitting organisation"
-* group[=].element[=].target.code = #Encounter.serviceProvider
+
+* group[=].element[+].code = #Prijem.DoporucujiciLekar.Id
+* group[=].element[=].display = "A.2.3.4.2 - Doručující lékař ID"
+* group[=].element[=].target.code = #Encounter.participant:referrer.individual.PractitionerRole.practitioner.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admission.admitter.organization
-* group[=].element[=].display = "A.2.3.3.6 - Admitting organisation"
-* group[=].element[=].target.code = #Encounter.participant.individual.organization
+
+* group[=].element[+].code = #Prijem.DoporucujiciLekar.Jmeno
+* group[=].element[=].display = "A.2.3.4.3 - Doručující lékař Jméno"
+* group[=].element[=].target.code = #Encounter.participant:referrer.individual.PractitionerRole.practitioner.name
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "where participant.type is 'ADM'  and Encounter.participant.individual.ofType(PractitionerRole)"
-* group[=].element[+].code = #Encounter.admission.source
-* group[=].element[=].display = "A.2.3.3.7 - Admit Source"
-* group[=].element[=].target.code = #Encounter.hospitalization.admitSource
+
+* group[=].element[+].code = #Prijem.DoporucujiciOrganizace.Id
+* group[=].element[=].display = "A.2.3.4.4 - Doručující organizace ID"
+* group[=].element[=].target.code = #Encounter.participant:referrer.individual.PractitionerRole.organization.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admission.referringHP
-* group[=].element[=].display = "Referring professional"
-* group[=].element[=].target.code = #Encounter.participant.individual
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "where participant.type is 'REF'"
-* group[=].element[+].code = #Encounter.admission.referringHP.organization
-* group[=].element[=].display = "A.2.3.3.11 - Referring organisation"
-* group[=].element[=].target.code = #Encounter.participant.individual.organization
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equal
-* group[=].element[=].target.comment = "where participant.type is 'REF'  and Encounter.participant.individual.ofType(PractitionerRole)"
-* group[=].element[+].code = #Encounter.admissionReason
-* group[=].element[=].display = "A.2.3.4 - Admission reason"
+
+* group[=].element[+].code = #duvodPrijeti
+* group[=].element[=].display = "A.2.3.5.1 - Důvod ambulantního kontaktu - kód"
 * group[=].element[=].target.code = #Encounter.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admissionReason
-* group[=].element[=].display = "A.2.3.4 - Admission reason"
-* group[=].element[=].target.code = #Encounter.reasonReference
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.admissionReason.code
-* group[=].element[=].display = "A.2.3.4.1 - Admission reason"
-* group[=].element[=].target.code = #Encounter.reasonCode
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Encounter.admissionReason.comment
-* group[=].element[=].display = "A.2.3.4.2 - Admission reason comment"
-* group[=].element[=].target.code = #Encounter.reasonCode.text
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be checked"
-* group[=].element[+].code = #Encounter.admissionReason.legalStatus
-* group[=].element[=].display = "A.2.3.4.3 - Admission legal status"
-* group[=].element[=].target.code = #XXXX
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "to be checked"
-* group[=].element[+].code = #Encounter.discharge
-* group[=].element[=].display = "A.2.3.5 - Discharge"
-* group[=].element[=].target.code = #Encounter
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Encounter.discharge.date
-* group[=].element[=].display = "A.2.3.5.1 - Discharge date"
-* group[=].element[=].target.code = #Encounter.period.end
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Encounter.discharge.destinationType
-* group[=].element[=].display = "A.2.3.5.2 - Discharge destination type"
-* group[=].element[=].target.code = #Encounter.hospitalization.dischargeDisposition
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Encounter.discharge.destinationLocation
-* group[=].element[=].display = "A.2.3.5.3 - Destination location"
-* group[=].element[=].target.code = #Encounter.hospitalization.destination
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #Encounter.location
-* group[=].element[=].display = "A.2.3.6 - Location - All locations/departments where the patient stayed (was boarded) within the hospital."
-* group[=].element[=].target.code = #Encounter.location
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.location.period
-* group[=].element[=].display = "A.2.3.6.1 - Period"
+* group[=].element[=].target.comment = "Kod - Encounter.reasonCode.coding[] /n Komentar - Encounter.reasonCode.text"
+
+* group[=].element[+].code = #poskytovatel.od
+* group[=].element[=].display = "A.2.3.6.1 - od do"
 * group[=].element[=].target.code = #Encounter.location.period
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "https://hl7.cz/fhir/amd/StructureDefinition/InPatientEncounterCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-location-core"
-* group[=].element[+].code = #Encounter.location.organization
-* group[=].element[=].display = "Organization"
-* group[=].element[=].target.code = #Location.managingOrganization
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+* group[=].element[+].code = #poskytovatel.id
+* group[=].element[=].display = "A.2.3.6.2 - ID poskytovatele"
+* group[=].element[=].target.code = #Encounter.location.location
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "Encounter.location.location"
+* group[=].element[=].target.comment = ""
+
+* group[=].element[+].code = #poskytovatel.nazev
+* group[=].element[=].display = "A.2.3.6.3 - Název poskytovatele"
+* group[=].element[=].target.code = #Encounter.location.location
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+* group[=].element[+].code = #poskytovatel.kontakt
+* group[=].element[=].display = "A.2.3.6.4 - Kontakt poskytovatele"
+* group[=].element[=].target.code = #Encounter.location.location
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/logEncounterCz"
+* group[=].target = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-practitionerrole-core"
+* group[=].element[+].code = #Prijem.DoporucujiciLekar.Id
+* group[=].element[=].display = "A.2.3.4.2 - Doručující lékař ID"
+* group[=].element[=].target.code = #practitioner.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
+* group[=].element[+].code = #Prijem.DoporucujiciLekar.Jmeno
+* group[=].element[=].display = "A.2.3.4.3 - Doručující lékař Jméno"
+* group[=].element[=].target.code = #practitioner.name
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
+* group[=].element[+].code = #Prijem.DoporucujiciOrganizace.Id
+* group[=].element[=].display = "A.2.3.4.4 - Doručující organizace ID"
+* group[=].element[=].target.code = #organization.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/logEncounterCz"
+* group[=].target = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-organization-core"
+* group[=].element[+].code = #Prijem.DoporucujiciOrganizace.Id
+* group[=].element[=].display = "A.2.3.4.4 - Doručující organizace ID"
+* group[=].element[=].target.code = #identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/logEncounterCz"
+* group[=].target = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-location-core"
+* group[=].element[+].code = #poskytovatel.id
+* group[=].element[=].display = "A.2.3.6.2 - ID poskytovatele"
+* group[=].element[=].target.code = #managingOrganization
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+* group[=].element[+].code = #poskytovatel.nazev
+* group[=].element[=].display = "A.2.3.6.3 - Název poskytovatele"
+* group[=].element[=].target.code = #managingOrganization
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+* group[=].element[+].code = #poskytovatel.kontakt
+* group[=].element[=].display = "A.2.3.6.4 - Kontakt poskytovatele"
+* group[=].element[=].target.code = #managingOrganization
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/logEncounterCz"
+* group[=].target = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-organization-core"
+* group[=].element[+].code = #poskytovatel.id
+* group[=].element[=].display = "A.2.3.6.2 - ID poskytovatele"
+* group[=].element[=].target.code = #identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "KRPZS is preferred identifier system for healthcare providers in Czechia."
+
+* group[=].element[+].code = #poskytovatel.nazev
+* group[=].element[=].display = "A.2.3.6.3 - Název poskytovatele"
+* group[=].element[=].target.code = #name
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
+
+* group[=].element[+].code = #poskytovatel.kontakt
+* group[=].element[=].display = "A.2.3.6.4 - Kontakt poskytovatele"
+* group[=].element[=].target.code = #contact
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = ""
