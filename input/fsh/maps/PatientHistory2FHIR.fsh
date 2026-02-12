@@ -96,7 +96,7 @@ Usage: #definition
 
 * group[=].element[+].code = #PatientHistory.zavislosti
 * group[=].element[=].display = "A.2.6.4.4 - Závislosti"
-* group[=].element[=].target.code = #Composition.section.sectionPatientHistory.OtherAddictions
+* group[=].element[=].target.code = #Composition.section.sectionPatientHistory.SubstanceUse
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = ""
