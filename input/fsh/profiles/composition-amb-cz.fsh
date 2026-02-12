@@ -161,7 +161,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[ProceduresHx]
   * title = "Procedures history"
-  * code = $loinc#11369-6 "Procedures history"
+  * code = $loinc#47519-4 "Procedures history"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ProcedureHdr or DocumentReference)
@@ -175,7 +175,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[InfectiousContacts]
   * title = "Infectious contacts"
-  * code = $loinc#11348-0 "Infectious disease contact"
+  * code = $loinc#56838-6 "History of Infectious disease Narrative"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ObservationInfectiousContactHdr or DocumentReference)
@@ -277,7 +277,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 // ------------------------------------------------------------
 * section[sectionEncounterSummary].section[MedicalDevices]
   * title = "Zdravotní pomůcky a implantáty"
-  * code = $loinc#46264-8 "History of medical device use"
+  * code = $loinc#57080-4 "Implanted medical device"
   * text 1..1
   * entry 0..*
   * entry only Reference(Device or DeviceUseStatement)

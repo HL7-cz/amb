@@ -3,8 +3,6 @@ Id: AttachmentsCz
 Title: "A.4 - Attachments"
 Description: """Attachments"""
 
-* insert SetFmmandStatusRule ( 1, draft )
-
 * contentType 0..1 CodeableConcept "A.4.1 Type of content" """Type of content - MIME type is required"""
 * language 0..1 CodeableConcept "A.4.2 Language of content" """Language of content - HL7 valueset of languages is required"""
 * data 1..1 base64Binary "A.4.3 Data of content" """Data inline, base64ed"""
