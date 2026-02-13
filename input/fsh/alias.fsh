@@ -10,6 +10,12 @@ Alias: $mime = urn:ietf:bcp:13
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-ActEncounterCode = http://terminology.hl7.org/CodeSystem/v3-ActEncounterCode
+Alias: $consent-category = http://terminology.hl7.org/CodeSystem/consentcategorycodes
+Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
+
 
 // ValueSet
 Alias: $dlp_lecprip = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
@@ -22,6 +28,7 @@ Alias: $hl7-participant-type = http://hl7.org/fhir/ValueSet/encounter-participan
 Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact|5.2.0
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img

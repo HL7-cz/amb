@@ -71,7 +71,7 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[device].resource only CZ_MedicalDevice
 * entry[deviceUseStatement].resource only CZ_DeviceUseStatementHdr // TODO to AMB?
 * entry[diagnosticReport].resource only CZ_DiagnosticReport
-* entry[encounter].resource only CZ_EncounterHdr //TODO to AMB?
+* entry[encounter].resource only CZ_EncounterAmb
 * entry[imagingStudy].resource only CZ_StudyImaging
 * entry[immunization].resource only CZ_ImmunizationHdr // TODO to AMB?
 * entry[media].resource only Media // $Media-observation-uv-ips

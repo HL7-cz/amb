@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """AMB Alerts Model to this guide mapping"""
 * group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-allergyIntolerance-hdr"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-allergyintolerance-amb"
 
 * group[=].element[+].code = #Alerts.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
@@ -78,7 +78,7 @@ Usage: #definition
 
 
 * group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-compositionAmb"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-composition-amb"
 * group[=].element[+].code = #Alerts.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
 * group[=].element[=].target.code = #Composition.section:sectionAllergies
@@ -98,8 +98,8 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 
 
-* group[+].source = "https://hl7.cz/fhir/hdr/StructureDefinition/AlertsCz"
-* group[=].target = "https://hl7.cz/fhir/hdr/StructureDefinition/cz-flag-hdr"
+* group[+].source = "https://hl7.cz/fhir/amb/StructureDefinition/AlertsCz"
+* group[=].target = "https://hl7.cz/fhir/amb/StructureDefinition/cz-flag-amb"
 * group[=].element[+].code = #Alerts.medicalAlerts.description
 * group[=].element[=].display = "A.2.2.2.1 - Healthcare alert description"
 * group[=].element[=].target.code = #Flag.text
@@ -130,7 +130,7 @@ Usage: #definition
 
 * group[=].element[+].code = #Alerts.medicalAlerts.comment
 * group[=].element[=].display = "A.2.2.2.5 - Healthcare alert comment"
-* group[=].element[=].target.code = #Flag.text
+* group[=].element[=].target.code = #Flag.extension:flagDetailExt
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "TO BE checked"
