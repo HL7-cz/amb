@@ -1,0 +1,60 @@
+@startuml PatientHistory-map
+hide circle
+hide stereotype
+hide members
+hide methods
+
+skinparam linetype ortho
+skinparam class {
+  BackgroundColor<<LogicalModel>> #APPLICATION
+  BackgroundColor<<Profile>> #TECHNOLOGY
+}
+
+legend right
+| <#APPLICATION> Logical Model |
+| <#TECHNOLOGY> Profile / Resource |
+endlegend
+
+' -----------------------------
+' Source logical model
+' -----------------------------
+class "PatientHistory" <<LogicalModel>> [[StructureDefinition-PatientHistoryCz.html]]
+
+note top #PaleTurquoise [[ConceptMap-patientHistory2FHIR-cz-amb.html]]
+Concept Map
+endnote
+
+' -----------------------------
+' Target Composition (container)
+' -----------------------------
+class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+
+class "sectionPatientHistory.PastIllnessHx.Condition" <<Profile>>
+class "sectionPatientHistory.HistoryMedicalDevices.Medical Device (CZ)" <<Profile>>
+class "sectionPatientHistory.ProceduresHx.Procedure" <<Profile>>
+class "sectionPatientHistory.ImmunizationHx.Immunization" <<Profile>>
+class "sectionPatientHistory.InfectiousContacts.Observation: Infectious Contact" <<Profile>>
+class "sectionPatientHistory.TravelHx.Observation: Travel History" <<Profile>>
+class "sectionPatientHistory.FamilyHistory.FamilyMemberHistory" <<Profile>>
+class "sectionPatientHistory.SocialHistory.CZ_ObservationSdohHdr" <<Profile>>
+class "sectionPatientHistory.AlcoholUse.Observation" <<Profile>>
+class "sectionPatientHistory.TobaccoUse.Observation" <<Profile>>
+class "sectionPatientHistory.DrugUse.Observation" <<Profile>>
+class "sectionPatientHistory.SubstanceUse.Observation" <<Profile>>
+
+' --- Realization links ---
+"PatientHistory" ..> "composition-cz-amb"
+"composition-cz-amb" ..> "Condition"
+"composition-cz-amb" ..> "Medical Device (CZ)"
+"composition-cz-amb" ..> "Procedure"
+"composition-cz-amb" ..> "Immunization"
+"composition-cz-amb" ..> "Observation: Infectious Contact"
+"composition-cz-amb" ..> "Observation: Travel History"
+"composition-cz-amb" ..> "FamilyMemberHistory"
+"composition-cz-amb" ..> "CZ_ObservationSdohHdr"
+
+"composition-cz-amb" ..> "sectionPatientHistory.AlcoholUse.Observation"
+"composition-cz-amb" ..> "sectionPatientHistory.TobaccoUse.Observation"
+"composition-cz-amb" ..> "sectionPatientHistory.DrugUse.Observation"
+"composition-cz-amb" ..> "sectionPatientHistory.SubstanceUse.Observation"
+@enduml

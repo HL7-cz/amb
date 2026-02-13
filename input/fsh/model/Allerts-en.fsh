@@ -18,7 +18,7 @@ Description: """Alerts"""
 * allergy.status 0..1 CodeableConcept "A.2.2.1.8 - Status" """Current status of the allergy or intolerance, for example, whether it is active, in remission, resolved, and so on …"""
 * allergy.certainty 0..1 CodeableConcept "A.2.2.1.9 - Certainty" """Assertion about the certainty associated with a propensity, or potential risk, of a reaction to the identified substance. Diagnostic and/or clinical evidence of condition."""
 * allergy.lastOccurrence 0..1 dateTime "A.2.2.1.10 - Last Occurrence"
-* medicalAlerts 0..* Base "A.2.2.2 - Medical alerts (relevant for the respective Outpatient stay)" """Medical alerts (relevant for the respective Outpatient stay)"""
+* medicalAlerts 0..* Base "A.2.2.2 - Medical alerts (relevant for the respective Encounter)" """Medical alerts (relevant for the respective Encounter)"""
 * medicalAlerts.description 0..1 CodeableConcept "A.2.2.2.1 - Healthcare alert description" """A warning, other than included in allergies.
 The warning can be entered in code (there are codes for frequently used alerts) but seeing the dynamic nature of the warnings, these alerts will often be entered as free text.
 Any clinical information that is imperative to know so that the life or health of the patient does not come under threat.

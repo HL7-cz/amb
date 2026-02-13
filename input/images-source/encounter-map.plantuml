@@ -1,0 +1,53 @@
+@startuml Encounter-map
+hide circle
+hide stereotype
+hide members
+hide methods
+
+skinparam linetype ortho
+skinparam class {
+  BackgroundColor<<LogicalModel>> #APPLICATION
+  BackgroundColor<<Profile>> #TECHNOLOGY
+}
+
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+
+' --- Source logical model (ConceptMap.group.source)
+class "Encounter" <<LogicalModel>> [[StructureDefinition-logEncounterCz.html]]
+
+note top #PaleTurquoise [[ConceptMap-encounter2FHIR-cz-amb.html]]
+Concept Map
+endnote
+
+' --- Targets (ConceptMap.group.target)
+class "cz-composition-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
+class "cz-encounter-amb" <<Profile>> [[StructureDefinition-cz-encounter-amb.html]]
+
+class "cz-practitionerrole-core" <<Profile>> [[https://hl7.cz/fhir/cz-core/StructureDefinition/cz-practitionerrole-core.html]]
+class "cz-organization-core" <<Profile>> [[https://hl7.cz/fhir/cz-core/StructureDefinition/cz-organization-core.html]]
+class "cz-location-core" <<Profile>> [[https://hl7.cz/fhir/cz-core/StructureDefinition/cz-location-core.html]]
+class "cz-practitioner-core" <<Profile>> [[https://hl7.cz/fhir/cz-core/StructureDefinition/cz-practitioner-core.html]]
+
+' --- Mappings per groups
+"Encounter" ..> "cz-composition-amb"
+"Encounter" ..> "cz-encounter-amb"
+"Encounter" ..> "cz-location-core"
+
+"Encounter" ..> "cz-practitionerrole-core"
+"Encounter" ..> "cz-organization-core"
+"Encounter" ..> "cz-practitioner-core"
+
+"Encounter"..> "cz-organization-core"
+
+' --- Layout helpers (optional)
+"cz-composition-amb" -d[hidden]-> "cz-encounter-amb"
+"cz-encounter-amb" -d[hidden]-> "cz-practitionerrole-core"
+"cz-practitionerrole-core" -d[hidden]-> "cz-practitioner-core"
+"cz-practitionerrole-core" -d[hidden]-> "cz-organization-core"
+"cz-encounter-amb" -d[hidden]-> "cz-location-core"
+"cz-location-core" -d[hidden]-> "cz-organization-core"
+
+@enduml
