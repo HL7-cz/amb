@@ -1,6 +1,6 @@
 Instance: Practitioner-123456789
 InstanceOf: CZ_PractitionerCore
-Usage: #example
+Usage: #inline
 Description: "Practitioner id(KRZP)=123456789"
 * id = "161dcf7e-928b-437a-a310-6c61038e6ff9"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"

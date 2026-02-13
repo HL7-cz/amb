@@ -36,7 +36,10 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * status 1..1
   * ^short = "Status of the Order"
-  * ^comment = ""
+
+* type ^short = "Kind of composition (Outpatient Encounter Report)"
+* type ^definition = "Specifies that this composition refers to an Outpatient Encounter Report."
+* type = $loinc#34108-1 "Outpatient Note"
 
 * subject 1..1
 * subject only Reference(CZ_PatientCore)
@@ -281,7 +284,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#57080-4 "Implanted medical device Narrative"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Device or DeviceUseStatement)
+  * entry only Reference(Device or CZ_MedicalDevice)
 
 // ------------------------------------------------------------
 // A.2.7.4 Další významná léčba (chemo, radio, dialýza, transfúze…)

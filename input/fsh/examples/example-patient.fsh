@@ -1,6 +1,6 @@
 Instance: Patient-Mracena
 InstanceOf: CZ_PatientCore
-Usage: #example
+Usage: #inline
 Description: "Patient, contact information and practitioner"
 
 * id = "00d304b8-5839-43dd-9239-69aed544f7e1"
