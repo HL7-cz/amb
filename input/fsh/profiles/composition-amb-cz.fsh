@@ -175,7 +175,8 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * section[sectionPatientHistory].section[InfectiousContacts]
   * title = "Infectious contacts"
-  * code = $loinc#56838-6 "History of Infectious disease Narrative"
+  // * code = $loinc#56838-6 "History of Infectious disease Narrative"
+  * code = TemporaryHDRSystem#infection-contact "Infectious contacts"
   * text 1..1
   * entry 0..*
   * entry only Reference(CZ_ObservationInfectiousContactHdr or DocumentReference)
