@@ -198,7 +198,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#10157-6 "History of family member diseases note"
   * text 1..1
   * entry 0..*
-  * entry only Reference(FamilyMemberHistory or DocumentReference)
+  * entry only Reference(CZ_FamilyMemberHistoryHdr or FamilyMemberHistory or DocumentReference)
 
 * section[sectionPatientHistory].section[SocialHistory]
   * title 1..
@@ -265,7 +265,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#11450-4 "Problem list - Reported"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Condition or ClinicalImpression)
+  * entry only Reference(CZ_ConditionHdr or Condition or ClinicalImpression)
 
 // ------------------------------------------------------------
 // A.2.7.2 Výkony
@@ -275,7 +275,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#29554-3 "Procedure Narrative"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Procedure or MedicationAdministration)
+  * entry only Reference(CZ_ProcedureHdr or Procedure or MedicationAdministration)
 
 // ------------------------------------------------------------
 // A.2.7.3 Zdravotní pomůcky a implantáty
@@ -285,7 +285,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#57080-4 "Implanted medical device Narrative"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Device or CZ_MedicalDevice)
+  * entry only Reference(CZ_DeviceUseStatementHdr or Device or CZ_MedicalDevice)
 
 // ------------------------------------------------------------
 // A.2.7.4 Další významná léčba (chemo, radio, dialýza, transfúze…)
@@ -300,7 +300,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#29549-3 "Medication administered Narrative"
   * text 1..1
   * entry 0..*
-  * entry only Reference(MedicationAdministration or MedicationStatement)
+  * entry only Reference(MedicationAdministration or MedicationStatement or CZ_Medication)
 
 // Pozn.: Medikace doporučená po propuštění patří typicky do bloku Medication Summary.
 
@@ -312,7 +312,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Observation or DiagnosticReport or ImagingStudy)
+  * entry only Reference(Observation or DiagnosticReport or ImagingStudy or CZ_ObservationResultLaboratory or CZ_ObservationResultImaging)
 
 // ------------------------------------------------------------
 // A.2.7.7 Klinické shrnutí
@@ -343,7 +343,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text 1..
 * section[sectionPlanOfCare].entry 0..*
-* section[sectionPlanOfCare].entry only Reference(CarePlan or DocumentReference)
+* section[sectionPlanOfCare].entry only Reference(CZ_CarePlanHdr or CarePlan or DocumentReference)
 
 // -------------------------------
 // Attachments
