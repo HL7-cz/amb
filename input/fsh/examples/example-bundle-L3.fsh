@@ -74,6 +74,7 @@ Usage: #example
 * section[sectionAllergies].entry[1] = Reference(urn:uuid:a1de206e-b7dc-4d63-9efc-6b3d4913822f)
 * section[sectionAllergies].entry[2] = Reference(urn:uuid:0711ad77-bbd4-4242-9e82-4d612a8cfda8)
 
+// Varování
 * section[sectionAlerts].title = "Varování"
 * section[sectionAlerts].code.coding[0].system = $loinc
 * section[sectionAlerts].code.coding[0].code = #104605-1 // Alert
@@ -82,7 +83,85 @@ Usage: #example
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
 * section[sectionAlerts].entry[0] = Reference(urn:uuid:90482ba4-9384-428a-a384-5b09f1293a0e) // Reference to Flag instance
 
+// Admission Evaluation (stav při přijetí/příchodu)
+* section[sectionAdmissionEvaluation].title = "Stav při přijetí/příchodu"
+* section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
+* section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Admission evaluation (assessment at admission)
+* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
+* section[sectionAdmissionEvaluation].text.status = #additional
+* section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient přichází do ambulance s bolestí na hrudi, dušností a kašlem. Při vyšetření je zjištěna tachykardie, hypotenze a cyanóza.</div>"
 
+// Patient History (anamnéza)
+* section[sectionPatientHistory].title = "Anamnéza"
+* section[sectionPatientHistory].code.coding[0].system = $loinc
+* section[sectionPatientHistory].code.coding[0].code = #35090-0
+* section[sectionPatientHistory].code.coding[0].display = "Patient history"
+
+* section[sectionPatientHistory].section[PastIllnessHx].title = "Historie zdravotních problémů"
+* section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].system = $loinc
+* section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].code = #11348-0
+* section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].display = "History of Past illness note"
+* section[sectionPatientHistory].section[PastIllnessHx].text.status = #additional
+* section[sectionPatientHistory].section[PastIllnessHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
+  <ul>
+    <li>Hypertenze</li>
+    <li>Fibrilace síní</li>
+    <li>Astma bronchiale</li>
+  </ul>
+</div>
+"""
+* section[sectionPatientHistory].section[PastIllnessHx].entry[0] = Reference(urn:uuid:pastillnes0) 
+* section[sectionPatientHistory].section[PastIllnessHx].entry[1] = Reference(urn:uuid:pastillnes1) 
+* section[sectionPatientHistory].section[PastIllnessHx].entry[2] = Reference(urn:uuid:pastillnes2) 
+
+// další subsekce
+      // HistoryMedicalDevices 0..1 and
+      // ProceduresHx 0..1 and
+      // ImmunizationHx 0..* and
+      // InfectiousContacts 0..* and
+      // TravelHx 0..* and
+      // FamilyHistory 0..* and
+      // SocialHistory 0..1 and
+      // AlcoholUse 0..1 and
+      // TobaccoUse 0..1 and
+      // DrugUse 0..1 and 
+      // SubstanceUse 0..1
+
+//sectionEncounterSummary
+//subsekce
+      // ProblemList 0..1 and
+      // ProceduresAndTreatments 0..1 and
+      // MedicalDevices 0..1 and
+      // MedicationDuring 0..* and
+      // Results 0..* and
+      // ClinicalSummary 0..*
+
+//sectionMedicationSummary
+* section[sectionMedicationSummary].title = "Souhrn medikace"
+* section[sectionMedicationSummary].code.coding[0].system = $loinc
+* section[sectionMedicationSummary].code.coding[0].code = #10160-0
+* section[sectionMedicationSummary].code.coding[0].display = "History of Medication use Narrative"
+* section[sectionMedicationSummary].text.status = #additional
+* section[sectionMedicationSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient užívá následující medikaci: Warfarin 5 mg denně, Metoprolol 50 mg denně, Salbutamol inhalátor podle potřeby.</div>" 
+* section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:medication1) 
+* section[sectionMedicationSummary].entry[1] = Reference(urn:uuid:medication2)
+* section[sectionMedicationSummary].entry[2] = Reference(urn:uuid:medication3)
+
+//sectionPlanOfCare
+* section[sectionPlanOfCare].title = "Plán péče"
+* section[sectionPlanOfCare].code.coding[0].system = $loinc
+* section[sectionPlanOfCare].code.coding[0].code = #18776-5
+* section[sectionPlanOfCare].code.coding[0].display = "Plan of care note"
+* section[sectionPlanOfCare].text.status = #additional
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientovi bude doporučeno sledování krevního tlaku, pravidelné kontroly u kardiologa a dodržování medikace na fibrilaci síní. Dále bude doporučena spirometrie pro posouzení astmatu.</div>"
+
+//sectionAttachments
+* section[sectionAttachments].title = "Přílohy"
+* section[sectionAttachments].code.coding[0].system = $loinc
+* section[sectionAttachments].code.coding[0].code = #77599-9
+* section[sectionAttachments].code.coding[0].display = "Additional documentation"
+* section[sectionAttachments].text.status = #additional
+* section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neobsahuje žádné přílohy.</div>"
 
 
 ///// Other resources /////
@@ -198,3 +277,65 @@ Description: "Flag resource for alert about long-term anticoagulation treatment 
 * extension[flagPriorityExt].valueCodeableConcept.coding[0].system = $flagPriority
 * extension[flagPriorityExt].valueCodeableConcept.coding[0].code = #PH 
 * extension[flagPriorityExt].valueCodeableConcept.coding[0].display = "High priority"      
+
+// Entry pro past illness history v sekci Anamnéza
+Instance: Condition-hypertenze
+InstanceOf: CZ_ConditionHdr
+Usage: #inline
+Description: "Condition resource for past illness history - Hypertenze for patient Mrakomorová Mračena - L3"
+* id = "pastillnes0"
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* code.coding[0].system = $sct
+* code.coding[0].code = #38341003 "Hypertension (disorder)"
+
+Instance: Condition-fibrilace
+InstanceOf: CZ_ConditionHdr
+Usage: #inline
+Description: "Condition resource for past illness history - Fibrilace síní for patient Mrakomorová Mračena - L3"
+* id = "pastillnes1"
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* code.coding[0].system = $sct
+* code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
+
+Instance: Condition-astma
+InstanceOf: CZ_ConditionHdr
+Usage: #inline
+Description: "Condition resource for past illness history - Astma bronchiale for patient Mrakomorová Mračena - L3"
+* id = "pastillnes2"
+* subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
+* code.coding[0].system = $sct
+* code.coding[0].code = #195967001 "Asthma (disorder)"
+
+// Entry pro medication summary
+Instance: Medication-Warfarin
+InstanceOf: CZ_Medication
+Usage: #inline
+Description: "Medication resource for Warfarin for patient Mrakomorová Mračena - L3"
+* id = "medication1"
+* identifier[+].system = "http://example.org/medications"
+* identifier[=].value = "medication-001"
+* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].code = #0094113
+* code.coding[0].display = "WARFARIN ORION 3MG TBL NOB 100"
+
+Instance: Medication-Metoprolol
+InstanceOf: CZ_Medication
+Usage: #inline
+Description: "Medication resource for Metoprolol for patient Mrakomorová Mračena - L3"
+* id = "medication2"
+* identifier[+].system = "http://example.org/medications"
+* identifier[=].value = "medication-002"
+* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].code = #0246762
+* code.coding[0].display = "METOPROLOL MEDREG 100MG TBL FLM 50"
+
+Instance: Medication-Salbutamol
+InstanceOf: CZ_Medication
+Usage: #inline
+Description: "Medication resource for Salbutamol for patient Mrakomorová Mračena - L3"
+* id = "medication3"
+* identifier[+].system = "http://example.org/medications"
+* identifier[=].value = "medication-003"
+* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].code = #0269356
+* code.coding[0].display = "SALBUTAMOL POLPHARMA 2MG TBL NOB 30"
