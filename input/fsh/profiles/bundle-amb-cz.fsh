@@ -62,7 +62,8 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
     goal 0..* and
     consent 0..* and
     provenance 0..* and
-    coverage 0..*
+    coverage 0..* and 
+    alcoholUse 0..*
   
 * entry[composition].resource only CZ_CompositionAmb
 * entry[patient].resource only CZ_PatientCore
@@ -87,13 +88,14 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only CZ_Specimen
 * entry[flag].resource only CZ_FlagAmb
-* entry[familyMemberHistory].resource only FamilyMemberHistory
+* entry[familyMemberHistory].resource only CZ_FamilyMemberHistoryHdr
 * entry[documentReference].resource only DocumentReference
 * entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?
 * entry[goal].resource only Goal
 * entry[consent].resource only Consent
 * entry[provenance].resource only CZ_Provenance
 * entry[coverage].resource only CZ_Coverage
+* entry[alcoholUse].resource only Observation
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
