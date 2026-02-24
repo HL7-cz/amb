@@ -62,7 +62,8 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
     goal 0..* and
     consent 0..* and
     provenance 0..* and
-    coverage 0..*
+    coverage 0..* and 
+    alcoholUse 0..*
   
 * entry[composition].resource only CZ_CompositionAmb
 * entry[patient].resource only CZ_PatientCore
@@ -71,7 +72,7 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[device].resource only CZ_MedicalDevice
 * entry[deviceUseStatement].resource only CZ_DeviceUseStatementHdr // TODO to AMB?
 * entry[diagnosticReport].resource only CZ_DiagnosticReport
-* entry[encounter].resource only CZ_EncounterHdr //TODO to AMB?
+* entry[encounter].resource only CZ_EncounterAmb
 * entry[imagingStudy].resource only CZ_StudyImaging
 * entry[immunization].resource only CZ_ImmunizationHdr // TODO to AMB?
 * entry[media].resource only Media // $Media-observation-uv-ips
@@ -87,13 +88,14 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only CZ_Specimen
 * entry[flag].resource only CZ_FlagAmb
-* entry[familyMemberHistory].resource only FamilyMemberHistory
+* entry[familyMemberHistory].resource only CZ_FamilyMemberHistoryHdr
 * entry[documentReference].resource only DocumentReference
 * entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?
 * entry[goal].resource only Goal
 * entry[consent].resource only Consent
 * entry[provenance].resource only CZ_Provenance
 * entry[coverage].resource only CZ_Coverage
+* entry[alcoholUse].resource only Observation
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
