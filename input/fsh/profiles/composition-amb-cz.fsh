@@ -32,10 +32,9 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * identifier 0..1
   * ^short = "Report identifier"
   * ^definition = "Identifiers assigned to this report by the performer or other systems. It shall be common to several report versions"
-  * ^comment = "Composition.identifier SHALL be equal to one of the OrderInformation.identifier, if at least one exists"
 
 * status 1..1
-  * ^short = "Status of the Order"
+  * ^short = "Status of the report"
 
 * type ^short = "Kind of composition (Outpatient Encounter Report)"
 * type ^definition = "Specifies that this composition refers to an Outpatient Encounter Report."
@@ -57,7 +56,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * ^short = "Who and/or what authored the Outpatient Encounter Report"
 
 * date 1..1
-  * ^short = "Date the order was created."
+  * ^short = "Date the report was created."
 
 // =======================================================
 // SECTIONS)
