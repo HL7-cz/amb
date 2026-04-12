@@ -36,9 +36,16 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * status 1..1
   * ^short = "Status of the report"
 
-* type ^short = "Kind of composition (Outpatient Encounter Report)"
+* type 1..1 MS
+* type from $MedicalDocumentType (preferred)
+* type ^short = "Kind of composition (\"Zpráva o vyšetření či ošetření\")"
 * type ^definition = "Specifies that this composition refers to an Outpatient Encounter Report."
-* type = $loinc#34108-1 "Outpatient Note"
+* type = $loinc#67781-5 //Zpráva o vyšetření či ošetření
+
+* category 0..* MS
+* category from $DocumentCategory (preferred)
+* category ^short = "Category of composition (\"Lékařské záznamy\")"
+* category = $loinc#11503-0	//Lékařské záznamy
 
 * subject 1..1
 * subject only Reference(CZ_PatientCore)

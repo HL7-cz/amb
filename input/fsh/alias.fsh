@@ -24,6 +24,8 @@ Alias: $dlp_formy = https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
 Alias: $v3-ActClassAMB = http://hl7.eu/fhir/amb/ValueSet/amb-encounterClass-eu-amb
 Alias: $v3-AdmissionUrgencyAmb = http://hl7.eu/fhir/amb/ValueSet/admission-urgency-eu-amb
 Alias: $hl7-participant-type = http://hl7.org/fhir/ValueSet/encounter-participant-type
+Alias: $MedicalDocumentType = https://ncez.mzcr.cz/terminology/ValueSet/medical-document-type
+Alias: $DocumentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 
 // Extensions
 Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact|5.2.0

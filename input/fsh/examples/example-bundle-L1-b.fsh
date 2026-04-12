@@ -23,8 +23,8 @@ Usage: #example
 * id = "a87fbcd9-68b7-50ce-010f-fb5d27c4e29e"
 * status = #final
 * type.coding[0].system = $loinc
-* type.coding[0].code = #34108-1
-* type.coding[0].display = "Outpatient Note"
+* type.coding[0].code = #67781-5
+* type.coding[0].display = "Zpráva o vyšetření či ošetření"
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak
 * date = "2026-02-15T14:30:45+01:00"
 * author[+] = Reference(urn:uuid:a47ac10b-58cc-4372-a567-0e02b2c3d479) // Reference to Practitioner-987654321
