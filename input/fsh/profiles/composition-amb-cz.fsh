@@ -318,7 +318,8 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Observation or DiagnosticReport or ImagingStudy or CZ_ObservationResultLaboratory or CZ_ObservationResultImaging)
+  * entry only Reference(Observation or DiagnosticReport or ImagingStudy or CZ_ObservationResultLaboratory) // TODO doplnění CZ_ObservationResultImaging až bude fungovat dependenci na hl7.fhir.cz.img
+  
 
 // ------------------------------------------------------------
 // A.2.7.7 Klinické shrnutí
@@ -359,7 +360,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAttachments].code = $loinc#77599-9 "Additional documentation"
 * section[sectionAttachments].text 1..
 * section[sectionAttachments].entry 0..*
-* section[sectionAttachments].entry only Reference(DocumentReference)
+* section[sectionAttachments].entry only Reference(DocumentReference or Binary)
 
 
 
