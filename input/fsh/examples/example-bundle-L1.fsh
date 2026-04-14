@@ -24,7 +24,7 @@ Usage: #example
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
-* type.coding[0].display = "Zpráva o vyšetření či ošetření"
+* type.coding[0].display = "Summarization of encounter note"
 * subject = Reference(urn:uuid:00d304b8-5839-43dd-9239-69aed544f7e1) // Reference to Patient-Mracena
 * date = "2026-01-29T17:50:08+01:00"
 * author[+] = Reference(urn:uuid:161dcf7e-928b-437a-a310-6c61038e6ff9) // Reference to Practitioner-123456789
