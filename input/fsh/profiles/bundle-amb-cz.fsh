@@ -92,10 +92,10 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[documentReference].resource only DocumentReference
 * entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?
 * entry[goal].resource only Goal
-* entry[consent].resource only Consent
+* entry[consent].resource only CZ_ConsentAmb
 * entry[provenance].resource only CZ_Provenance
 * entry[coverage].resource only CZ_Coverage
-* entry[alcoholUse].resource only Observation
+* entry[alcoholUse].resource only CZ_ObservationSdohHdr
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

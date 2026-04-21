@@ -18,7 +18,7 @@ Usage: #example
 * entry[practitioner][+].fullUrl = "urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42"
 * entry[practitioner][=].resource = Practitioner-Jansky
 // Sekce Dříve vyslovaná přání
-* entry[consent][+].fullUrl = "urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad"
+* entry[consent][+].fullUrl = "urn:uuid:40f2cb6c-de78-4c52-85ab-a351ba495a02"
 * entry[consent][=].resource = AdvanceDirective-Mracena-L3
 // Sekce Alergie a intolerance
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:ad596f22-799b-4cdb-b8f2-6198a6d0a53c"
@@ -127,6 +127,7 @@ Usage: #example
 * date = "2026-01-29T09:50:08+01:00"
 * author[+] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Janský
 * title = "Ambulantní zpráva - L3 composition"
+* extension[presentedForm].valueAttachment = cz-pdfamb-example-L3
 
 // Sekce Dříve vyslovaná přání
 * section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"
@@ -135,7 +136,7 @@ Usage: #example
 * section[sectionAdvanceDirectives].code.coding[0].display = "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient si nepřeje být resuscitován.</div>"
 * section[sectionAdvanceDirectives].text.status = #additional
-* section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:64054bb3-093f-4b94-aa58-17940bc4d3ad) // Reference to AdvanceDirective instance
+* section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:40f2cb6c-de78-4c52-85ab-a351ba495a02) // Reference to AdvanceDirective instance
 
 * section[sectionAllergies].title = "Alergie a intolerance"
 * section[sectionAllergies].code.coding[0].system = $loinc
@@ -424,10 +425,10 @@ Description: "Practitioner - L3"
 
 /// Advance Directive ///
 Instance: AdvanceDirective-Mracena-L3
-InstanceOf: CZ_ConsentHdr
+InstanceOf: CZ_ConsentAmb
 Usage: #inline
 Description: "Advance Directive for patient Mrakomorová Mračena - L3"
-* id = "64054bb3-093f-4b94-aa58-17940bc4d3ad"
+* id = "40f2cb6c-de78-4c52-85ab-a351ba495a02"
 * status = #active
 
 * scope.coding[0].system = $consentscope
@@ -659,18 +660,14 @@ Description: "FamilyMemberHistory resource for family history of diabetes mellit
 * condition[0].code.coding[0].code = #44054006 "Diabetes mellitus type 2 (disorder)"
 
 Instance: AlcoholUse-History
-InstanceOf: Observation
+InstanceOf: CZ_ObservationSdohHdr
 Usage: #inline
 Description: "Observation resource for alcohol use history for patient Mrakomorová Mračena - L3"
 * id = "alcoholuse1"
 * status = #final
-* category.coding[0].system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding[0].code = #social-history
-* category.coding[0].display = "Social History"
+* category[SocialHistory] = $observation-category#social-history
 
-* code.coding[0].system = $loinc
-* code.coding[0].code = #108238-7
-* code.coding[0].display = "History of Alcohol use note"
+* code = $sct#160573003 "Alcohol consumption"
 
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * effectiveDateTime = "2025-11-01T10:00:00+01:00"
@@ -924,3 +921,15 @@ Description: "Pacient byl v kontaktu s osobou nakaženou spalničkami"
 * valueCodeableConcept.coding[0].code = #B05
 * valueCodeableConcept.coding[0].display = "Spalničky"
 * note[0].text = "Kontakt proběhl ve školním kolektivu během vyučování."
+
+
+Instance: cz-pdfamb-example-L3
+InstanceOf: Attachment
+Usage: #inline
+Description: "Ambulatory Report Document - PDF"
+* id = "34c0a6b1-9f50-4545-84a5-902dd2e7f6b0"
+* contentType = #application/pdf
+* language = #cs
+// * data = "xxx"
+* title = "Ambulantní zpráva"
+* creation = "2026-02-15T14:30:45+01:00"
