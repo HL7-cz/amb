@@ -101,7 +101,7 @@
 
                 <thead>
                     <tr>
-                        <th colspan="2" class="src-head">Attachment (Logical Model)</th>
+                        <th colspan="2" class="src-head">Advance Directives (Logical Model)</th>
                         <th class="relhead">Relationship</th>
                         <th colspan="4" class="tgt-head">FHIR Target</th>
                     </tr>
