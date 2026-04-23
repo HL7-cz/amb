@@ -71,9 +71,9 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[condition].resource only CZ_ConditionHdr //TODO to AMB?
 * entry[device].resource only CZ_MedicalDevice
 * entry[deviceUseStatement].resource only CZ_DeviceUseStatementHdr // TODO to AMB?
-* entry[diagnosticReport].resource only CZ_DiagnosticReport
+* entry[diagnosticReport].resource only DiagnosticReport // TODO CZ_DiagnosticReport až bude fungovat dependenci na hl7.fhir.cz.img
 * entry[encounter].resource only CZ_EncounterAmb
-* entry[imagingStudy].resource only CZ_StudyImaging
+* entry[imagingStudy].resource only ImagingStudy // TODO CZ_StudyImaging až bude fungovat dependenci na hl7.fhir.cz.img
 * entry[immunization].resource only CZ_ImmunizationHdr // TODO to AMB?
 * entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource only CZ_Medication
@@ -92,10 +92,10 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[documentReference].resource only DocumentReference
 * entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?
 * entry[goal].resource only Goal
-* entry[consent].resource only Consent
+* entry[consent].resource only CZ_ConsentAmb
 * entry[provenance].resource only CZ_Provenance
 * entry[coverage].resource only CZ_Coverage
-* entry[alcoholUse].resource only Observation
+* entry[alcoholUse].resource only CZ_ObservationSdohHdr
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
