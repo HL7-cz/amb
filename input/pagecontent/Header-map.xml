@@ -10,4 +10,439 @@ Hereafter a browseable diagram showing how the xxx model is realized by the HL7 
 
     <h4 id="model">Model Overview</h4>
     <!-- <p>{% include Alerts-map.svg %}</p> -->
+
+    <div class="table-wrap">
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th colspan="3"></th>
+                    <th colspan="4">Target</th>
+                </tr>
+                <tr>
+                    <th>Source Element</th>
+                    <th>Display</th>
+                    <th>Relation</th>
+                    <th>Resource (Profile)</th>
+                    <th>Target Code</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ AMB Composition</strong> -                        <a href="StructureDefinition-cz-composition-amb.html">cz-composition-amb</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Header.subject</td>
+                    <td>A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.subject</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.payer</td>
+                    <td>A.1.3 - Health insurance and payment information</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.extension:basedOn:order</td>
+                    <td>To be discussed if the payor data are conveyed with the request or through other means.</td>
+                </tr>
+                <tr>
+                    <td>Header.payer</td>
+                    <td>A.1.3 - Health insurance and payment information</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section:sectionPayers.entry</td>
+                    <td>Composition.section:sectionPayers.entry.ofType(Coverage).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-coverage')</td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient</td>
+                    <td>A.1.4 - Information recipient</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.extension:information-recipient</td>
+                    <td>Composition.extension:information-recipient.valueReference.resolve().ofType(PracittionerRole)</td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.name</td>
+                    <td>A.1.4.2 - Recipient name</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>PractitionerRole.practitioner.name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.organizationID</td>
+                    <td>A.1.4.3 - Recipient organisation ID</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>PractitionerRole.practitioner.organization.identifier</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.organization</td>
+                    <td>A.1.4.4 - Recipient organisation</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>PractitionerRole.practitioner.organization</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.address</td>
+                    <td>A.1.4.5 - Address</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>PractitionerRole.address</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.country</td>
+                    <td>A.1.4.6 - Country</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>PractitionerRole.country</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.telecom</td>
+                    <td>A.1.4.7 - Telecom</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>PractitionerRole.telecom</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.author</td>
+                    <td>A.1.5 - Author</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.author</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.author.dateTime</td>
+                    <td>A.1.5.5 - Date Time</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.date</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.attester</td>
+                    <td>A.1.6 - Attester</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.attester.party</td>
+                    <td>where attester.mode = 'professional'</td>
+                </tr>
+                <tr>
+                    <td>Header.attester.dateTime</td>
+                    <td>A.1.6.5 - Approval date and time</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.attester.time</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator</td>
+                    <td>A.1.7 - Legal authenticator</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.attester.party</td>
+                    <td>where attester.mode = 'legal'</td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator.dateTime</td>
+                    <td>A.1.7.5 - Authentication date and time</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.attester.time</td>
+                    <td>where attester.mode = 'legal'</td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata</td>
+                    <td>A.1.8 - Document metadata</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.type</td>
+                    <td>A.1.8.2 - Document type</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.type</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.status</td>
+                    <td>A.1.8.3 - Document status</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.status</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.dateTime</td>
+                    <td>A.1.8.4 - Report date and time</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.date</td>
+                    <td>If it is when this document has been created (independently by its version)</td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.title</td>
+                    <td>A.1.8.5 - Document title</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.title</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.custodian</td>
+                    <td>A.1.8.6 - Report custodian</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.custodian</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.confidentiality</td>
+                    <td>A.1.8.7 - Confidentiality</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.confidentiality</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.language</td>
+                    <td>A.1.8.8 - Language</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.language</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.version</td>
+                    <td>A.1.8.9 - Version</td>
+                    <td>equivalent</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.extension:versionNumber.valueString</td>
+                    <td>As business version, not as resource version</td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ Organization Core</strong> -                        <a href="StructureDefinition-cz-organization-core.html">cz-organization-core</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Header.payer.insuranceCode</td>
+                    <td>A.1.3.1 - Health insurance code</td>
+                    <td>equivalent</td>
+                    <td>Organization (cz-organization-core)</td>
+                    <td>Organization.identifier.KP</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.payer.insuranceName</td>
+                    <td>A.1.3.2 - Health insurance name</td>
+                    <td>equivalent</td>
+                    <td>Organization (cz-organization-core)</td>
+                    <td>Organization.name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ Coverage</strong> -                        <a href="StructureDefinition-cz-coverage.html">cz-coverage</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Header.coverage.insuranceNumber</td>
+                    <td>A.1.3.3 - insuranceNumber</td>
+                    <td>equivalent</td>
+                    <td>Coverage (cz-coverage)</td>
+                    <td>CZ_Coverage.identifer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ Patient Core</strong> -                        <a href="StructureDefinition-cz-patient-core.html">cz-patient-core</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Header.subject</td>
+                    <td>A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject</td>
+                    <td>equivalent</td>
+                    <td>Patient (cz-patient-core)</td>
+                    <td>Patient</td>
+                    <td>Composition.subject.ofType(Patient).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core')</td>
+                </tr>
+                <tr>
+                    <td>Header.payer.insuranceNumber</td>
+                    <td>A.1.3.3 - Health insurance number</td>
+                    <td>equivalent</td>
+                    <td>Patient (cz-patient-core)</td>
+                    <td>Patient.identifier</td>
+                    <td>If treated as one of the Patient identifiers; this applies in some jurisdictions.</td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ PractitionerRole Core</strong> -                        <a href="StructureDefinition-cz-practitionerrole-core.html">cz-practitionerrole-core</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Header.informationRecipient.identifier</td>
+                    <td>A.1.4.1 - Recipient identifier</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.identifier</td>
+                    <td>Composition.extension:information-recipient.valueReference.resolve()</td>
+                </tr>
+                <tr>
+                    <td>Header.author</td>
+                    <td>A.1.5 - Author</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole</td>
+                    <td>Composition.author.resolve().ofType(PractitionerRole).confirmsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core')</td>
+                </tr>
+                <tr>
+                    <td>Header.author.identifier</td>
+                    <td>A.1.5.1 - Author identifier</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.identifier</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.author.name</td>
+                    <td>A.1.5.2 - Author name</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.practictioner.name</td>
+                    <td>If PractitionerRole</td>
+                </tr>
+                <tr>
+                    <td>Header.author.organizationID</td>
+                    <td>A.1.5.3 - Author organisation ID</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.organization.identifier</td>
+                    <td>If Organization</td>
+                </tr>
+                <tr>
+                    <td>Header.author.organization</td>
+                    <td>A.1.5.4 - Author organisation</td>
+                    <td>related-to</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.organization</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.attester</td>
+                    <td>A.1.6 - Attester</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole</td>
+                    <td>where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(PractitionerRole).confirmsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core')</td>
+                </tr>
+                <tr>
+                    <td>Header.attester.identifier</td>
+                    <td>A.1.6.1 - Attester identifier</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.identifier</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.attester.name</td>
+                    <td>A.1.6.2 - Attester name</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.practictioner.name</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.attester.organizationID</td>
+                    <td>A.1.6.3 - Attester organisation ID</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.organization.identifier</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.attester.organization</td>
+                    <td>A.1.6.4 - Attester organisation</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.organization</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator</td>
+                    <td>A.1.7 - Legal authenticator</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole</td>
+                    <td>where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(PractitionerRole).conformsTo('https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core')</td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator.identifier</td>
+                    <td>A.1.7.1 - Legal authenticator identifier</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.identifier</td>
+                    <td>where attester.mode = 'legal'</td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator.name</td>
+                    <td>A.1.7.2 - Legal authenticator name</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.practictioner.name</td>
+                    <td>where attester.mode = 'legal'</td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator.organizationID</td>
+                    <td>A.1.7.3 - Legal authenticator organisation ID</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.organization.identifier</td>
+                    <td>where attester.mode = 'legal'</td>
+                </tr>
+                <tr>
+                    <td>Header.legalAuthenticator.organization</td>
+                    <td>A.1.7.4 - Legal authenticator organisation</td>
+                    <td>equivalent</td>
+                    <td>PractitionerRole (cz-practitionerrole-core)</td>
+                    <td>PractitionerRole.organization</td>
+                    <td>where attester.mode = 'legal'</td>
+                </tr>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ AMB Bundle</strong> -                        <a href="StructureDefinition-cz-bundle-amb.html">cz-bundle-amb</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.identifier</td>
+                    <td>A.1.8.1 - Document ID</td>
+                    <td>equivalent</td>
+                    <td>Bundle (cz-bundle-amb)</td>
+                    <td>Bundle.identifier</td>
+                    <td>If it is the identifier of a particular report instance</td>
+                </tr>
+                <tr>
+                    <td>Header.documentMetadata.dateTime</td>
+                    <td>A.1.8.4 - Report date and time</td>
+                    <td>equivalent</td>
+                    <td>Bundle (cz-bundle-amb)</td>
+                    <td>Bundle.timeStamp</td>
+                    <td>If it is when this particular version of this report has been assembled into a Bundle.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

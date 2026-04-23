@@ -9,13 +9,13 @@ Alias: $dlp_formy_cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
 Alias: $mime = urn:ietf:bcp:13
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
-Alias: $v3-ActEncounterCode = http://terminology.hl7.org/CodeSystem/v3-ActEncounterCode
 Alias: $consent-category = http://terminology.hl7.org/CodeSystem/consentcategorycodes
 Alias: $consentscope = http://terminology.hl7.org/CodeSystem/consentscope
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
 
 // ValueSet
@@ -24,6 +24,9 @@ Alias: $dlp_formy = https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
 Alias: $v3-ActClassAMB = http://hl7.eu/fhir/amb/ValueSet/amb-encounterClass-eu-amb
 Alias: $v3-AdmissionUrgencyAmb = http://hl7.eu/fhir/amb/ValueSet/admission-urgency-eu-amb
 Alias: $hl7-participant-type = http://hl7.org/fhir/ValueSet/encounter-participant-type
+Alias: $v3-ActEncounterCode = http://terminology.hl7.org/ValueSet/v3-ActEncounterCode
+Alias: $MedicalDocumentType = https://ncez.mzcr.cz/terminology/ValueSet/medical-document-type
+Alias: $DocumentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 
 // Extensions
 Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact|5.2.0
