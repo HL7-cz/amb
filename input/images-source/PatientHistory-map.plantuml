@@ -20,10 +20,6 @@ endlegend
 ' -----------------------------
 class "PatientHistory" <<LogicalModel>> [[StructureDefinition-PatientHistoryCz.html]]
 
-note top #PaleTurquoise [[ConceptMap-patientHistory2FHIR-cz-amb.html]]
-Concept Map
-endnote
-
 ' -----------------------------
 ' Target Composition (container)
 ' -----------------------------

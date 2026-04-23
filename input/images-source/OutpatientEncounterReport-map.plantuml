@@ -20,9 +20,6 @@ endlegend
 ' -----------------------------
 class "OutpatientEncounterReport" <<LogicalModel>> [[StructureDefinition-OutpatientEncounterReportCz.html]]
 
-note top #PaleTurquoise [[ConceptMap-outpatientEncounterReport2FHIR-cz-amb.html]]
-Concept Map
-endnote
 
 ' -----------------------------
 ' Target Composition (container)

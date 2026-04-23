@@ -20,10 +20,6 @@ endlegend
 ' -----------------------------
 class "EncounterSummary" <<LogicalModel>> [[StructureDefinition-EncounterSummaryCz.html]]
 
-note top #PaleTurquoise [[ConceptMap-encounterSummary2FHIR-cz-amb.html]]
-Concept Map
-endnote
-
 ' -----------------------------
 ' Target Composition (container)
 ' -----------------------------
