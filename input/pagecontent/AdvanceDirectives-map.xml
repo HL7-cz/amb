@@ -10,4 +10,85 @@ Hereafter a browseable diagram showing how the AdvanceDirectives model is realiz
 
     <h4 id="model">Model Overview</h4>
     <p>{% include AdvanceDirectives-map.svg %}</p>
+
+    <div class="table-wrap">
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Source Display</th>
+                    <th>Relation</th>
+                    <th>Target Profile</th>
+                    <th>Target</th>
+                    <th>Target Display</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AdvanceDirectives.livingWill</td>
+                    <td>A.2.1.1 - Living will</td>
+                    <td>related-to</td>
+                    <td>cz-compositionAmb</td>
+                    <td>Composition.section:sectionAdvanceDirectives.text</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>AdvanceDirectives.livingWill</td>
+                    <td>A.2.1.1 - Living will</td>
+                    <td>equivalent</td>
+                    <td>cz-compositionAmb</td>
+                    <td>Composition.section:sectionAdvanceDirectives.entry</td>
+                    <td></td>
+                    <td>Composition.section:sectionAdvanceDirectives.entry.ofType(Consent)</td>
+                </tr>
+                <tr>
+                    <td>AdvanceDirectives.livingWill.date</td>
+                    <td>A.2.1.1.1 - Date and time</td>
+                    <td>related-to</td>
+                    <td>Consent</td>
+                    <td>Consent.dateTime</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>AdvanceDirectives.livingWill.type</td>
+                    <td>A.2.1.1.2 - Type</td>
+                    <td>related-to</td>
+                    <td>Consent</td>
+                    <td>Consent.category</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>AdvanceDirectives.livingWill.comment</td>
+                    <td>A.2.1.1.3 - Comment</td>
+                    <td>related-to</td>
+                    <td>Consent</td>
+                    <td>Consent.text</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>AdvanceDirectives.livingWill.conditions</td>
+                    <td>A.2.1.1.4 - Related conditions</td>
+                    <td>related-to</td>
+                    <td>Consent</td>
+                    <td>Consent.provision.code</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>AdvanceDirectives.livingWill.document</td>
+                    <td>A.2.1.1.5 - Living will document</td>
+                    <td>related-to</td>
+                    <td>cz-compositionAmb</td>
+                    <td>Composition.section:sectionAdvanceDirectives.entry</td>
+                    <td></td>
+                    <td>Composition.section:sectionAdvanceDirectives.entry.ofType(DocumentReference)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

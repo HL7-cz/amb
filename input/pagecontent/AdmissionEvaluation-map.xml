@@ -10,4 +10,67 @@ Hereafter a browseable diagram showing how the Admission Evaluation model is rea
 
     <h4 id="model">Model Overview</h4>
     <p>{% include AdmissionEvaluation-map.svg %}</p>
+
+    <div class="table-wrap">
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Source Display</th>
+                    <th>Relation</th>
+                    <th>Target Profile</th>
+                    <th>Target</th>
+                    <th>Target Display</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>logAdmissionEvaluationCz</td>
+                    <td>A.2.4 - Údaje o klinickém stavu při prezentaci</td>
+                    <td>equivalent</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAdmissionEvaluation</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>objectiveFindings.anthropometricObservations</td>
+                    <td>A.2.4.1.3 - Anthropometric observations</td>
+                    <td>equivalent</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAdmissionEvaluation.entry:Observation()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>objectiveFindings.vitalSigns</td>
+                    <td>A.2.4.1.4 - Vital signs</td>
+                    <td>equivalent</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAdmissionEvaluation.entry:Observation()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>functionalStatus.physicalExamination</td>
+                    <td>A.2.4.1.5 - Physical examination</td>
+                    <td>equivalent</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAdmissionEvaluation.entry:Observation()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>objectiveFindings.date</td>
+                    <td>A.2.4.1.1 - Date and time</td>
+                    <td>equivalent</td>
+                    <td>Observation</td>
+                    <td>effectiveDateTime</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -10,4 +10,134 @@ Hereafter a browseable diagram showing how the Patient History model is realized
 
     <h4 id="model">Model Overview</h4>
     <p>{% include PatientHistory-map.svg %}</p>
+
+    <div class="table-wrap">
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th colspan="3"></th>
+                    <th colspan="4">Target</th>
+                </tr>
+                <tr>
+                    <th>Source Element</th>
+                    <th>Display</th>
+                    <th>Relation</th>
+                    <th>Resource (Profile)</th>
+                    <th>Target Code</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="7" class="row-group">
+                        <strong>Target: CZ AMB Composition</strong> -                        <a href="StructureDefinition-cz-composition-amb.html">cz-composition-amb</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PatientHistory</td>
+                    <td>A.2.6 - Anamnéza pacienta</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory</td>
+                    <td>several subsections</td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.zdravotniProblemy</td>
+                    <td>A.2.6.1.1 - Historie zdravotních problémů</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.sectionPersonalHistory</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.zp</td>
+                    <td>A.2.6.1.2 - Historie zdravotních pomůcek a implantátů</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.HistoryMedicalDevices</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.vyznamneVykony</td>
+                    <td>A.2.6.1.3 - Významné výkony</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.ProceduresHx</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.ockovani</td>
+                    <td>A.2.6.1.4 - Očkování</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.ImmunizationHx</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.epidemiologickaAnamneza</td>
+                    <td>A.2.6.1.5 - Epidemiologická anamnéza</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.InfectiousContacts</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.cestovatelskaAnamneza</td>
+                    <td>A.2.6.1.5.2 - Cestovatelská anamnéza</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.TravelHx</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.rodinnaAnamneza</td>
+                    <td>A.2.6.2 - Rodinná anamnéza</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.FamilyHistory</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.socialniAnamneza</td>
+                    <td>A.2.6.3 - Sociální anamnéza</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.SocialHistory</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.alkohol</td>
+                    <td>A.2.6.4.1 - Alkohol</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.AlcoholUse</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.koureni</td>
+                    <td>A.2.6.4.2 - Kouření</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.TobaccoUse</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.drogy</td>
+                    <td>A.2.6.4.3 - Drogy</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.DrugUse</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>PatientHistory.zavislosti</td>
+                    <td>A.2.6.4.4 - Závislosti</td>
+                    <td>related-to</td>
+                    <td>Composition (cz-composition-amb)</td>
+                    <td>Composition.section.sectionPatientHistory.SubstanceUse</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
