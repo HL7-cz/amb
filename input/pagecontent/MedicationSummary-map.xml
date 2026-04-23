@@ -1,158 +1,253 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Outpatient Encounter Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>Medication Summary -&gt; FHIR profiles (CZ AMB)</title>
+
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">Medication Summary -&gt; FHIR Profiles (CZ AMB)</h3>
 
 
-    <p>
-Hereafter a browseable diagram showing how the xxx model is realized by the HL7 FHIR Profiles of this guide
+        <p>
+        Hereafter a browseable diagram showing how the MedicationSummary model is realized by the HL7 FHIR Profiles of this guide
+        </p>
 
-    </p>
+        <h4 id="model">Model Overview</h4>
 
-    <h4 id="model">Model Overview</h4>
-    <!-- <p>{% include Alerts-map.svg %}</p> -->
+        {% comment %}
+        <p>{% include Attachments-map.svg %}</p>
+        {% endcomment %}
 
-    <div class="table-wrap">
-        <table class="grid">
-            <thead>
-                <tr>
-                    <th colspan="3"></th>
-                    <th colspan="4">Target</th>
-                </tr>
-                <tr>
-                    <th>Source Element</th>
-                    <th>Display</th>
-                    <th>Relation</th>
-                    <th>Resource (Profile)</th>
-                    <th>Target Code</th>
-                    <th>Comment</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="7" class="row-group">
-                        <strong>Target: CZ Medication</strong> -                        <a href="StructureDefinition-cz-Medication.html">cz-Medication</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.productCode</td>
-                    <td>A.2.9.2.3 - Code</td>
-                    <td>equivalent</td>
-                    <td>Medication (cz-Medication)</td>
-                    <td>Medication.code</td>
-                    <td>Preferred mapping</td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.productName</td>
-                    <td>A.2.9.2.4 - Brand name</td>
-                    <td>equivalent</td>
-                    <td>Medication (cz-Medication)</td>
-                    <td>Medication.extension:productName</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.activeIngredient</td>
-                    <td>A.2.9.2.5 - Active ingredient list</td>
-                    <td>equivalent</td>
-                    <td>Medication (cz-Medication)</td>
-                    <td>Medication.ingredient.item[x]</td>
-                    <td>Medication.ingredient.isActive = true</td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.strength</td>
-                    <td>A.2.9.2.6 - Strength</td>
-                    <td>equivalent</td>
-                    <td>Medication (cz-Medication)</td>
-                    <td>Medication.ingredient.strength</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.doseForm</td>
-                    <td>A.2.9.2.7 - Pharmaceutical dose form</td>
-                    <td>equivalent</td>
-                    <td>Medication (cz-Medication)</td>
-                    <td>Medication.form</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="7" class="row-group">
-                        <strong>Target: MedicationDispense</strong> -                        <a href="StructureDefinition-MedicationDispense.html">MedicationDispense</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.productCode</td>
-                    <td>A.2.9.2.3 - Code</td>
-                    <td>equivalent</td>
-                    <td>MedicationDispense</td>
-                    <td>MedicationDispense.medicationCodeableConcept</td>
-                    <td>If no details about the medication are provided</td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.daysSupplied</td>
-                    <td>A.2.9.2.11 - Days supplied</td>
-                    <td>equivalent</td>
-                    <td>MedicationDispense</td>
-                    <td>MedicationDispense.daysSupply</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="7" class="row-group">
-                        <strong>Target: CZ AMB MedicationRequest</strong> -                        <a href="StructureDefinition-cz-medicationRequest-amb.html">cz-medicationRequest-amb</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.reason</td>
-                    <td>A.2.9.2.1 - Medication reason</td>
-                    <td>equivalent</td>
-                    <td>MedicationRequest (cz-medicationRequest-amb)</td>
-                    <td>MedicationRequest.status</td>
-                    <td>As reason for ordering</td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.changeReason</td>
-                    <td>A.2.9.2.2 - Reason for change</td>
-                    <td>equivalent</td>
-                    <td>MedicationRequest (cz-medicationRequest-amb)</td>
-                    <td>MedicationRequest.statusReason</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.productCode</td>
-                    <td>A.2.9.2.3 - Code</td>
-                    <td>equivalent</td>
-                    <td>MedicationRequest (cz-medicationRequest-amb)</td>
-                    <td>MedicationRequest.medicationCodeableConcept</td>
-                    <td>If no details about the medication are provided</td>
-                </tr>
-                <tr>
-                    <td colspan="7" class="row-group">
-                        <strong>Target: Dosage</strong> -                        <a href="StructureDefinition-Dosage.html">Dosage</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.dosageRegimen</td>
-                    <td>A.2.9.2.8 - Dosage Regimen</td>
-                    <td>equivalent</td>
-                    <td>Dosage</td>
-                    <td>Dosage</td>
-                    <td>MedicationRequest.dosageInstruction or MedicationDispense.dosageInstruction</td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.route</td>
-                    <td>A.2.9.2.9 - Route of administration</td>
-                    <td>equivalent</td>
-                    <td>Dosage</td>
-                    <td>Dosage.route</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>MedicationSummary.period</td>
-                    <td>A.2.9.2.10 - Period of treatment</td>
-                    <td>equivalent</td>
-                    <td>Dosage</td>
-                    <td>Dosage.timing.repeat.duration</td>
-                    <td>CHECK it is used the name period but the impression is that is the duration not the period</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <div class="table-wrap">
+
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-MedicationSummaryCz.html">MedicationSummaryCz</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-Medication.html">CZ_Medication</a>
+                    <a href="StructureDefinition-MedicationDispense.html">CZ_MedicationDispense</a>
+                    <a href="StructureDefinition-cz-medicationRequest-hdr.html">CZ_MedicationRequestHdr</a>
+                    <a href="StructureDefinition-Dosage.html">Dosage</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="table-wrap">
+            <table summary="MedicationSummary logical model to CZ AMB profiles">
+                <caption>MedicationSummary -&gt; FHIR Profiles (CZ AMB)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Medication Summary (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7" class="row-group">
+                            <strong>Target: CZ Medication</strong> -                            <a href="StructureDefinition-cz-Medication.html">cz-Medication</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.productCode</td>
+                        <td>A.2.9.2.3 - Code</td>
+                        <td>equivalent</td>
+                        <td>Medication (cz-Medication)</td>
+                        <td>Medication.code</td>
+                        <td>Preferred mapping</td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.productName</td>
+                        <td>A.2.9.2.4 - Brand name</td>
+                        <td>equivalent</td>
+                        <td>Medication (cz-Medication)</td>
+                        <td>Medication.extension:productName</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.activeIngredient</td>
+                        <td>A.2.9.2.5 - Active ingredient list</td>
+                        <td>equivalent</td>
+                        <td>Medication (cz-Medication)</td>
+                        <td>Medication.ingredient.item[x]</td>
+                        <td>Medication.ingredient.isActive = true</td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.strength</td>
+                        <td>A.2.9.2.6 - Strength</td>
+                        <td>equivalent</td>
+                        <td>Medication (cz-Medication)</td>
+                        <td>Medication.ingredient.strength</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.doseForm</td>
+                        <td>A.2.9.2.7 - Pharmaceutical dose form</td>
+                        <td>equivalent</td>
+                        <td>Medication (cz-Medication)</td>
+                        <td>Medication.form</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" class="row-group">
+                            <strong>Target: MedicationDispense</strong> -                            <a href="StructureDefinition-MedicationDispense.html">MedicationDispense</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.productCode</td>
+                        <td>A.2.9.2.3 - Code</td>
+                        <td>equivalent</td>
+                        <td>MedicationDispense</td>
+                        <td>MedicationDispense.medicationCodeableConcept</td>
+                        <td>If no details about the medication are provided</td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.daysSupplied</td>
+                        <td>A.2.9.2.11 - Days supplied</td>
+                        <td>equivalent</td>
+                        <td>MedicationDispense</td>
+                        <td>MedicationDispense.daysSupply</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" class="row-group">
+                            <strong>Target: CZ AMB MedicationRequest</strong> -                            <a href="StructureDefinition-cz-medicationRequest-amb.html">cz-medicationRequest-amb</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.reason</td>
+                        <td>A.2.9.2.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>MedicationRequest (cz-medicationRequest-amb)</td>
+                        <td>MedicationRequest.status</td>
+                        <td>As reason for ordering</td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.changeReason</td>
+                        <td>A.2.9.2.2 - Reason for change</td>
+                        <td>equivalent</td>
+                        <td>MedicationRequest (cz-medicationRequest-amb)</td>
+                        <td>MedicationRequest.statusReason</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.productCode</td>
+                        <td>A.2.9.2.3 - Code</td>
+                        <td>equivalent</td>
+                        <td>MedicationRequest (cz-medicationRequest-amb)</td>
+                        <td>MedicationRequest.medicationCodeableConcept</td>
+                        <td>If no details about the medication are provided</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" class="row-group">
+                            <strong>Target: Dosage</strong> -                            <a href="StructureDefinition-Dosage.html">Dosage</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.dosageRegimen</td>
+                        <td>A.2.9.2.8 - Dosage Regimen</td>
+                        <td>equivalent</td>
+                        <td>Dosage</td>
+                        <td>Dosage</td>
+                        <td>MedicationRequest.dosageInstruction or MedicationDispense.dosageInstruction</td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.route</td>
+                        <td>A.2.9.2.9 - Route of administration</td>
+                        <td>equivalent</td>
+                        <td>Dosage</td>
+                        <td>Dosage.route</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MedicationSummary.period</td>
+                        <td>A.2.9.2.10 - Period of treatment</td>
+                        <td>equivalent</td>
+                        <td>Dosage</td>
+                        <td>Dosage.timing.repeat.duration</td>
+                        <td>CHECK it is used the name period but the impression is that is the duration not the period</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </div>
