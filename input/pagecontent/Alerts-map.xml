@@ -10,4 +10,211 @@ Hereafter a browseable diagram showing how the AdvanceDirectives model is realiz
 
     <h4 id="model">Model Overview</h4>
     <p>{% include Alerts-map.svg %}</p>
+
+    <div class="table-wrap">
+        <table class="grid">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Source Display</th>
+                    <th>Relation</th>
+                    <th>Target Profile</th>
+                    <th>Target</th>
+                    <th>Target Display</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alerts.allergy</td>
+                    <td>A.2.2.1 - Allergy and Intolerance</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.description</td>
+                    <td>A.2.2.1.1 - Allergy description</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.text</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.agent</td>
+                    <td>A.2.2.1.2 - Agent or Allergen</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.code</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.typeOfPropensity</td>
+                    <td>A.2.2.1.3 - Type of propensity</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.type</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.manifestation</td>
+                    <td>A.2.2.1.4 - Allergy manifestation</td>
+                    <td>related-to</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.reaction.manifestation</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.criticality</td>
+                    <td>A.2.2.1.5 - Criticality</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.criticality</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.onsetDate</td>
+                    <td>A.2.2.1.6 - Onset date</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.onset[x]</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.endDate</td>
+                    <td>A.2.2.1.7 - End date</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.extension:abatement-datetime</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.status</td>
+                    <td>A.2.2.1.8 - Status</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.clinicalStatus</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.certainty</td>
+                    <td>A.2.2.1.9 - Certainty</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.verificationStatus</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy.lastOccurrence</td>
+                    <td>A.2.2.1.10 - Last Occurence</td>
+                    <td>equivalent</td>
+                    <td>cz-allergyintolerance-amb</td>
+                    <td>AllergyIntolerance.lastOccurrence</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.allergy</td>
+                    <td>A.2.2.1 - Allergy and Intolerance</td>
+                    <td>related-to</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAllergies</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts</td>
+                    <td>A.2.2.2 - Medical alerts (relevant for the respective hospital stay)</td>
+                    <td>related-to</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAlerts</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.description</td>
+                    <td>A.2.2.2.1 - Healthcare alert description</td>
+                    <td>related-to</td>
+                    <td>cz-composition-amb</td>
+                    <td>Composition.section:sectionAlerts.text</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.description</td>
+                    <td>A.2.2.2.1 - Healthcare alert description</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.text</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.description</td>
+                    <td>A.2.2.2.1 - Healthcare alert description</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.code.text</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.code</td>
+                    <td>A.2.2.2.3 - Healthcare alert code(s)</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.code</td>
+                    <td></td>
+                    <td>TO BE checked (cardinality)</td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.specialistPhysician</td>
+                    <td>A.2.2.2.4 - Healthcare alert specialist physician</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.author</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.comment</td>
+                    <td>A.2.2.2.5 - Healthcare alert comment</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.extension:flagDetailExt</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.priority</td>
+                    <td>A.2.2.2.6 - Healthcare alert priority</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.extension:flagPriorityExt</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+                <tr>
+                    <td>Alerts.medicalAlerts.period</td>
+                    <td>A.2.2.2.7 - Healthcare alert period</td>
+                    <td>related-to</td>
+                    <td>cz-flag-amb</td>
+                    <td>Flag.period</td>
+                    <td></td>
+                    <td>TO BE checked</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
