@@ -1,13 +1,189 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Outpatient Encounter Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>Attachments -&gt; FHIR Profiles (CZ AMB)</title>
+
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">Attachments -&gt; FHIR Profiles (CZ AMB)</h3>
 
 
-    <p>
-Hereafter a browseable diagram showing how the xxx model is realized by the HL7 FHIR Profiles of this guide
+        <p>
+        Hereafter a browseable diagram showing how the Attachments model is realized by the HL7 FHIR Profiles of this guide
+        </p>
 
-    </p>
+        <h4 id="model">Model Overview</h4>
 
-    <h4 id="model">Model Overview</h4>
-    <!-- <p>{% include Alerts-map.svg %}</p> -->
+        {% comment %}
+        <p>{% include Attachments-map.svg %}</p>
+        {% endcomment %} 
+
+        <div class="table-wrap">
+
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-AttachmentsCz.html">AttachmentsCz</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-consent-amb-cz.html">CZ_ConsentAmb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="table-wrap">
+            <table summary="Attachments logical model to CZ AMB profiles">
+                <caption>Attachments -&gt; FHIR Profiles (CZ AMB)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Attachments (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Attachments</td>
+                        <td>A.4 - Attachments</td>
+                        <td>equivalent</td>
+                        <td>cz-composition-hdr</td>
+                        <td>Composition.section:sectionAttachments.entry[x].DocumentReference.content[x].attachment</td>
+                        <td>If it is additional attachments</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Attachments.contentType</td>
+                        <td>A.4.1 - Content type of media attachments</td>
+                        <td>equivalent</td>
+                        <td>cz-attachment-hdr</td>
+                        <td>content[x].attachment.contentType</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Attachments.language</td>
+                        <td>A.4.2 - Language of media attachments</td>
+                        <td>equivalent</td>
+                        <td>cz-attachment-hdr</td>
+                        <td>content[x].attachment.language</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Attachments.data</td>
+                        <td>A.4.3 - Data of media attachments</td>
+                        <td>equivalent</td>
+                        <td>cz-attachment-hdr</td>
+                        <td>content[x].attachment.data</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Attachments.url</td>
+                        <td>A.4.4 - URL of media attachments</td>
+                        <td>equivalent</td>
+                        <td>cz-attachment-hdr</td>
+                        <td>content[x].attachment.url</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Attachments.title</td>
+                        <td>A.4.5 - Title of media attachments</td>
+                        <td>equivalent</td>
+                        <td>cz-attachment-hdr</td>
+                        <td>content[x].attachment.title</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Attachments.creation</td>
+                        <td>A.4.6 - Date and time of creation</td>
+                        <td>equivalent</td>
+                        <td>cz-attachment-hdr</td>
+                        <td>content[x].attachment.creation</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </div>
