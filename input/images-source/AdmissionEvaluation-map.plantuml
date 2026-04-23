@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-AdmissionEvaluationCz.html]]
-note top #PaleTurquoise [[AdmissionEvaluation2FHIR-cz-amb.html]]
-Concept Map
-endnote
 
 class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
 class "observation" <<Profile>> [[StructureDefinition-observation.html]]
