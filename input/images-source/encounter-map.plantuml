@@ -18,10 +18,6 @@ endlegend
 ' --- Source logical model (ConceptMap.group.source)
 class "Encounter" <<LogicalModel>> [[StructureDefinition-logEncounterCz.html]]
 
-note top #PaleTurquoise [[ConceptMap-encounter2FHIR-cz-amb.html]]
-Concept Map
-endnote
-
 ' --- Targets (ConceptMap.group.target)
 class "cz-composition-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
 class "cz-encounter-amb" <<Profile>> [[StructureDefinition-cz-encounter-amb.html]]

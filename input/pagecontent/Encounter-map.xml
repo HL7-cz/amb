@@ -1,13 +1,332 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Outpatient Encounter Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>Encounter -&gt; FHIR profiles (CZ AMB)</title>
 
+        <style type="text/css">
 
-    <p>
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+        <h3 id="overview">Encounter -&gt; FHIR Profiles (CZ AMB)</h3>
+
+        <p>
 Hereafter a browseable diagram showing how the Encounter model is realized by the HL7 FHIR Profiles of this guide
 
-    </p>
+        </p>
 
-    <h4 id="model">Model Overview</h4>
-    <p>{% include Encounter-map.svg %}</p>
+        <h4 id="model">Model Overview</h4>
+
+        <p>{% include Encounter-map.svg %}</p>
+
+        <div class="table-wrap">
+
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-EncounterCz.html">EncounterCz</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-encounter-ambulatory.html">CZ_EncounterAmbulatory</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="table-wrap">
+
+
+            <table summary="Encounter logical model to CZ AMB profiles">
+                <caption>Encounter -&gt; FHIR Profiles (CZ AMB)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">Encounter (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>logEncounterCz</td>
+                        <td>A.2.3 - Údaje o ambulantním kontaktu</td>
+                        <td>equivalent</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.Encounter</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Typ</td>
+                        <td>A.2.3.1 - Typ ambulantního kontaktu</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.class</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Poznamka</td>
+                        <td>A.2.3.2 - Poznámka</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.extension:note</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Datum</td>
+                        <td>A.2.3.3 - Datum a čas vyšetření</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.period.start</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.Urgentni</td>
+                        <td>A.2.3.4.1 - Urgentnost ambulantního kontaktu</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.priority</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciLekar.Id</td>
+                        <td>A.2.3.4.2 - Doručující lékař ID</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.participant:referrer.individual.PractitionerRole.practitioner.identifier</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciLekar.Jmeno</td>
+                        <td>A.2.3.4.3 - Doručující lékař Jméno</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.participant:referrer.individual.PractitionerRole.practitioner.name</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciOrganizace.Id</td>
+                        <td>A.2.3.4.4 - Doručující organizace ID</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.participant:referrer.individual.PractitionerRole.organization.identifier</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>duvodPrijeti</td>
+                        <td>A.2.3.5.1 - Důvod ambulantního kontaktu - kód</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.reasonCode</td>
+                        <td></td>
+                        <td>Kod - Encounter.reasonCode.coding[] /n Komentar - Encounter.reasonCode.text</td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.od</td>
+                        <td>A.2.3.6.1 - od do</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.location.period</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.id</td>
+                        <td>A.2.3.6.2 - ID poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.location.location</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.nazev</td>
+                        <td>A.2.3.6.3 - Název poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.location.location</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.kontakt</td>
+                        <td>A.2.3.6.4 - Kontakt poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-encounter-amb</td>
+                        <td>Encounter.location.location</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciLekar.Id</td>
+                        <td>A.2.3.4.2 - Doručující lékař ID</td>
+                        <td>equivalent</td>
+                        <td>cz-practitionerrole-core</td>
+                        <td>practitioner.identifier</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciLekar.Jmeno</td>
+                        <td>A.2.3.4.3 - Doručující lékař Jméno</td>
+                        <td>equivalent</td>
+                        <td>cz-practitionerrole-core</td>
+                        <td>practitioner.name</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciOrganizace.Id</td>
+                        <td>A.2.3.4.4 - Doručující organizace ID</td>
+                        <td>equivalent</td>
+                        <td>cz-practitionerrole-core</td>
+                        <td>organization.identifier</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Prijem.DoporucujiciOrganizace.Id</td>
+                        <td>A.2.3.4.4 - Doručující organizace ID</td>
+                        <td>equivalent</td>
+                        <td>cz-organization-core</td>
+                        <td>identifier</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.id</td>
+                        <td>A.2.3.6.2 - ID poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-location-core</td>
+                        <td>managingOrganization</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.nazev</td>
+                        <td>A.2.3.6.3 - Název poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-location-core</td>
+                        <td>managingOrganization</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.kontakt</td>
+                        <td>A.2.3.6.4 - Kontakt poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-location-core</td>
+                        <td>managingOrganization</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.id</td>
+                        <td>A.2.3.6.2 - ID poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-organization-core</td>
+                        <td>identifier</td>
+                        <td></td>
+                        <td>KRPZS is preferred identifier system for healthcare providers in Czechia.</td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.nazev</td>
+                        <td>A.2.3.6.3 - Název poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-organization-core</td>
+                        <td>name</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>poskytovatel.kontakt</td>
+                        <td>A.2.3.6.4 - Kontakt poskytovatele</td>
+                        <td>equivalent</td>
+                        <td>cz-organization-core</td>
+                        <td>contact</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </div>
