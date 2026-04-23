@@ -1,13 +1,762 @@
-<div xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
-    <h3 id="overview">Outpatient Encounter Report Model Map</h3>
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>EncounterSummary -&gt; FHIR profiles (CZ AMB)</title>
+
+        <style type="text/css">
+
+      .model-map-block { margin: 0 0 1rem 0; }
+
+      .callout-wrapper {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f2f4f7;
+        padding: 10px 12px;
+      }
+
+      .callout-box { color: #222; }
+
+      .table-wrap {
+        border: 1px solid #c9cdd3;
+        border-radius: 10px;
+        background: #f7f8fa;
+        padding: 10px;
+        margin: 0 0 1rem 0;
+      }
+
+      .table-wrap table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        background: #fff;
+      }
+
+      .table-wrap th,
+      .table-wrap td {
+        border: 1px solid #bfc5cc;
+        padding: 6px 8px;
+        vertical-align: top;
+        word-wrap: break-word;
+      }
+
+      .table-wrap caption {
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 6px 0;
+      }
+
+      .src-head { background: #2f63b7; color: #fff; }
+      .relhead { background: #7b389f; color: #fff; }
+      .tgt-head { background: #cf003e; color: #fff; }
+
+      .src-sub { background: #97abd7; }
+      .relsub { background: #c9bed1; }
+      .tgt-sub { background: #cf8398; }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-map-block">
+            <div class="callout-wrapper">
+                <div class="callout-box">
+                    <strong></strong>
+                </div>
+            </div>
+        </div>
+
+        <h3 id="overview">EncounterSummary -&gt; FHIR Profiles (CZ AMB)</h3>
 
 
-    <p>
-Hereafter a browseable diagram showing how the Encounter Summary model is realized by the HL7 FHIR Profiles of this guide
+        <p>
+        Hereafter a browseable diagram showing how the EncounterSummary model is realized by the HL7 FHIR Profiles of this guide
+        </p>
 
-    </p>
+        <h4 id="model">Model Overview</h4>
 
-    <h4 id="model">Model Overview</h4>
-    <p>{% include EncounterSummary-map.svg %}</p>
+        <p>{% include EncounterSummary-map.svg %}</p>
+        <div class="table-wrap">
+
+            <strong>Mapping Context</strong>
+
+            <ul>
+                <li>
+                    <strong>Source logical model:</strong>
+                    <a href="StructureDefinition-EncounterSummaryCz.html">EncounterSummaryCz</a>
+                </li>
+
+                <li>
+                    <strong>Main target profile:</strong>
+                    <a href="StructureDefinition-cz-composition-amb.html">CZ_CompositionAmb</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="table-wrap">
+            <table summary="EncounterSummary logical model to CZ AMB profiles">
+                <caption>EncounterSummary -&gt; FHIR Profiles (CZ AMB)</caption>
+
+                <thead>
+                    <tr>
+                        <th colspan="2" class="src-head">EncounterSummary (Logical Model)</th>
+                        <th class="relhead">Relationship</th>
+                        <th colspan="4" class="tgt-head">FHIR Target</th>
+                    </tr>
+
+                    <tr>
+                        <th class="src-sub">Element</th>
+                        <th class="src-sub">Description</th>
+                        <th class="relsub">Relation</th>
+                        <th class="tgt-sub">Resource/Profile</th>
+                        <th class="tgt-sub">Element</th>
+                        <th class="tgt-sub">Description</th>
+                        <th class="tgt-sub">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary</td>
+                        <td>A.2.7.1 - Diagnostic summary</td>
+                        <td>equivalent</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionDiagnosticSummary</td>
+                        <td></td>
+                        <td>Details in the Composition.section:sectionDiagnosticSummary.entry of type Condition. See dedicated group</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures</td>
+                        <td>A.2.7.2 - Significant procedures</td>
+                        <td>equivalent</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionSignificantProcedures</td>
+                        <td></td>
+                        <td>Details in the Composition.section:sectionSignificantProcedures.entry of type Procedure. See dedicated group</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices</td>
+                        <td>A.2.7.3 - Medical devices and implants</td>
+                        <td>equivalent</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionMedicalDevices</td>
+                        <td></td>
+                        <td>Details in the Composition.section:sectionMedicalDevices.entry of type DeviceUseStatement. See dedicated groups</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy</td>
+                        <td>A.2.7.5 - Pharmacotherapy</td>
+                        <td>related-to</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionPharmacotherapy</td>
+                        <td></td>
+                        <td>Details in the Composition.section:sectionPharmacotherapy.entry. See dedicated groups</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults</td>
+                        <td>A.2.7.6 - Significant Observation Results</td>
+                        <td>related-to</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionSignificantResults</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.details</td>
+                        <td>A.2.7.6.4 - Observation details</td>
+                        <td>related-to</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionSignificantResults.text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.synthesis</td>
+                        <td>A.2.7.7 - Synthesis</td>
+                        <td>related-to</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionSynthesis</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.synthesis.description</td>
+                        <td>A.2.7.7.1 - Problem synthesis</td>
+                        <td>related-to</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionSynthesis.text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.synthesis.reasoning</td>
+                        <td>A.2.7.7.2 - Clinical reasoning</td>
+                        <td>related-to</td>
+                        <td>cz-composition-amb</td>
+                        <td>Composition.section:sectionSynthesis.text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.problemDescription</td>
+                        <td>A.2.7.1.1 - Problem description</td>
+                        <td>related-to</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.problemDetails</td>
+                        <td>A.2.7.1.2 - Problem details</td>
+                        <td>related-to</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.onsetDate</td>
+                        <td>A.2.7.1.3 - Onset date</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.onSetDateTime</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.endDate</td>
+                        <td>A.2.7.1.4 - End date</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.abatementDateTime</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.category</td>
+                        <td>A.2.7.1.5 - Category</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.category:poa</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.treatmentClass</td>
+                        <td>A.2.7.1.6 - Treatment class</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.category:treated</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.clinicalStatus</td>
+                        <td>A.2.7.1.7 - Clinical status</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.clinicalStatus</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.resolution</td>
+                        <td>A.2.7.1.8 - Resolution circumstances</td>
+                        <td>related-to</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.text</td>
+                        <td></td>
+                        <td>The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.severity</td>
+                        <td>A.2.7.1.9 - Severity</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.severity</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.diagnosticSummary.stage</td>
+                        <td>A.2.7.1.10 - Stage</td>
+                        <td>equivalent</td>
+                        <td>cz-condition-amb</td>
+                        <td>Condition.stage</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.description</td>
+                        <td>A.2.7.3.1 - Device and implant description</td>
+                        <td>related-to</td>
+                        <td>cz-medical-device</td>
+                        <td>Device.text</td>
+                        <td></td>
+                        <td>if referring to the description of the device</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.identifier</td>
+                        <td>A.2.7.3.2 - Device ID</td>
+                        <td>related-to</td>
+                        <td>cz-medical-device</td>
+                        <td>Device.identifier</td>
+                        <td></td>
+                        <td>if generic identifier</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.identifier</td>
+                        <td>A.2.7.3.2 - Device ID</td>
+                        <td>related-to</td>
+                        <td>cz-medical-device</td>
+                        <td>Device.udiCarrier</td>
+                        <td></td>
+                        <td>if it is the udiCarrier</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.description</td>
+                        <td>A.2.7.3.1 - Device and implant description</td>
+                        <td>related-to</td>
+                        <td>cz-deviceUseStatement-amb</td>
+                        <td>DeviceUseStatement.text</td>
+                        <td></td>
+                        <td>if referring to the description of the usage of the device</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.implantDate</td>
+                        <td>A.2.7.3.3 - Implant date</td>
+                        <td>related-to</td>
+                        <td>cz-deviceUseStatement-amb</td>
+                        <td>DeviceUseStatement.timing[x]</td>
+                        <td></td>
+                        <td>If the usage period is highlighted</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.endDate</td>
+                        <td>A.2.7.3.4 - End date</td>
+                        <td>related-to</td>
+                        <td>cz-deviceUseStatement-amb</td>
+                        <td>DeviceUseStatement.timingPeriod.end</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.reason</td>
+                        <td>A.2.7.3.5 - Reason</td>
+                        <td>related-to</td>
+                        <td>cz-deviceUseStatement-amb</td>
+                        <td>DeviceUseStatement.reasonCode</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.reason</td>
+                        <td>A.2.7.3.5 - Reason</td>
+                        <td>related-to</td>
+                        <td>cz-deviceUseStatement-amb</td>
+                        <td>DeviceUseStatement.reasonReference</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.productCode</td>
+                        <td>A.2.7.5.2 - Code</td>
+                        <td>equivalent</td>
+                        <td>cz-Medication</td>
+                        <td>Medication.code</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.intendedUse</td>
+                        <td>A.2.7.5.3 - Intended use</td>
+                        <td>equivalent</td>
+                        <td>cz-Medication</td>
+                        <td>Composition.section:sectionPharmacotherapy</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.productName</td>
+                        <td>A.2.7.5.4 - Brand name</td>
+                        <td>equivalent</td>
+                        <td>cz-Medication</td>
+                        <td>Medication.extension:productName</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.activeIngredient</td>
+                        <td>A.2.7.5.5 - Active ingredient list</td>
+                        <td>equivalent</td>
+                        <td>cz-Medication</td>
+                        <td>Medication.ingredient.item[x]</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.strength</td>
+                        <td>A.2.7.5.6 - Strength</td>
+                        <td>equivalent</td>
+                        <td>cz-Medication</td>
+                        <td>Medication.ingredient.strength</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.doseForm</td>
+                        <td>A.2.7.5.7 - Pharmaceutical dose form</td>
+                        <td>equivalent</td>
+                        <td>cz-Medication</td>
+                        <td>Medication.form</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>cz-medicationDispense-amb</td>
+                        <td>MedicationDispense.reasonCode</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>cz-medicationDispense-amb</td>
+                        <td>MedicationDispense.reasonReference</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.productCode</td>
+                        <td>A.2.7.5.2 - Code</td>
+                        <td>equivalent</td>
+                        <td>cz-medicationDispense-amb</td>
+                        <td>MedicationDispense.medicationCodeableConcept</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>cz-medicationRequest-amb</td>
+                        <td>MedicationRequest.reasonCode</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>cz-medicationRequest-amb</td>
+                        <td>MedicationRequest.reasonReference</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.productCode</td>
+                        <td>A.2.7.5.2 - Code</td>
+                        <td>equivalent</td>
+                        <td>cz-medicationRequest-amb</td>
+                        <td>MedicationRequest.medicationCodeableConcept</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.procedureCode</td>
+                        <td>A.2.7.2.1 - Procedure code</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.code</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.description</td>
+                        <td>A.2.7.2.2 - Procedure description</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.text</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.bodySite</td>
+                        <td>A.2.7.2.3 - Body site</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.bodySite</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.bodySite</td>
+                        <td>A.2.7.2.3 - Body site</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.extension:bodySite</td>
+                        <td></td>
+                        <td>if details about the body structure have to be provided</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.date</td>
+                        <td>A.2.7.2.4 - Procedure date</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.perfomedDateTime</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.reason</td>
+                        <td>A.2.7.2.5 - Procedure reason</td>
+                        <td>equivalent</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.reasonCode</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.reason</td>
+                        <td>A.2.7.2.5 - Procedure reason</td>
+                        <td>equivalent</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.reasonReference</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.outcome</td>
+                        <td>A.2.7.2.6 - Outcome</td>
+                        <td>equivalent</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.outcome</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.complication</td>
+                        <td>A.2.7.2.7 - Complication</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.complication</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.complication</td>
+                        <td>A.2.7.2.7 - Complication</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.complicationDetail</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantProcedures.focalDevice</td>
+                        <td>A.2.7.2.8 - Focal device</td>
+                        <td>equivalent</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.focalDevice</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.medicalDevices.implantDate</td>
+                        <td>A.2.7.3.3 - Implant date</td>
+                        <td>related-to</td>
+                        <td>cz-procedure-amb</td>
+                        <td>Procedure.perfomed[x]</td>
+                        <td></td>
+                        <td>if the implantation procedure is described</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.date</td>
+                        <td>A.2.7.6.1 - Date</td>
+                        <td>equivalent</td>
+                        <td>Observation</td>
+                        <td>Observation.effective[x]</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.status</td>
+                        <td>A.2.7.6.2 - Observation status</td>
+                        <td>equivalent</td>
+                        <td>Observation</td>
+                        <td>Observation.status</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.description</td>
+                        <td>A.2.7.6.3 - Result description</td>
+                        <td>related-to</td>
+                        <td>Observation</td>
+                        <td>Observation.text</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.details</td>
+                        <td>A.2.7.6.4 - Observation details</td>
+                        <td>related-to</td>
+                        <td>Observation</td>
+                        <td>Observation</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.result</td>
+                        <td>A.2.7.6.5 - Observation result</td>
+                        <td>equivalent</td>
+                        <td>Observation</td>
+                        <td>Observation.value[x]</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.result</td>
+                        <td>A.2.7.6.5 - Observation result</td>
+                        <td>equivalent</td>
+                        <td>Observation</td>
+                        <td>Observation.component.value[x]</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.significantResults.reporter</td>
+                        <td>A.2.7.6.7 - Reporter</td>
+                        <td>equivalent</td>
+                        <td>Observation</td>
+                        <td>Observation.performer</td>
+                        <td></td>
+                        <td>Similar Mapping for other Observation profiles</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.dosageRegimen</td>
+                        <td>A.2.7.5.8 - Dosage Regimen</td>
+                        <td>equivalent</td>
+                        <td>Dosage</td>
+                        <td>Dosage</td>
+                        <td></td>
+                        <td>MedicationDispense.dosageInstruction or MedicationRequest.dosageInstruction or MedicationStatement.dosage</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.route</td>
+                        <td>A.2.7.5.9 - Route of administration</td>
+                        <td>equivalent</td>
+                        <td>Dosage</td>
+                        <td>Dosage.route</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.period</td>
+                        <td>A.2.7.5.10 - Period of treatment</td>
+                        <td>related-to</td>
+                        <td>Dosage</td>
+                        <td>Dosage.timing.repeat.duration</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>MedicationAdministration</td>
+                        <td>MedicationAdministration.reasonCode</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>MedicationAdministration</td>
+                        <td>MedicationAdministration.reasonReference</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.productCode</td>
+                        <td>A.2.7.5.2 - Code</td>
+                        <td>equivalent</td>
+                        <td>MedicationAdministration</td>
+                        <td>MedicationAdministration.medicationCodeableConcept</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.dosageRegimen</td>
+                        <td>A.2.7.5.8 - Dosage Regimen</td>
+                        <td>related-to</td>
+                        <td>MedicationAdministration</td>
+                        <td>MedicationAdministration</td>
+                        <td></td>
+                        <td>several elements used</td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.route</td>
+                        <td>A.2.7.5.9 - Route of administration</td>
+                        <td>equivalent</td>
+                        <td>MedicationAdministration</td>
+                        <td>MedicationAdministration.dosage.route</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.period</td>
+                        <td>A.2.7.5.10 - Period of treatment</td>
+                        <td>equivalent</td>
+                        <td>MedicationAdministration</td>
+                        <td>MedicationAdministration.occurencePeriod</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>MedicationStatement</td>
+                        <td>MedicationStatement.reasonReference</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.reason</td>
+                        <td>A.2.7.5.1 - Medication reason</td>
+                        <td>equivalent</td>
+                        <td>MedicationStatement</td>
+                        <td>MedicationStatement.reasonCode</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.productCode</td>
+                        <td>A.2.7.5.2 - Code</td>
+                        <td>equivalent</td>
+                        <td>MedicationStatement</td>
+                        <td>MedicationStatement.medicationCodeableConcept</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>EncounterSummary.pharmacotherapy.period</td>
+                        <td>A.2.7.5.10 - Period of treatment</td>
+                        <td>equivalent</td>
+                        <td>MedicationStatement</td>
+                        <td>MedicationStatement.effectivePeriod</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 </div>

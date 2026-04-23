@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-        <title>Advance directives -&gt; FHIR profily (CZ AMB)</title>
+        <title>Advance directives -&gt; FHIR profiles (CZ AMB)</title>
 
         <style type="text/css">
 
@@ -101,7 +101,7 @@
 
                 <thead>
                     <tr>
-                        <th colspan="2" class="src-head">Attachment (Logical Model)</th>
+                        <th colspan="2" class="src-head">Advance Directives (Logical Model)</th>
                         <th class="relhead">Relationship</th>
                         <th colspan="4" class="tgt-head">FHIR Target</th>
                     </tr>
