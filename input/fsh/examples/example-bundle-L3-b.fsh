@@ -21,11 +21,11 @@ Usage: #example
 * entry[consent][+].fullUrl = "urn:uuid:e3a4b5c6-d7e8-49fa-ac12-b2c3d4e5f6a7"
 * entry[consent][=].resource = AdvanceDirective-Novak-L3
 
-* entry[medication][+].fullUrl = "urn:uuid:cde4e5f6-a7b8-4934-b6bc-f06i27"
+* entry[medication][+].fullUrl = "urn:uuid:4dec7ef4-e0a3-4d7c-9270-b430f339ec0e"
 * entry[medication][=].resource = Medication-Lisinopril
-* entry[medication][+].fullUrl = "urn:uuid:bcd3d4e5-f6a7-4823-b5ab-ebf05h16"
+* entry[medication][+].fullUrl = "urn:uuid:ac6dc5de-cda3-43dc-8046-3912e1a8f042"
 * entry[medication][=].resource = Medication-Atorvastatin
-* entry[medication][+].fullUrl = "urn:uuid:abc2c3d4-e5f6-4712-b49a-daebf04g05"
+* entry[medication][+].fullUrl = "urn:uuid:0fe6504c-cd44-4d46-9468-5e8c2f2ff469"
 * entry[medication][=].resource = Medication-Metformin
 
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:f4b5c6d7-e8f9-40ab-ad23-c3d4e5f6a7b8"
@@ -34,6 +34,13 @@ Usage: #example
 * entry[allergyIntolerance][=].resource = AllergyIntolerance-Penicillin
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:b6d7e8f9-a0b1-42cd-af45-e5f6a7b8c9da"
 * entry[allergyIntolerance][=].resource = AllergyIntolerance-Shellfish
+
+* entry[condition][+].fullUrl = "urn:uuid:d8f9a0b1-c2d3-44ef-b167-a7b8c9daeb2"
+* entry[condition][=].resource = Condition-diabetes
+* entry[condition][+].fullUrl = "urn:uuid:e9a0b1c2-d3e4-45f0-b278-b8c9daebf3"
+* entry[condition][=].resource = Condition-hyperlipidemia
+* entry[condition][+].fullUrl = "urn:uuid:faa1b2c3-e4f5-4601-b389-c9daebf04"
+* entry[condition][=].resource = Condition-obesity
 
 * entry[flag][+].fullUrl = "urn:uuid:c7e8f9a0-b1c2-43de-a056-f6a7b8c9deb1"
 * entry[flag][=].resource = Alert-Diabetes
@@ -127,9 +134,9 @@ Usage: #example
 * section[sectionMedicationSummary].code.coding[0].display = "History of Medication use Narrative"
 * section[sectionMedicationSummary].text.status = #additional
 * section[sectionMedicationSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient užívá následující medikaci: Metformin 850 mg 3x denně, Atorvastatin 20 mg denně, Lisinopril 10 mg denně.</div>" 
-* section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:abc2c3d4-e5f6-4712-b49a-daebf04g05)
-* section[sectionMedicationSummary].entry[1] = Reference(urn:uuid:bcd3d4e5-f6a7-4823-b5ab-ebf05h16)
-* section[sectionMedicationSummary].entry[2] = Reference(urn:uuid:cde4e5f6-a7b8-4934-b6bc-f06i27)
+* section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:0fe6504c-cd44-4d46-9468-5e8c2f2ff469)
+* section[sectionMedicationSummary].entry[1] = Reference(urn:uuid:ac6dc5de-cda3-43dc-8046-3912e1a8f042)
+* section[sectionMedicationSummary].entry[2] = Reference(urn:uuid:4dec7ef4-e0a3-4d7c-9270-b430f339ec0e)
 
 //sectionPlanOfCare
 * section[sectionPlanOfCare].title = "Plán péče"
@@ -189,8 +196,8 @@ Description: "Advance Directive for patient Novák Jan - L3"
 * scope.coding[0].display = "Advanced Care Directive"
 
 * category.coding[0].system = $consent-category
-* category.coding[0].code = #jpp
-* category.coding[0].display = "Patient information rights"
+* category.coding[0].code = #research
+* category.coding[0].display = "Research Information Access"
 
 * patient = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
 * dateTime = "2026-01-15T10:00:00+01:00"
@@ -296,7 +303,7 @@ Instance: Medication-Metformin
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Metformin for patient Novák Jan - L3"
-* id = "abc2c3d4-e5f6-4712-b49a-daebf04g05"
+* id = "0fe6504c-cd44-4d46-9468-5e8c2f2ff469"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-001"
 * code.coding[0].system = $dlp_lec_pripravky
@@ -307,7 +314,7 @@ Instance: Medication-Atorvastatin
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Atorvastatin for patient Novák Jan - L3"
-* id = "bcd3d4e5-f6a7-4823-b5ab-ebf05h16"
+* id = "ac6dc5de-cda3-43dc-8046-3912e1a8f042"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-002"
 * code.coding[0].system = $dlp_lec_pripravky
@@ -318,7 +325,7 @@ Instance: Medication-Lisinopril
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Lisinopril for patient Novák Jan - L3"
-* id = "cde4e5f6-a7b8-4934-b6bc-f06i27"
+* id = "4dec7ef4-e0a3-4d7c-9270-b430f339ec0e"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
 * code.coding[0].system = $dlp_lec_pripravky
