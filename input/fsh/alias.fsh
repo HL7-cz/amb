@@ -16,7 +16,7 @@ Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/
 Alias: $flagPriority = http://hl7.org/fhir/flag-priority-code
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-
+Alias: $dlp_lec_pripravky = https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky
 
 // ValueSet
 Alias: $dlp_lecprip = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs

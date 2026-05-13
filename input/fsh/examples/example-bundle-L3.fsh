@@ -107,6 +107,8 @@ Usage: #example
 * entry[medication][=].resource = Medication-Metoprolol
 * entry[medication][+].fullUrl = "urn:uuid:ddb09fb9-9560-4735-ac04-95a4beb833b6"
 * entry[medication][=].resource = Medication-Salbutamol
+* entry[medication][+].fullUrl = "urn:uuid:4313f24b-bf88-4439-9430-297bcc86f59a"
+* entry[medication][=].resource = Medication-Paracetamol
 // Plán péče - textový popis s referencemi na další zdroje, proto žádný resource pro tuto sekci, ale strukturované reference na CarePlan resources pro jednotlivé položky plánu péče
 // Attachments - textový popis s referencemi na další zdroje, proto žádný resource pro tuto sekci, ale strukturované reference na DocumentReference resources pro jednotlivé přílohy
 * entry[documentReference][+].fullUrl = "urn:uuid:f884a976-86c5-4149-94dd-75f5fd48c029"
@@ -549,7 +551,7 @@ Description: "Medication resource for Warfarin for patient Mrakomorová Mračena
 * id = "2f37f3a7-8424-4344-b9e7-2b3c504d96b6"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-001"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0094113
 * code.coding[0].display = "WARFARIN ORION 3MG TBL NOB 100"
 
@@ -560,7 +562,7 @@ Description: "Medication resource for Metoprolol for patient Mrakomorová Mrače
 * id = "f615bb73-a121-4783-bcdc-e48a82db87d9"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-002"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0246762
 * code.coding[0].display = "METOPROLOL MEDREG 100MG TBL FLM 50"
 
@@ -571,7 +573,7 @@ Description: "Medication resource for Salbutamol for patient Mrakomorová Mrače
 * id = "ddb09fb9-9560-4735-ac04-95a4beb833b6"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0269356
 * code.coding[0].display = "SALBUTAMOL POLPHARMA 2MG TBL NOB 30"
 
@@ -820,7 +822,7 @@ Description: "Medication resource for Paracetamol for patient Mrakomorová Mrač
 * id = "4313f24b-bf88-4439-9430-297bcc86f59a"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-004"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0269356
 * code.coding[0].display = "PARALEN 500MG TBL NOB 20"
 

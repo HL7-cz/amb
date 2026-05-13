@@ -299,7 +299,7 @@ Description: "Medication resource for Metformin for patient Novák Jan - L3"
 * id = "abc2c3d4-e5f6-4712-b49a-daebf04g05"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-001"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0200150
 * code.coding[0].display = "METFORMIN MEDREG 850MG TBL NOB 100"
 
@@ -310,7 +310,7 @@ Description: "Medication resource for Atorvastatin for patient Novák Jan - L3"
 * id = "bcd3d4e5-f6a7-4823-b5ab-ebf05h16"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-002"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0313509
 * code.coding[0].display = "ATORVASTATIN KRKA 20MG TBL FLM 100"
 
@@ -321,6 +321,6 @@ Description: "Medication resource for Lisinopril for patient Novák Jan - L3"
 * id = "cde4e5f6-a7b8-4934-b6bc-f06i27"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
-* code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
+* code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0263393
 * code.coding[0].display = "LISINOPRIL SANDOZ 10MG TBL FLM 100"
