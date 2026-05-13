@@ -95,7 +95,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text 1..
 * section[sectionAdvanceDirectives].entry 0..*
-* section[sectionAdvanceDirectives].entry only Reference(CZ_ConsentAmb or DocumentReference)
+* section[sectionAdvanceDirectives].entry only Reference(CZ_ConsentHdr or DocumentReference)
 
 // -------------------------------
 // Allergies and Intolerances

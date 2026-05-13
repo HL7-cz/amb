@@ -43,26 +43,11 @@ Description: "Ambulatory encounter specialization of the Czech national Encounte
 // Doporučující/odesílající – v3 ParticipationType
 * participant[referrer].type = $v3-ParticipationType#REF "referrer" (exactly)
 
-// V Encounteru je reference
-* participant[referrer].individual 1..1
-* participant[referrer].individual only Reference(CZ_PractitionerRoleCore)
-
 // --- A.2.3.5 Důvod ambulantního kontaktu
 * reasonCode 0..*
 * reasonCode.text 0..1
 // pokud chcete omezit coding systémy (ICD-10 / Orpha), dělejte to přes VS nebo invarianty;
 // ve FHIRu se to typicky řeší VS na reasonCode, ne pevnými system=... (kvůli mixu text+kód).
-
-// --- A.2.3.6 Poskytovatel ambulantní služby s od–do
-* location 0..*
-* location.location 1..1
-* location.location only Reference(CZ_LocationCore)
-* location.period 1..1
-* location.period.start 1..1
-* location.period.end 0..1
-
-// serviceProvider dle CZ_Encounter (1..1 Reference(Organization (CZ core))).
-
 
 Extension: CZ_ExtEncounterNote
 Id: cz-ext-encounter-note

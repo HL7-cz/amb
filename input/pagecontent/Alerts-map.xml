@@ -88,7 +88,7 @@
 
                 <li>
                     <strong>Main target profile:</strong>
-                    <a href="StructureDefinition-cz-consent-amb-cz.html">CZ_ConsentAmb</a>
+                    <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-consent-hdr.html">CZ_ConsentHdr</a>
                 </li>
 
             </ul>

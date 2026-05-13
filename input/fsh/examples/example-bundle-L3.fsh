@@ -425,7 +425,7 @@ Description: "Practitioner - L3"
 
 /// Advance Directive ///
 Instance: AdvanceDirective-Mracena-L3
-InstanceOf: CZ_ConsentAmb
+InstanceOf: CZ_ConsentHdr
 Usage: #inline
 Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 * id = "40f2cb6c-de78-4c52-85ab-a351ba495a02"

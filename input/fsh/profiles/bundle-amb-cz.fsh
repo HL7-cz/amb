@@ -92,7 +92,7 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[documentReference].resource only DocumentReference
 * entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?
 * entry[goal].resource only Goal
-* entry[consent].resource only CZ_ConsentAmb
+* entry[consent].resource only CZ_ConsentHdr
 * entry[provenance].resource only CZ_Provenance
 * entry[coverage].resource only CZ_Coverage
 * entry[alcoholUse].resource only CZ_ObservationSdohHdr
