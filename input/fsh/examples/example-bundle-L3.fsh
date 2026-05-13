@@ -33,37 +33,37 @@ Usage: #example
 // Sekce Stav při přijetí/příchodu
 // Sekce Anamnéza - textový popis s referencemi na další zdroje, proto žádný resource pro tuto sekci
 // Patient History - subsekce Past Illness History - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Condition resources pro jednotlivé diagnózy
-* entry[condition][+].fullUrl = "urn:uuid:pastillnes0"
+* entry[condition][+].fullUrl = "urn:uuid:388ab281-4052-41e9-ac7c-ed4c5a709f20"
 * entry[condition][=].resource = Condition-Hypertension-past
-* entry[condition][+].fullUrl = "urn:uuid:pastillnes1"
+* entry[condition][+].fullUrl = "urn:uuid:1014aabc-2f8d-4970-8be1-a68d20d7d0e9"
 * entry[condition][=].resource = Condition-AtrialFibrillation-past
-* entry[condition][+].fullUrl = "urn:uuid:pastillnes2"
+* entry[condition][+].fullUrl = "urn:uuid:deb5e840-f521-46c4-9711-e2c937ae972a"
 * entry[condition][=].resource = Condition-Astma
 // Patient History - subsekce History Medical Devices - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Device resources pro jednotlivé zdravotnické prostředky 
-* entry[device][+].fullUrl = "urn:uuid:medicaldevice1"
+* entry[device][+].fullUrl = "urn:uuid:d9e665b2-2a09-4d69-af36-68c4378f41c5"
 * entry[device][=].resource = Device-CardiacPacemaker
 // Patient History - subsekce Procedures History - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Procedure resources pro jednotlivé výkony
-* entry[procedure][+].fullUrl = "urn:uuid:procedureHx1"
+* entry[procedure][+].fullUrl = "urn:uuid:2510420d-1f7c-40b9-a76b-8afb31a52334"
 * entry[procedure][=].resource = Procedure-CardiacPacemakerImplantation
 // Patient History - subsekce Immunization History - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Immunization resources pro jednotlivá očkování
-* entry[immunization][+].fullUrl = "urn:uuid:immunization1"
+* entry[immunization][+].fullUrl = "urn:uuid:d3667639-8502-47ee-bb4d-dc6ecc161442"
 * entry[immunization][=].resource = Immunization-Influenza
-* entry[immunization][+].fullUrl = "urn:uuid:immunization2"
+* entry[immunization][+].fullUrl = "urn:uuid:15d73255-d7a0-468d-a4df-9420e43e68c2"
 * entry[immunization][=].resource = Immunization-Pneumococcal
-* entry[immunization][+].fullUrl = "urn:uuid:immunization3"
+* entry[immunization][+].fullUrl = "urn:uuid:67c96ae3-b279-43e8-afb2-297bd5747566"
 * entry[immunization][=].resource = Immunization-COVID19
 // Patient History - subsekce Infectious Contacts - textový popis bez strukturovaných dat, proto žádný resource pro tuto subsekci
 * entry[observation][+].fullUrl = "urn:uuid:f2015c80-9091-4b6f-8d66-97f49d6434b2"
 * entry[observation][=].resource = Observation-InfectiousContact-Measles
 // Patient History - subsekce Travel History - textový popis bez strukturovaných dat, proto žádný resource pro tuto subsekci
 // Patient History - subsekce Family History - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na FamilyMemberHistory resources pro jednotlivé záznamy v rodinné anamnéze
-* entry[familyMemberHistory][+].fullUrl = "urn:uuid:familyhistory1"
+* entry[familyMemberHistory][+].fullUrl = "urn:uuid:9f7292db-b310-4594-ae46-1881131621d1"
 * entry[familyMemberHistory][=].resource = FamilyMemberHistory-HypertensionMother
-* entry[familyMemberHistory][+].fullUrl = "urn:uuid:familyhistory2"
+* entry[familyMemberHistory][+].fullUrl = "urn:uuid:45f5334f-887a-4243-b51c-33138a144fb5"
 * entry[familyMemberHistory][=].resource = FamilyMemberHistory-DiabetesFather
 // Patient History - subsekce Social History - textový popis bez strukturovaných dat, proto žádný resource pro tuto subsekci
 // Patient History - subsekce AlcoholUse - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturovaná reference na AlcoholUse resource pro detailní informace o užívání alkoholu
-* entry[alcoholUse][+].fullUrl = "urn:uuid:alcoholuse1"
+* entry[alcoholUse][+].fullUrl = "urn:uuid:c9ad92cd-0bb5-4332-9a9c-033ea6a71ec2"
 * entry[alcoholUse][=].resource = AlcoholUse-History
 // Patient History - subsekce TobaccoUse - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturovaná reference na TobaccoUse resource pro detailní informace o užívání tabáku
 // Vzhledem k tomu, že pacientka nekouří a nikdy nekouřila, není pro tuto subsekci vytvořen žádný TobaccoUse resource, ale pro úplnost je zde reference s prázdným TobaccoUse resource
@@ -73,39 +73,39 @@ Usage: #example
 // Vzhledem k tomu, že pacientka neužívá žádné návykové látky a nikdy neužívala, není pro tuto subsekci vytvořen žádný SubstanceUse resource, ale pro úplnost je zde reference s prázdným SubstanceUse resource
 // Sekce Souhrn vyšetření - textový popis s referencemi na další zdroje, proto žádný resource pro tuto sekci, ale strukturované reference na Condition resources pro jednotlivé problémy v problem listu
 // Souhrn vyšetření - subsekce Problem list - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Condition resources pro jednotlivé problémy v problem listu
-* entry[condition][+].fullUrl = "urn:uuid:problem1"
+* entry[condition][+].fullUrl = "urn:uuid:63c03dc8-9a79-4406-a6ee-1df6db699772"
 * entry[condition][=].resource = Condition-AtrialFibrillation
-* entry[condition][+].fullUrl = "urn:uuid:problem2"
+* entry[condition][+].fullUrl = "urn:uuid:079625d5-4c7e-4e86-ac48-95917e0d5b9a"
 * entry[condition][=].resource = Condition-Hypertension
-* entry[condition][+].fullUrl = "urn:uuid:problem3"
+* entry[condition][+].fullUrl = "urn:uuid:33a9dda4-c92d-4938-ab3d-24ad2150c246"
 * entry[condition][=].resource = Condition-AsthmaBronchiale
 // Souhrn vyšetření - subsekce Procedures and Treatments - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Procedure resources pro jednotlivé výkony provedené během vyšetření
-* entry[procedure][+].fullUrl = "urn:uuid:procedure1"
+* entry[procedure][+].fullUrl = "urn:uuid:4c407f39-3d66-4415-8309-7b3fdf856921"
 * entry[procedure][=].resource = Procedure-Spirometry
-* entry[procedure][+].fullUrl = "urn:uuid:procedure2"
+* entry[procedure][+].fullUrl = "urn:uuid:59197805-1e80-4125-80bf-2953506de8ca"
 * entry[procedure][=].resource = Procedure-Echocardiography
 // Souhrn vyšetření - subsekce Implanted Medical Devices - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Device resources pro jednotlivé implantované zdravotnické prostředky
-* entry[deviceUseStatement][+].fullUrl = "urn:uuid:deviceUseStatement1"
+* entry[deviceUseStatement][+].fullUrl = "urn:uuid:d7b48080-be68-4f56-9382-7a470f1fa390"
 * entry[deviceUseStatement][=].resource = DeviceUseStatement-CardiacPacemaker
 // Souhrn vyšetření - subsekce Medication During Encounter - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na MedicationAdministration resources pro jednotlivé léky podávané během vyšetření
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:medicationadministration1"
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:a9404a92-4936-48d0-bf35-1b3a30ee0d3b"
 * entry[medicationAdministration][=].resource = MedicationAdministration-Metoprolol
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:medicationadministration2"
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:f01b5104-2030-4e82-85a9-96308cd78d10"
 * entry[medicationAdministration][=].resource = MedicationAdministration-Paracetamol
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:medicationadministration3"
+* entry[medicationAdministration][+].fullUrl = "urn:uuid:ea851399-588c-41ac-8317-ac60b524950e"
 * entry[medicationAdministration][=].resource = MedicationAdministration-Salbutamol
 // Souhrn vyšetření - subsekce Relevant Diagnostic Tests/Laboratory Data - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Observation, DiagnosticReport a ImagingStudy resources pro jednotlivé relevantní výsledky vyšetření
-* entry[observation][+].fullUrl = "urn:uuid:observation1"
+* entry[observation][+].fullUrl = "urn:uuid:b5e21d0a-3249-447f-9a8f-e249c9ffbd62"
 * entry[observation][=].resource = Observation-NTproBNP
-* entry[observation][+].fullUrl = "urn:uuid:observation2"
+* entry[observation][+].fullUrl = "urn:uuid:fb92c668-6b5f-4201-9cf5-7aec8428660b"
 * entry[observation][=].resource = Observation-ArterialBloodGas
 // Souhrn vyšetření - subsekce Klinické shrnutí - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na Condition, Procedure a CarePlan resources pro jednotlivé položky klinického shrnutí
 // Souhrn medikace - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturované reference na MedicationStatement resources pro jednotlivé léky v medikačním shrnutí
-* entry[medication][+].fullUrl = "urn:uuid:medication1"
+* entry[medication][+].fullUrl = "urn:uuid:2f37f3a7-8424-4344-b9e7-2b3c504d96b6"
 * entry[medication][=].resource = Medication-Warfarin
-* entry[medication][+].fullUrl = "urn:uuid:medication2"
+* entry[medication][+].fullUrl = "urn:uuid:f615bb73-a121-4783-bcdc-e48a82db87d9"
 * entry[medication][=].resource = Medication-Metoprolol
-* entry[medication][+].fullUrl = "urn:uuid:medication3"
+* entry[medication][+].fullUrl = "urn:uuid:ddb09fb9-9560-4735-ac04-95a4beb833b6"
 * entry[medication][=].resource = Medication-Salbutamol
 // Plán péče - textový popis s referencemi na další zdroje, proto žádný resource pro tuto sekci, ale strukturované reference na CarePlan resources pro jednotlivé položky plánu péče
 // Attachments - textový popis s referencemi na další zdroje, proto žádný resource pro tuto sekci, ale strukturované reference na DocumentReference resources pro jednotlivé přílohy
@@ -194,9 +194,9 @@ Usage: #example
   </ul>
 </div>
 """
-* section[sectionPatientHistory].section[PastIllnessHx].entry[0] = Reference(urn:uuid:pastillnes0) 
-* section[sectionPatientHistory].section[PastIllnessHx].entry[1] = Reference(urn:uuid:pastillnes1) 
-* section[sectionPatientHistory].section[PastIllnessHx].entry[2] = Reference(urn:uuid:pastillnes2) 
+* section[sectionPatientHistory].section[PastIllnessHx].entry[0] = Reference(urn:uuid:388ab281-4052-41e9-ac7c-ed4c5a709f20) 
+* section[sectionPatientHistory].section[PastIllnessHx].entry[1] = Reference(urn:uuid:1014aabc-2f8d-4970-8be1-a68d20d7d0e9) 
+* section[sectionPatientHistory].section[PastIllnessHx].entry[2] = Reference(urn:uuid:deb5e840-f521-46c4-9711-e2c937ae972a) 
 
 // Patient History - subsekce History Medical Devices
 * section[sectionPatientHistory].section[HistoryMedicalDevices].title = "Historie zdravotnických prostředků"
@@ -206,7 +206,7 @@ Usage: #example
 * section[sectionPatientHistory].section[HistoryMedicalDevices].text.status = #additional
 * section[sectionPatientHistory].section[HistoryMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má v anamnéze implantaci kardiostimulátoru pro fibrilaci síní.</div>"
 // entry Cardiac pacemaker
-* section[sectionPatientHistory].section[HistoryMedicalDevices].entry[0] = Reference(urn:uuid:medicaldevice1)
+* section[sectionPatientHistory].section[HistoryMedicalDevices].entry[0] = Reference(urn:uuid:d9e665b2-2a09-4d69-af36-68c4378f41c5)
 
 // Patient History - subsekce Procedures History
 * section[sectionPatientHistory].section[ProceduresHx].title = "Historie výkonů"
@@ -215,7 +215,7 @@ Usage: #example
 * section[sectionPatientHistory].section[ProceduresHx].code.coding[0].display = "History of Procedures Document"
 * section[sectionPatientHistory].section[ProceduresHx].text.status = #additional
 * section[sectionPatientHistory].section[ProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient prodělal v minulosti několik kardiologických výkonů, včetně implantace kardiostimulátoru a katetrizačního vyšetření koronárních tepen.</div>"
-* section[sectionPatientHistory].section[ProceduresHx].entry[0] = Reference(urn:uuid:procedureHx1) // Reference to Procedure resource for cardiac pacemaker implantation
+* section[sectionPatientHistory].section[ProceduresHx].entry[0] = Reference(urn:uuid:2510420d-1f7c-40b9-a76b-8afb31a52334) // Reference to Procedure resource for cardiac pacemaker implantation
 
 // Patient History - subsekce Immunization History
 * section[sectionPatientHistory].section[ImmunizationHx].title = "Historie očkování"
@@ -224,9 +224,9 @@ Usage: #example
 * section[sectionPatientHistory].section[ImmunizationHx].code.coding[0].display = "History of Immunization note"
 * section[sectionPatientHistory].section[ImmunizationHx].text.status = #additional
 * section[sectionPatientHistory].section[ImmunizationHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient je očkován proti chřipce, pneumokokům a COVID-19.</div>"
-* section[sectionPatientHistory].section[ImmunizationHx].entry[0] = Reference(urn:uuid:immunization1)
-* section[sectionPatientHistory].section[ImmunizationHx].entry[1] = Reference(urn:uuid:immunization2)
-* section[sectionPatientHistory].section[ImmunizationHx].entry[2] = Reference(urn:uuid:immunization3)
+* section[sectionPatientHistory].section[ImmunizationHx].entry[0] = Reference(urn:uuid:d3667639-8502-47ee-bb4d-dc6ecc161442)
+* section[sectionPatientHistory].section[ImmunizationHx].entry[1] = Reference(urn:uuid:15d73255-d7a0-468d-a4df-9420e43e68c2)
+* section[sectionPatientHistory].section[ImmunizationHx].entry[2] = Reference(urn:uuid:67c96ae3-b279-43e8-afb2-297bd5747566)
 
 // Patient History - subsekce Infectious Contacts
 * section[sectionPatientHistory].section[InfectiousContacts].title = "Kontakty s infekčními nemocnými"
@@ -251,8 +251,8 @@ Usage: #example
 * section[sectionPatientHistory].section[FamilyHistory].code.coding[0].display = "History of family member diseases note"
 * section[sectionPatientHistory].section[FamilyHistory].text.status = #additional
 * section[sectionPatientHistory].section[FamilyHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">V rodinné anamnéze je uvedena hypertenze u matky a diabetes mellitus 2. typu u otce.</div>"
-* section[sectionPatientHistory].section[FamilyHistory].entry[0] = Reference(urn:uuid:familyhistory1) // Reference to FamilyMemberHistory resource for family history of hypertension 
-* section[sectionPatientHistory].section[FamilyHistory].entry[1] = Reference(urn:uuid:familyhistory2) // Reference to FamilyMemberHistory resource for family history of diabetes mellitus 2. typu
+* section[sectionPatientHistory].section[FamilyHistory].entry[0] = Reference(urn:uuid:9f7292db-b310-4594-ae46-1881131621d1) // Reference to FamilyMemberHistory resource for family history of hypertension 
+* section[sectionPatientHistory].section[FamilyHistory].entry[1] = Reference(urn:uuid:45f5334f-887a-4243-b51c-33138a144fb5) // Reference to FamilyMemberHistory resource for family history of diabetes mellitus 2. typu
 
 // Patient History - subsekce Social History
 * section[sectionPatientHistory].section[SocialHistory].title = "Sociální anamnéza"
@@ -269,7 +269,7 @@ Usage: #example
 * section[sectionPatientHistory].section[AlcoholUse].code.coding[0].display = "History of Alcohol use"
 * section[sectionPatientHistory].section[AlcoholUse].text.status = #additional
 * section[sectionPatientHistory].section[AlcoholUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka příležitostně konzumuje alkoholické nápoje, přibližně 1-2 skleničky vína týdně.</div>"
-* section[sectionPatientHistory].section[AlcoholUse].entry[0] = Reference(urn:uuid:alcoholuse1) // Reference to AlcoholUse resource for alcohol use details
+* section[sectionPatientHistory].section[AlcoholUse].entry[0] = Reference(urn:uuid:c9ad92cd-0bb5-4332-9a9c-033ea6a71ec2) // Reference to AlcoholUse resource for alcohol use details
 
 // Patient History - subsekce TobaccoUse
 * section[sectionPatientHistory].section[TobaccoUse].title = "Anamnéza - Tabák"
@@ -309,9 +309,9 @@ Usage: #example
 * section[sectionEncounterSummary].section[ProblemList].code.coding[0].display = "Problem list - Reported"
 * section[sectionEncounterSummary].section[ProblemList].text.status = #additional
 * section[sectionEncounterSummary].section[ProblemList].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">1. Fibrilace síní<br/>2. Hypertenze<br/>3. Astma bronchiale</div>"
-* section[sectionEncounterSummary].section[ProblemList].entry[0] = Reference(urn:uuid:problem1) // Reference to Condition resource for atrial fibrillation
-* section[sectionEncounterSummary].section[ProblemList].entry[1] = Reference(urn:uuid:problem2) // Reference to Condition resource for hypertension
-* section[sectionEncounterSummary].section[ProblemList].entry[2] = Reference(urn:uuid:problem3) // Reference to Condition resource for asthma bronchiale
+* section[sectionEncounterSummary].section[ProblemList].entry[0] = Reference(urn:uuid:63c03dc8-9a79-4406-a6ee-1df6db699772) // Reference to Condition resource for atrial fibrillation
+* section[sectionEncounterSummary].section[ProblemList].entry[1] = Reference(urn:uuid:079625d5-4c7e-4e86-ac48-95917e0d5b9a) // Reference to Condition resource for hypertension
+* section[sectionEncounterSummary].section[ProblemList].entry[2] = Reference(urn:uuid:33a9dda4-c92d-4938-ab3d-24ad2150c246) // Reference to Condition resource for asthma bronchiale
 // subsekce Procedures and Treatments
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].title = "Výkony a léčba"
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].code.coding[0].system = $loinc
@@ -319,8 +319,8 @@ Usage: #example
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].code.coding[0].display = "Procedure Narrative"
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].text.status = #additional
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Během vyšetření byla provedena spirometrie, která potvrdila přítomnost obstrukční poruchy dýchacích cest. Dále byla provedena echokardiografie, která ukázala dilataci levé síně a normální funkci levé komory.</div>"
-* section[sectionEncounterSummary].section[ProceduresAndTreatments].entry[0] = Reference(urn:uuid:procedure1) // Reference to Procedure resource for spirometry
-* section[sectionEncounterSummary].section[ProceduresAndTreatments].entry[1] = Reference(urn:uuid:procedure2) // Reference to Procedure resource for echocardiography
+* section[sectionEncounterSummary].section[ProceduresAndTreatments].entry[0] = Reference(urn:uuid:4c407f39-3d66-4415-8309-7b3fdf856921) // Reference to Procedure resource for spirometry
+* section[sectionEncounterSummary].section[ProceduresAndTreatments].entry[1] = Reference(urn:uuid:59197805-1e80-4125-80bf-2953506de8ca) // Reference to Procedure resource for echocardiography
 // subsekce Medical Devices
 * section[sectionEncounterSummary].section[MedicalDevices].title = "Zdravotnické prostředky"
 * section[sectionEncounterSummary].section[MedicalDevices].code.coding[0].system = $loinc
@@ -328,8 +328,8 @@ Usage: #example
 * section[sectionEncounterSummary].section[MedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
 * section[sectionEncounterSummary].section[MedicalDevices].text.status = #additional
 * section[sectionEncounterSummary].section[MedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka má implantovaný kardiostimulátor pro fibrilaci síní, který byl implantován v roce 2015.</div>"
-* section[sectionEncounterSummary].section[MedicalDevices].entry[0] = Reference(urn:uuid:medicaldevice1) // Reference to Device resource for cardiac pacemaker
-* section[sectionEncounterSummary].section[MedicalDevices].entry[1] = Reference(urn:uuid:deviceUseStatement1) // Reference to DeviceUseStatement resource for current use of cardiac pacemaker
+* section[sectionEncounterSummary].section[MedicalDevices].entry[0] = Reference(urn:uuid:d9e665b2-2a09-4d69-af36-68c4378f41c5) // Reference to Device resource for cardiac pacemaker
+* section[sectionEncounterSummary].section[MedicalDevices].entry[1] = Reference(urn:uuid:d7b48080-be68-4f56-9382-7a470f1fa390) // Reference to DeviceUseStatement resource for current use of cardiac pacemaker
 // subsekce MedicationDuring
 * section[sectionEncounterSummary].section[MedicationDuring].title = "Medikace během vyšetření"
 * section[sectionEncounterSummary].section[MedicationDuring].code.coding[0].system = $loinc
@@ -347,9 +347,9 @@ Usage: #example
   <p>Domácí chronická medikace je uvedena v sekci „Souhrn medikace“.</p>
 </div>
 """
-* section[sectionEncounterSummary].section[MedicationDuring].entry[0] = Reference(urn:uuid:medicationadministration1) // Reference to MedicationAdministration resource for Metoprolol administration
-* section[sectionEncounterSummary].section[MedicationDuring].entry[1] = Reference(urn:uuid:medicationadministration2) // Reference to MedicationAdministration resource for Paracetamol administration
-* section[sectionEncounterSummary].section[MedicationDuring].entry[2] = Reference(urn:uuid:medicationadministration3) // Reference to MedicationAdministration resource for Salbutamol administration
+* section[sectionEncounterSummary].section[MedicationDuring].entry[0] = Reference(urn:uuid:a9404a92-4936-48d0-bf35-1b3a30ee0d3b) // Reference to MedicationAdministration resource for Metoprolol administration
+* section[sectionEncounterSummary].section[MedicationDuring].entry[1] = Reference(urn:uuid:f01b5104-2030-4e82-85a9-96308cd78d10) // Reference to MedicationAdministration resource for Paracetamol administration
+* section[sectionEncounterSummary].section[MedicationDuring].entry[2] = Reference(urn:uuid:ea851399-588c-41ac-8317-ac60b524950e) // Reference to MedicationAdministration resource for Salbutamol administration
 
 // subsekce Results
 * section[sectionEncounterSummary].section[Results].title = "Výsledky vyšetření"
@@ -358,8 +358,8 @@ Usage: #example
 * section[sectionEncounterSummary].section[Results].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
 * section[sectionEncounterSummary].section[Results].text.status = #additional
 * section[sectionEncounterSummary].section[Results].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratorní výsledky ukazují zvýšené hodnoty NT-proBNP, což je konzistentní s dekompenzací srdečního selhání. Dále jsou přítomny známky hypoxémie v arteriální krevní plynů.</div>"
-* section[sectionEncounterSummary].section[Results].entry[0] = Reference(urn:uuid:observation1) // Reference to Observation resource for NT-proBNP result
-* section[sectionEncounterSummary].section[Results].entry[1] = Reference(urn:uuid:observation2) // Reference to Observation resource for arterial blood gas results
+* section[sectionEncounterSummary].section[Results].entry[0] = Reference(urn:uuid:b5e21d0a-3249-447f-9a8f-e249c9ffbd62) // Reference to Observation resource for NT-proBNP result
+* section[sectionEncounterSummary].section[Results].entry[1] = Reference(urn:uuid:fb92c668-6b5f-4201-9cf5-7aec8428660b) // Reference to Observation resource for arterial blood gas results
 
 // subsekce ClinicalSummary
 * section[sectionEncounterSummary].section[ClinicalSummary].title = "Klinický souhrn"
@@ -376,9 +376,9 @@ Usage: #example
 * section[sectionMedicationSummary].code.coding[0].display = "History of Medication use Narrative"
 * section[sectionMedicationSummary].text.status = #additional
 * section[sectionMedicationSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient užívá následující medikaci: Warfarin 5 mg denně, Metoprolol 50 mg denně, Salbutamol inhalátor podle potřeby.</div>" 
-* section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:medication1) 
-* section[sectionMedicationSummary].entry[1] = Reference(urn:uuid:medication2)
-* section[sectionMedicationSummary].entry[2] = Reference(urn:uuid:medication3)
+* section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:2f37f3a7-8424-4344-b9e7-2b3c504d96b6) 
+* section[sectionMedicationSummary].entry[1] = Reference(urn:uuid:f615bb73-a121-4783-bcdc-e48a82db87d9)
+* section[sectionMedicationSummary].entry[2] = Reference(urn:uuid:ddb09fb9-9560-4735-ac04-95a4beb833b6)
 
 //sectionPlanOfCare
 * section[sectionPlanOfCare].title = "Plán péče"
@@ -516,7 +516,7 @@ Instance: Condition-Hypertension-past
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for past illness history - Hypertenze for patient Mrakomorová Mračena - L3"
-* id = "pastillnes0"
+* id = "388ab281-4052-41e9-ac7c-ed4c5a709f20"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #38341003 "Hypertension (disorder)"
@@ -525,7 +525,7 @@ Instance: Condition-AtrialFibrillation-past
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for past illness history - Fibrilace síní for patient Mrakomorová Mračena - L3"
-* id = "pastillnes1"
+* id = "1014aabc-2f8d-4970-8be1-a68d20d7d0e9"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
@@ -534,7 +534,7 @@ Instance: Condition-Astma
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for past illness history - Astma bronchiale for patient Mrakomorová Mračena - L3"
-* id = "pastillnes2"
+* id = "deb5e840-f521-46c4-9711-e2c937ae972a"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #195967001 "Asthma (disorder)"
@@ -544,7 +544,7 @@ Instance: Medication-Warfarin
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Warfarin for patient Mrakomorová Mračena - L3"
-* id = "medication1"
+* id = "2f37f3a7-8424-4344-b9e7-2b3c504d96b6"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-001"
 * code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
@@ -555,7 +555,7 @@ Instance: Medication-Metoprolol
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Metoprolol for patient Mrakomorová Mračena - L3"
-* id = "medication2"
+* id = "f615bb73-a121-4783-bcdc-e48a82db87d9"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-002"
 * code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
@@ -566,7 +566,7 @@ Instance: Medication-Salbutamol
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Salbutamol for patient Mrakomorová Mračena - L3"
-* id = "medication3"
+* id = "ddb09fb9-9560-4735-ac04-95a4beb833b6"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
 * code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
@@ -578,7 +578,7 @@ Instance: Device-CardiacPacemaker
 InstanceOf: CZ_MedicalDevice
 Usage: #inline
 Description: "MedicalDevice resource for cardiac pacemaker for patient Mrakomorová Mračena - L3"
-* id = "medicaldevice1"
+* id = "d9e665b2-2a09-4d69-af36-68c4378f41c5"
 * identifier[+].system = "http://example.org/medical-devices"
 * identifier[=].value = "device-001"
 * manufacturer = "Medtronic"
@@ -591,7 +591,7 @@ Instance: Procedure-CardiacPacemakerImplantation
 InstanceOf: CZ_ProcedureHdr
 Usage: #inline
 Description: "Procedure resource for cardiac pacemaker implantation for patient Mrakomorová Mračena - L3"
-* id = "procedureHx1"
+* id = "2510420d-1f7c-40b9-a76b-8afb31a52334"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #307280005 "Implantation of cardiac pacemaker (procedure)"
@@ -605,7 +605,7 @@ Instance: Immunization-Influenza
 InstanceOf: CZ_ImmunizationHdr
 Usage: #inline
 Description: "Immunization resource for influenza vaccination for patient Mrakomorová Mračena - L3"
-* id = "immunization1"
+* id = "d3667639-8502-47ee-bb4d-dc6ecc161442"
 * status = #completed
 * vaccineCode.coding[0].system = $sct
 * vaccineCode.coding[0].code = #1181000221105 "Vaccine product containing only influenza virus antigen (medicinal product)"
@@ -616,7 +616,7 @@ Instance: Immunization-Pneumococcal
 InstanceOf: CZ_ImmunizationHdr
 Usage: #inline
 Description: "Immunization resource for pneumococcal vaccination for patient Mrakomorová Mračena - L3"
-* id = "immunization2"
+* id = "15d73255-d7a0-468d-a4df-9420e43e68c2"
 * status = #completed
 * vaccineCode.coding[0].system = $sct
 * vaccineCode.coding[0].code = #981000221107 "Vaccine product containing only Streptococcus pneumoniae antigen (medicinal product)"
@@ -627,7 +627,7 @@ Instance: Immunization-COVID19
 InstanceOf: CZ_ImmunizationHdr
 Usage: #inline
 Description: "Immunization resource for COVID-19 vaccination for patient Mrakomorová Mračena - L3"
-* id = "immunization3"
+* id = "67c96ae3-b279-43e8-afb2-297bd5747566"
 * status = #completed
 * vaccineCode.coding[0].system = $sct
 * vaccineCode.coding[0].code = #1156257007 "Administration of vaccine product against severe acute respiratory syndrome coronavirus 2 (procedure)"
@@ -639,7 +639,7 @@ Instance: FamilyMemberHistory-HypertensionMother
 InstanceOf: CZ_FamilyMemberHistoryHdr
 Usage: #inline
 Description: "FamilyMemberHistory resource for family history of hypertension for patient Mrakomorová Mračena - L3"
-* id = "familyhistory1"
+* id = "9f7292db-b310-4594-ae46-1881131621d1"
 * status = #completed
 * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * relationship.coding[0].system = $v3-RoleCode
@@ -651,7 +651,7 @@ Instance: FamilyMemberHistory-DiabetesFather
 InstanceOf: CZ_FamilyMemberHistoryHdr
 Usage: #inline
 Description: "FamilyMemberHistory resource for family history of diabetes mellitus 2. typu for patient Mrakomorová Mračena - L3"
-* id = "familyhistory2"
+* id = "45f5334f-887a-4243-b51c-33138a144fb5"
 * status = #completed
 * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * relationship.coding[0].system = $v3-RoleCode
@@ -663,7 +663,7 @@ Instance: AlcoholUse-History
 InstanceOf: CZ_ObservationSdohHdr
 Usage: #inline
 Description: "Observation resource for alcohol use history for patient Mrakomorová Mračena - L3"
-* id = "alcoholuse1"
+* id = "c9ad92cd-0bb5-4332-9a9c-033ea6a71ec2"
 * status = #final
 * category[SocialHistory] = $observation-category#social-history
 
@@ -690,7 +690,7 @@ Instance: Condition-AtrialFibrillation
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for problem list - Atrial fibrillation for patient Mrakomorová Mračena - L3"
-* id = "problem1"
+* id = "63c03dc8-9a79-4406-a6ee-1df6db699772"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #49436004 "Atrial fibrillation (disorder)"
@@ -700,7 +700,7 @@ Instance: Condition-Hypertension
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for problem list - Hypertension for patient Mrakomorová Mračena - L3"
-* id = "problem2"
+* id = "079625d5-4c7e-4e86-ac48-95917e0d5b9a"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #38341003 "Hypertension (disorder)"
@@ -710,7 +710,7 @@ Instance: Condition-AsthmaBronchiale
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for problem list - Asthma bronchiale for patient Mrakomorová Mračena - L3"
-* id = "problem3"
+* id = "33a9dda4-c92d-4938-ab3d-24ad2150c246"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #195967001 "Asthma (disorder)"
@@ -720,7 +720,7 @@ Instance: Procedure-Spirometry
 InstanceOf: CZ_ProcedureHdr
 Usage: #inline
 Description: "Procedure resource for spirometry for patient Mrakomorová Mračena - L3"
-* id = "procedure1"
+* id = "4c407f39-3d66-4415-8309-7b3fdf856921"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #127783003 "Spirometry (procedure)"
@@ -734,7 +734,7 @@ Instance: Procedure-Echocardiography
 InstanceOf: CZ_ProcedureHdr
 Usage: #inline
 Description: "Procedure resource for echocardiography for patient Mrakomorová Mračena - L3"
-* id = "procedure2"
+* id = "59197805-1e80-4125-80bf-2953506de8ca"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #40701008 "Echocardiography (procedure)"
@@ -748,10 +748,10 @@ Instance: DeviceUseStatement-CardiacPacemaker
 InstanceOf: CZ_DeviceUseStatementHdr
 Usage: #inline
 Description: "DeviceUseStatement resource for current use of cardiac pacemaker for patient Mrakomorová Mračena - L3"
-* id = "deviceUseStatement1"
+* id = "d7b48080-be68-4f56-9382-7a470f1fa390"
 * status = #active
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
-* device = Reference(urn:uuid:medicaldevice1) // Reference to Device-CardiacPacemaker
+* device = Reference(urn:uuid:d9e665b2-2a09-4d69-af36-68c4378f41c5) // Reference to Device-CardiacPacemaker
 * timingDateTime = "2025-11-01T10:00:00+01:00"
 * bodySite = $sct#51185008 "Thorax"
 
@@ -760,9 +760,9 @@ Instance: MedicationAdministration-Metoprolol
 InstanceOf: MedicationAdministration
 Usage: #inline
 Description: "MedicationAdministration resource for Metoprolol administration during encounter for patient Mrakomorová Mračena - L3"
-* id = "medicationadministration1"
+* id = "a9404a92-4936-48d0-bf35-1b3a30ee0d3b"
 * status = #completed
-* medicationReference = Reference(urn:uuid:medication2) // Reference to Medication-Metoprolol
+* medicationReference = Reference(urn:uuid:f615bb73-a121-4783-bcdc-e48a82db87d9) // Reference to Medication-Metoprolol
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * effectiveDateTime = "2025-11-01T10:30:00+01:00"
 * dosage.text = "Metoprolol 5 mg i.v. (pomalu), 1 dávka"
@@ -778,9 +778,9 @@ Instance: MedicationAdministration-Paracetamol
 InstanceOf: MedicationAdministration
 Usage: #inline
 Description: "MedicationAdministration resource for Paracetamol administration during encounter for patient Mrakomorová Mračena - L3"
-* id = "medicationadministration2"
+* id = "f01b5104-2030-4e82-85a9-96308cd78d10"
 * status = #completed
-* medicationReference = Reference(urn:uuid:medication4) // Reference to Medication-Paracetamol
+* medicationReference = Reference(urn:uuid:4313f24b-bf88-4439-9430-297bcc86f59a) // Reference to Medication-Paracetamol
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * effectiveDateTime = "2025-11-01T11:00:00+01:00"
 * dosage.text = "Paracetamol 1 g p.o., 1 dávka"
@@ -796,9 +796,9 @@ Instance: MedicationAdministration-Salbutamol
 InstanceOf: MedicationAdministration
 Usage: #inline
 Description: "MedicationAdministration resource for Salbutamol administration during encounter for patient Mrakomorová Mračena - L3"
-* id = "medicationadministration3"
+* id = "ea851399-588c-41ac-8317-ac60b524950e"
 * status = #completed
-* medicationReference = Reference(urn:uuid:medication3) // Reference to Medication-Salbutamol
+* medicationReference = Reference(urn:uuid:ddb09fb9-9560-4735-ac04-95a4beb833b6) // Reference to Medication-Salbutamol
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * effectiveDateTime = "2025-11-01T11:30:00+01:00"
 * dosage.text = "Salbutamol inhal. (2 vdechy)"
@@ -815,7 +815,7 @@ Instance: Medication-Paracetamol
 InstanceOf: CZ_Medication
 Usage: #inline
 Description: "Medication resource for Paracetamol for patient Mrakomorová Mračena - L3"
-* id = "medication4"
+* id = "4313f24b-bf88-4439-9430-297bcc86f59a"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-004"
 * code.coding[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecive-pripravky"
@@ -827,7 +827,7 @@ Instance: Observation-NTproBNP
 InstanceOf: CZ_ObservationResultLaboratory
 Usage: #inline
 Description: "Observation resource for NT-proBNP result for patient Mrakomorová Mračena - L3"
-* id = "observation1"
+* id = "b5e21d0a-3249-447f-9a8f-e249c9ffbd62"
 * status = #final
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
@@ -845,7 +845,7 @@ Instance: Observation-ArterialBloodGas
 InstanceOf: CZ_ObservationResultLaboratory
 Usage: #inline
 Description: "Observation resource for arterial blood gas results for patient Mrakomorová Mračena - L3"
-* id = "observation2"
+* id = "fb92c668-6b5f-4201-9cf5-7aec8428660b"
 * status = #final
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
