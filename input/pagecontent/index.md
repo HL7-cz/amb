@@ -15,10 +15,10 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Scope and content](scope-and-content.html): This segment contains general information about Imaging report.
   - [Background](background.html): This segment contains background information about Imaging report.
 - Functional:
-  - [Use cases](use-cases.html): This segment contains information about use cases.
-  - [Workflow](workflow.html): This segment contains information about workflow.
+  <!-- - [Use cases](use-cases.html): This segment contains information about use cases.-->
+  <!-- - [Workflow](workflow.html): This segment contains information about workflow.-->
   - [Logical models](logical-models.html): This segment contains information about logical models.
-  - [Terminology considerations](terminology-considerations.html): This segment contains information about terminology.
+  <!-- - [Terminology considerations](terminology-considerations.html): This segment contains information about terminology.-->
 - Implementation:
   - [Mapping to profiles](model-map.html): This segment contains information about logical model maps to profiles.
   - [Examples](examples.html): This segment contains information about examples.

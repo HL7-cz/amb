@@ -20,7 +20,7 @@ class "Encounter" <<LogicalModel>> [[StructureDefinition-logEncounterCz.html]]
 
 ' --- Targets (ConceptMap.group.target)
 class "cz-composition-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
-class "cz-encounter-amb" <<Profile>> [[StructureDefinition-cz-encounter-amb.html]]
+class "cz-encounter-amb" <<Profile>> [[StructureDefinition-cz-encounter-ambulatory.html]]
 
 class "cz-practitionerrole-core" <<Profile>> [[https://hl7.cz/fhir/cz-core/StructureDefinition/cz-practitionerrole-core.html]]
 class "cz-organization-core" <<Profile>> [[https://hl7.cz/fhir/cz-core/StructureDefinition/cz-organization-core.html]]

@@ -90,7 +90,7 @@
 
                 <li>
                     <strong>Main target profile:</strong>
-                    <a href="StructureDefinition-cz-compositionAmbCz.html">CZ_CompositionAmb</a>
+                    <a href="StructureDefinition-cz-composition-amb.html">CZ_CompositionAmb</a>
                 </li>
 
             </ul>
@@ -326,7 +326,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: CZ Organization Core</strong> -                            <a href="StructureDefinition-cz-organization-core.html">cz-organization-core</a>
+                            <strong>Target: CZ Organization Core</strong> -                            <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-organization-core.html">cz-organization-core</a>
                         </td>
                     </tr>
                     <tr>
@@ -347,7 +347,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: CZ Coverage</strong> -                            <a href="StructureDefinition-cz-coverage.html">cz-coverage</a>
+                            <strong>Target: CZ Coverage</strong> -                            <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-coverage.html">cz-coverage</a>
                         </td>
                     </tr>
                     <tr>
@@ -360,7 +360,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: CZ Patient Core</strong> -                            <a href="StructureDefinition-cz-patient-core.html">cz-patient-core</a>
+                            <strong>Target: CZ Patient Core</strong> -                            <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-patient-core.html">cz-patient-core</a>
                         </td>
                     </tr>
                     <tr>
@@ -381,7 +381,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: CZ PractitionerRole Core</strong> -                            <a href="StructureDefinition-cz-practitionerrole-core.html">cz-practitionerrole-core</a>
+                            <strong>Target: CZ PractitionerRole Core</strong> -                            <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitionerrole-core.html">cz-practitionerrole-core</a>
                         </td>
                     </tr>
                     <tr>

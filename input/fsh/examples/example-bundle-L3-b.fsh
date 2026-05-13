@@ -44,7 +44,7 @@ Usage: #example
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
 * date = "2026-02-15T14:30:45+01:00"
 * author[+] = Reference(urn:uuid:a47ac10b-58cc-4372-a567-0e02b2c3d479) // Reference to Practitioner-Svoboda-L3
-* title = "Ambulantní zpráva - L3 composition"
+* title = "Ambulantní zpráva - L3 composition Novak"
 
 // Sekce Dříve vyslovaná přání
 * section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"

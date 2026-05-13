@@ -13,7 +13,7 @@ Outpatient Encounter Report (OER) has two main components:
 
 {% include MindmapAmbReportEn.svg %}
 
-#### Header
+#### Header of document
 
 The Header component of the outpatient report from the hospital provides documentation for:
 
@@ -28,7 +28,7 @@ The Header component of the outpatient report from the hospital provides documen
 
 {% include MindmapHeaderEn.svg %}
 
-#### Body
+#### Body of document
 
 The Outpatient Encounter Report Body component includes:
 

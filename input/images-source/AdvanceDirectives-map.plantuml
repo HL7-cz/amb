@@ -15,7 +15,7 @@ endlegend
 class "AdvanceDirectives" <<LogicalModel>> [[StructureDefinition-AdvanceDirectivesCz.html]]
 
 class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
-class "consent-cz-amb" <<Profile>> [[StructureDefinition-cz-consent-amb.html]]
+class "consent-cz-amb" <<Profile>> [[StructureDefinition-cz-consent-amb-cz.html]]
 
 
 ' --- Mappings per groups

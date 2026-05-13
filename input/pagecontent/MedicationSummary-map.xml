@@ -90,10 +90,10 @@
 
                 <li>
                     <strong>Main target profile:</strong>
-                    <a href="StructureDefinition-cz-Medication.html">CZ_Medication</a>
-                    <a href="StructureDefinition-MedicationDispense.html">CZ_MedicationDispense</a>
-                    <a href="StructureDefinition-cz-medicationRequest-hdr.html">CZ_MedicationRequestHdr</a>
-                    <a href="StructureDefinition-Dosage.html">Dosage</a>
+                    <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-Medication.html">CZ_Medication</a>
+                    <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-medicationDispense-hdr.html">CZ_MedicationDispenseHdr</a>
+                    <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-medicationRequest-hdr.html">CZ_MedicationRequestHdr</a>
+                    <a href="https://hl7.org/fhir/R4/dosage.html#Dosage">Dosage</a>
                 </li>
 
             </ul>
@@ -124,7 +124,7 @@
                 <tbody>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: CZ Medication</strong> -                            <a href="StructureDefinition-cz-Medication.html">cz-Medication</a>
+                            <strong>Target: CZ Medication</strong> -                            <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-Medication.html">cz-Medication</a>
                         </td>
                     </tr>
                     <tr>
@@ -169,7 +169,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: MedicationDispense</strong> -                            <a href="StructureDefinition-MedicationDispense.html">MedicationDispense</a>
+                            <strong>Target: MedicationDispense</strong> -                            <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-medicationDispense-hdr.html">MedicationDispense</a>
                         </td>
                     </tr>
                     <tr>
@@ -190,7 +190,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: CZ AMB MedicationRequest</strong> -                            <a href="StructureDefinition-cz-medicationRequest-amb.html">cz-medicationRequest-amb</a>
+                            <strong>Target: CZ AMB MedicationRequest</strong> -                            <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-medicationRequest-hdr.html">cz-medicationRequest-amb</a>
                         </td>
                     </tr>
                     <tr>
@@ -219,7 +219,7 @@
                     </tr>
                     <tr>
                         <td colspan="7" class="row-group">
-                            <strong>Target: Dosage</strong> -                            <a href="StructureDefinition-Dosage.html">Dosage</a>
+                            <strong>Target: Dosage</strong> -                            <a href="https://hl7.org/fhir/R4/dosage.html#Dosage">Dosage</a>
                         </td>
                     </tr>
                     <tr>

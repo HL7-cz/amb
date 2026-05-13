@@ -15,8 +15,8 @@ endlegend
 class "AdmissionEvaluation" <<LogicalModel>> [[StructureDefinition-AdmissionEvaluationCz.html]]
 
 class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
-class "observation" <<Profile>> [[StructureDefinition-observation.html]]
-class "vital-signs" <<Profile>> [[StructureDefinition-vital-signs.html]]
+class "observation" <<Profile>> [[https://hl7.org/fhir/R4/observation.html]]
+class "vital-signs" <<Profile>> [[https://hl7.org/fhir/R4/observation-vitalsigns.html]]
 
 ' --- Mappings per groups
 "AdmissionEvaluation" ..> "composition-cz-amb"

@@ -17,10 +17,10 @@ Tato příručka je rozdělena do několika stránek, které jsou uvedeny v horn
   - [Rozsah použití a obsah](scope-and-content-cs.html): Tento segment obsahuje úvodní obecné informace o obrazové zprávě.
   - [Background](background-cs.html): Tento segment obsahuje obecné informace o původu definice obrazové zprávy.
 - Functional:
-  - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití.
-  - [Workflow](workflow-cs.html): Tento segment obsahuje informace o pracovním postupu.
+<!--   - [Případy užití](use-cases-cs.html): Tento segment obsahuje informace o případech použití.-->
+<!--   - [Workflow](workflow-cs.html): Tento segment obsahuje informace o pracovním postupu.-->
   - [Logické modely](logical-models-cs.html): Tento segment obsahuje informace o logických modelech.
-  - [Terminologické aspekty](terminology-considerations-cs.html): Tento segment obsahuje informace o terminologii.
+<!--   - [Terminologické aspekty](terminology-considerations-cs.html): Tento segment obsahuje informace o terminologii.-->
 - Implementation:
   - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové zprávy.
   - [Příklady](examples-cs.html): Tento segment obsahuje informace o příkladech.

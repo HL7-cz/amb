@@ -85,12 +85,12 @@
             <ul>
                 <li>
                     <strong>Source logical model:</strong>
-                    <a href="StructureDefinition-StructureDefinition-PlanOfCareCz.html">PlanOfCareCz</a>
+                    <a href="StructureDefinition-PlanOfCareCz.html">PlanOfCareCz</a>
                 </li>
 
                 <li>
                     <strong>Main target profile:</strong>
-                    <a href="/StructureDefinition-cz-carePlan-hdr.html">CZ_CarePlan</a>
+                    <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-carePlan-hdr.html">CZ_CarePlan</a>
                 </li>
 
             </ul>

@@ -126,7 +126,7 @@ Usage: #example
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * date = "2026-01-29T09:50:08+01:00"
 * author[+] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Janský
-* title = "Ambulantní zpráva - L3 composition"
+* title = "Ambulantní zpráva - L3 composition Mracena"
 * extension[presentedForm].valueAttachment = cz-pdfamb-example-L3
 
 // Sekce Dříve vyslovaná přání
