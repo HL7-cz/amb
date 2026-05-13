@@ -21,6 +21,13 @@ Usage: #example
 * entry[consent][+].fullUrl = "urn:uuid:e3a4b5c6-d7e8-49fa-ac12-b2c3d4e5f6a7"
 * entry[consent][=].resource = AdvanceDirective-Novak-L3
 
+* entry[medication][+].fullUrl = "urn:uuid:cde4e5f6-a7b8-4934-b6bc-f06i27"
+* entry[medication][=].resource = Medication-Lisinopril
+* entry[medication][+].fullUrl = "urn:uuid:bcd3d4e5-f6a7-4823-b5ab-ebf05h16"
+* entry[medication][=].resource = Medication-Atorvastatin
+* entry[medication][+].fullUrl = "urn:uuid:abc2c3d4-e5f6-4712-b49a-daebf04g05"
+* entry[medication][=].resource = Medication-Metformin
+
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:f4b5c6d7-e8f9-40ab-ad23-c3d4e5f6a7b8"
 * entry[allergyIntolerance][=].resource = AllergyIntolerance-Aspirin
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:a5c6d7e8-f9a0-41bc-ae34-d4e5f6a7b8c9"
@@ -40,7 +47,6 @@ Usage: #example
 * status = #final
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
-* type.coding[0].display = "Zpráva o vyšetření či ošetření"
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
 * date = "2026-02-15T14:30:45+01:00"
 * author[+] = Reference(urn:uuid:a47ac10b-58cc-4372-a567-0e02b2c3d479) // Reference to Practitioner-Svoboda-L3

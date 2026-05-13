@@ -834,7 +834,7 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
-* code.coding[0].display = "NT-proBNP [Mass/volume] in Serum or Plasma"
+* code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
 * effectiveDateTime = "2025-11-01T12:00:00+01:00"
@@ -865,7 +865,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[1].code.coding[0].system = $loinc
 * component[1].code.coding[0].code = #2019-8
-* component[1].code.coding[0].display = "pCO2 of Arterial blood"
+* component[1].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[1].valueQuantity.value = 50
 * component[1].valueQuantity.unit = "mmHg"
 * component[1].valueQuantity.system = $ucum
@@ -873,7 +873,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[2].code.coding[0].system = $loinc
 * component[2].code.coding[0].code = #2019-8
-* component[2].code.coding[0].display = "pO2 of Arterial blood"
+* component[2].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[2].valueQuantity.value = 60
 * component[2].valueQuantity.unit = "mmHg"
 * component[2].valueQuantity.system = $ucum
@@ -881,7 +881,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[3].code.coding[0].system = $loinc
 * component[3].code.coding[0].code = #1960-4
-* component[3].code.coding[0].display = "HCO3- of Arterial blood"
+* component[3].code.coding[0].display = "Bicarbonate [Moles/volume] in Arterial blood"
 * component[3].valueQuantity.value = 22
 * component[3].valueQuantity.unit = "mmol/L"
 * component[3].valueQuantity.system = $ucum
