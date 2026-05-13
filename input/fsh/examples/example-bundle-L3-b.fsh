@@ -176,6 +176,8 @@ Description: "Advance Directive for patient Novák Jan - L3"
 * id = "e3a4b5c6-d7e8-49fa-ac12-b2c3d4e5f6a7"
 * status = #active
 
+* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
+
 * scope.coding[0].system = $consentscope
 * scope.coding[0].code = #adr
 * scope.coding[0].display = "Advanced Care Directive"

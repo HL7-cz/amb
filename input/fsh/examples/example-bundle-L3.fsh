@@ -431,6 +431,8 @@ Description: "Advance Directive for patient Mrakomorová Mračena - L3"
 * id = "40f2cb6c-de78-4c52-85ab-a351ba495a02"
 * status = #active
 
+* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
+
 * scope.coding[0].system = $consentscope
 * scope.coding[0].code = #adr
 * scope.coding[0].display = "Advanced Care Directive"
