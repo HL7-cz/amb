@@ -35,11 +35,11 @@ Usage: #example
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:b6d7e8f9-a0b1-42cd-af45-e5f6a7b8c9da"
 * entry[allergyIntolerance][=].resource = AllergyIntolerance-Shellfish
 
-* entry[condition][+].fullUrl = "urn:uuid:d8f9a0b1-c2d3-44ef-b167-a7b8c9daeb2"
+* entry[condition][+].fullUrl = "urn:uuid:95d23203-6ece-45f7-ae96-6c32ad919396"
 * entry[condition][=].resource = Condition-diabetes
-* entry[condition][+].fullUrl = "urn:uuid:e9a0b1c2-d3e4-45f0-b278-b8c9daebf3"
+* entry[condition][+].fullUrl = "urn:uuid:e17418bc-af94-4fe1-852e-2039534981cb"
 * entry[condition][=].resource = Condition-hyperlipidemia
-* entry[condition][+].fullUrl = "urn:uuid:faa1b2c3-e4f5-4601-b389-c9daebf04"
+* entry[condition][+].fullUrl = "urn:uuid:09acc1c7-1656-4a5c-b3e6-162922ba8df4"
 * entry[condition][=].resource = Condition-obesity
 
 * entry[flag][+].fullUrl = "urn:uuid:c7e8f9a0-b1c2-43de-a056-f6a7b8c9deb1"
@@ -55,6 +55,7 @@ Usage: #example
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
+* extension[presentedForm].valueAttachment = cz-pdfamb-example-L3-b
 * date = "2026-02-15T14:30:45+01:00"
 * author[+] = Reference(urn:uuid:a47ac10b-58cc-4372-a567-0e02b2c3d479) // Reference to Practitioner-Svoboda-L3
 * title = "Ambulantní zpráva - L3 composition Novak"
@@ -123,9 +124,9 @@ Usage: #example
   </ul>
 </div>
 """
-* section[sectionPatientHistory].section[PastIllnessHx].entry[0] = Reference(urn:uuid:d8f9a0b1-c2d3-44ef-b167-a7b8c9daeb2)
-* section[sectionPatientHistory].section[PastIllnessHx].entry[1] = Reference(urn:uuid:e9a0b1c2-d3e4-45f0-b278-b8c9daebf3)
-* section[sectionPatientHistory].section[PastIllnessHx].entry[2] = Reference(urn:uuid:faa1b2c3-e4f5-4601-b389-c9daebf04)
+* section[sectionPatientHistory].section[PastIllnessHx].entry[0] = Reference(urn:uuid:95d23203-6ece-45f7-ae96-6c32ad919396)
+* section[sectionPatientHistory].section[PastIllnessHx].entry[1] = Reference(urn:uuid:e17418bc-af94-4fe1-852e-2039534981cb)
+* section[sectionPatientHistory].section[PastIllnessHx].entry[2] = Reference(urn:uuid:09acc1c7-1656-4a5c-b3e6-162922ba8df4)
 
 //sectionMedicationSummary
 * section[sectionMedicationSummary].title = "Souhrn medikace"
@@ -275,7 +276,7 @@ Instance: Condition-diabetes
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for past illness history - Diabetes mellitus for patient Novák Jan - L3"
-* id = "d8f9a0b1-c2d3-44ef-b167-a7b8c9daeb2"
+* id = "95d23203-6ece-45f7-ae96-6c32ad919396"
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #44054006 "Diabetes mellitus type 2 (disorder)"
@@ -284,7 +285,7 @@ Instance: Condition-hyperlipidemia
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for past illness history - Hyperlipidemia for patient Novák Jan - L3"
-* id = "e9a0b1c2-d3e4-45f0-b278-b8c9daebf3"
+* id = "e17418bc-af94-4fe1-852e-2039534981cb"
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #55822004 "Hyperlipidemia (disorder)"
@@ -293,7 +294,7 @@ Instance: Condition-obesity
 InstanceOf: CZ_ConditionHdr
 Usage: #inline
 Description: "Condition resource for past illness history - Overweight for patient Novák Jan - L3"
-* id = "faa1b2c3-e4f5-4601-b389-c9daebf04"
+* id = "09acc1c7-1656-4a5c-b3e6-162922ba8df4"
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
 * code.coding[0].system = $sct
 * code.coding[0].code = #408512008 "Overweight (finding)"
@@ -331,3 +332,13 @@ Description: "Medication resource for Lisinopril for patient Novák Jan - L3"
 * code.coding[0].system = $dlp_lec_pripravky
 * code.coding[0].code = #0263393
 * code.coding[0].display = "LISINOPRIL SANDOZ 10MG TBL FLM 100"
+
+Instance: cz-pdfamb-example-L3-b
+InstanceOf: Attachment
+Usage: #inline
+Description: "Ambulatory Report Document - PDF"
+* contentType = #application/pdf
+* language = #cs
+// * data = "xxx"
+* title = "Ambulantní zpráva"
+* creation = "2026-02-15T14:30:45+01:00"

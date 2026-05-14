@@ -63,8 +63,8 @@ Usage: #example
 * entry[familyMemberHistory][=].resource = FamilyMemberHistory-DiabetesFather
 // Patient History - subsekce Social History - textový popis bez strukturovaných dat, proto žádný resource pro tuto subsekci
 // Patient History - subsekce AlcoholUse - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturovaná reference na AlcoholUse resource pro detailní informace o užívání alkoholu
-* entry[alcoholUse][+].fullUrl = "urn:uuid:c9ad92cd-0bb5-4332-9a9c-033ea6a71ec2"
-* entry[alcoholUse][=].resource = AlcoholUse-History
+* entry[observation][+].fullUrl = "urn:uuid:c9ad92cd-0bb5-4332-9a9c-033ea6a71ec2"
+* entry[observation][=].resource = AlcoholUse-History
 // Patient History - subsekce TobaccoUse - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturovaná reference na TobaccoUse resource pro detailní informace o užívání tabáku
 // Vzhledem k tomu, že pacientka nekouří a nikdy nekouřila, není pro tuto subsekci vytvořen žádný TobaccoUse resource, ale pro úplnost je zde reference s prázdným TobaccoUse resource
 // Patient History - subsekce DrugUse - textový popis s referencemi na další zdroje, proto žádný resource pro tuto subsekci, ale strukturovaná reference na DrugUse resource pro detailní informace o užívání drog
@@ -828,12 +828,11 @@ Description: "Medication resource for Paracetamol for patient Mrakomorová Mrač
 
 // Entry Encounter Summary - Results - NT-proBNP result
 Instance: Observation-NTproBNP
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
 Usage: #inline
 Description: "Observation resource for NT-proBNP result for patient Mrakomorová Mračena - L3"
 * id = "b5e21d0a-3249-447f-9a8f-e249c9ffbd62"
 * status = #final
-* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
 * code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
@@ -844,14 +843,14 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * valueQuantity.unit = "pg/mL"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #pg/mL
+
 // Entry Encounter Summary - Results - Arterial blood gas results
 Instance: Observation-ArterialBloodGas
-InstanceOf: CZ_ObservationResultLaboratory
+InstanceOf: Observation
 Usage: #inline
 Description: "Observation resource for arterial blood gas results for patient Mrakomorová Mračena - L3"
 * id = "fb92c668-6b5f-4201-9cf5-7aec8428660b"
 * status = #final
-* category[laboratory] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
 * code.coding[0].system = $loinc
 * code.coding[0].code = #24336-0
 * code.coding[0].display = "Gas panel - Arterial blood"

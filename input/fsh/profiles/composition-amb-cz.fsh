@@ -318,7 +318,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
   * text 1..1
   * entry 0..*
-  * entry only Reference(Observation or DiagnosticReport or ImagingStudy or CZ_ObservationResultLaboratory) // TODO doplnění CZ_ObservationResultImaging až bude fungovat dependenci na hl7.fhir.cz.img
+  * entry only Reference(Observation or DiagnosticReport or ImagingStudy) 
   
 
 // ------------------------------------------------------------
