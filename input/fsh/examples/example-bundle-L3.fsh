@@ -892,6 +892,8 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 Instance: AttachmentExampleDocumentReferencePdf
 InstanceOf: DocumentReference
 Usage: #example
+Title: "DocumentReference resource with PDF attachment for ambulatory report for patient Mrakomorová Mračena - L3"
+Description: "DocumentReference resource representing an ambulatory report with a PDF attachment for patient Mrakomorová Mračena - L3"
 * id = "f884a976-86c5-4149-94dd-75f5fd48c029"
 * status = #current
 * type.coding[0].system = $loinc
