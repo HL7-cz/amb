@@ -799,8 +799,8 @@ Description: "Medication resource for Paracetamol for patient Mrakomorová Mrač
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-004"
 * code.coding[0].system = $dlp_lec_pripravky
-* code.coding[0].code = #0269356
-* code.coding[0].display = "PARALEN 500MG TBL NOB 20"
+* code.coding[0].code = #0253304
+* code.coding[0].display = "PARACETAMOL ZENTIVA K.S. 500MG TBL NOB 12"
 
 // Entry Encounter Summary - Results - NT-proBNP result
 Instance: Observation-NTproBNP

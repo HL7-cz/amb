@@ -302,8 +302,8 @@ Description: "Medication resource for Metformin for patient Novák Jan - L3"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-001"
 * code.coding[0].system = $dlp_lec_pripravky
-* code.coding[0].code = #0200150
-* code.coding[0].display = "METFORMIN MEDREG 850MG TBL NOB 100"
+* code.coding[0].code = #0260652
+* code.coding[0].display = "METFORMIN MEDREG 850MG TBL FLM 120"
 
 Instance: Medication-Atorvastatin
 InstanceOf: CZ_MedicationCore
@@ -324,8 +324,8 @@ Description: "Medication resource for Lisinopril for patient Novák Jan - L3"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
 * code.coding[0].system = $dlp_lec_pripravky
-* code.coding[0].code = #0263393
-* code.coding[0].display = "LISINOPRIL SANDOZ 10MG TBL FLM 100"
+* code.coding[0].code = #0010685
+* code.coding[0].display = "LISINOPRIL-RATIOPHARM 10 MG"
 
 Instance: cz-pdfamb-example-L3-b
 InstanceOf: Attachment
