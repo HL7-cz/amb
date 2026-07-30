@@ -26,7 +26,6 @@ Usage: #example
 * identifier.value = "AR123458"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
-* type.coding[0].display = "Summarization of encounter note"
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak
 * date = "2026-02-15T14:30:45+01:00"
 * author[+] = Reference(urn:uuid:a47ac10b-58cc-4372-a567-0e02b2c3d479) // Reference to Practitioner-987654321

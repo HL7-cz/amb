@@ -66,7 +66,6 @@ Usage: #example
 * section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"
 * section[sectionAdvanceDirectives].code.coding[0].system = $loinc
 * section[sectionAdvanceDirectives].code.coding[0].code = #42348-3 // Advance directives
-* section[sectionAdvanceDirectives].code.coding[0].display = "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient si žádá, aby byl informován před jakoukoliv hospitalizací.</div>"
 * section[sectionAdvanceDirectives].text.status = #additional
 * section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:e3a4b5c6-d7e8-49fa-ac12-b2c3d4e5f6a7) // Reference to AdvanceDirective instance
@@ -74,7 +73,6 @@ Usage: #example
 * section[sectionAllergies].title = "Alergie a intolerance"
 * section[sectionAllergies].code.coding[0].system = $loinc
 * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
-* section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -94,7 +92,6 @@ Usage: #example
 * section[sectionAlerts].title = "Varování"
 * section[sectionAlerts].code.coding[0].system = $loinc
 * section[sectionAlerts].code.coding[0].code = #104605-1 // Alert
-* section[sectionAlerts].code.coding[0].display = "Alert"
 * section[sectionAlerts].text.status = #additional
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má diabetes mellitus typ 2 - vyžaduje monitorování hladiny glukózy.</div>"
 * section[sectionAlerts].entry[0] = Reference(urn:uuid:c7e8f9a0-b1c2-43de-a056-f6a7b8c9deb1) // Reference to Flag instance
@@ -103,7 +100,6 @@ Usage: #example
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí/příchodu"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Admission evaluation (assessment at admission)
-* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient přichází na kontrolu s mírnou únavou a lehkou bolestí v krku. Ostatní příznaky se nepředstavují. Fyzikální vyšetření je v normě, vitální funkce jsou stabilní.</div>"
 
@@ -111,13 +107,11 @@ Usage: #example
 * section[sectionPatientHistory].title = "Anamnéza"
 * section[sectionPatientHistory].code.coding[0].system = $loinc
 * section[sectionPatientHistory].code.coding[0].code = #35090-0
-* section[sectionPatientHistory].code.coding[0].display = "Patient history"
 * section[sectionPatientHistory].text.status = #generated
 * section[sectionPatientHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History</div>"
 * section[sectionPatientHistory].section[PastIllnessHx].title = "Historie zdravotních problémů"
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].code = #11348-0
-* section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].display = "History of Past illness note"
 * section[sectionPatientHistory].section[PastIllnessHx].text.status = #additional
 * section[sectionPatientHistory].section[PastIllnessHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   <ul>
@@ -135,7 +129,6 @@ Usage: #example
 * section[sectionMedicationSummary].title = "Souhrn medikace"
 * section[sectionMedicationSummary].code.coding[0].system = $loinc
 * section[sectionMedicationSummary].code.coding[0].code = #10160-0
-* section[sectionMedicationSummary].code.coding[0].display = "History of Medication use Narrative"
 * section[sectionMedicationSummary].text.status = #additional
 * section[sectionMedicationSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient užívá následující medikaci: Metformin 850 mg 3x denně, Atorvastatin 20 mg denně, Lisinopril 10 mg denně.</div>" 
 * section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:0fe6504c-cd44-4d46-9468-5e8c2f2ff469)
@@ -146,7 +139,6 @@ Usage: #example
 * section[sectionPlanOfCare].title = "Plán péče"
 * section[sectionPlanOfCare].code.coding[0].system = $loinc
 * section[sectionPlanOfCare].code.coding[0].code = #18776-5
-* section[sectionPlanOfCare].code.coding[0].display = "Plan of care note"
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientovi bude doporučeno pokračovat v aktuální medikaci, zvýšit fyzickou aktivitu a provést lab testy za 3 měsíce. Doporučena kontrola dietou řízená specialistou.</div>"
 
@@ -154,7 +146,6 @@ Usage: #example
 * section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = $loinc
 * section[sectionAttachments].code.coding[0].code = #77599-9
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
 * section[sectionAttachments].text.status = #additional
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Neobsahuje přílohované dokumenty.</div>"
 

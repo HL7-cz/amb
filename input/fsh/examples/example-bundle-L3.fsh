@@ -126,7 +126,6 @@ Usage: #example
 * identifier.value = "AR123460"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
-* type.coding[0].display = "Summarization of encounter note"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * date = "2026-01-29T09:50:08+01:00"
 * author[+] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Janský
@@ -137,7 +136,6 @@ Usage: #example
 * section[sectionAdvanceDirectives].title = "Dříve vyslovaná přání"
 * section[sectionAdvanceDirectives].code.coding[0].system = $loinc
 * section[sectionAdvanceDirectives].code.coding[0].code = #42348-3 // Advance directives
-* section[sectionAdvanceDirectives].code.coding[0].display = "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient si nepřeje být resuscitován.</div>"
 * section[sectionAdvanceDirectives].text.status = #additional
 * section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:40f2cb6c-de78-4c52-85ab-a351ba495a02) // Reference to AdvanceDirective instance
@@ -145,7 +143,6 @@ Usage: #example
 * section[sectionAllergies].title = "Alergie a intolerance"
 * section[sectionAllergies].code.coding[0].system = $loinc
 * section[sectionAllergies].code.coding[0].code = #48765-2 // Allergies and adverse reactions
-* section[sectionAllergies].code.coding[0].display = "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #additional
 * section[sectionAllergies].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -165,7 +162,6 @@ Usage: #example
 * section[sectionAlerts].title = "Varování"
 * section[sectionAlerts].code.coding[0].system = $loinc
 * section[sectionAlerts].code.coding[0].code = #104605-1 // Alert
-* section[sectionAlerts].code.coding[0].display = "Alert"
 * section[sectionAlerts].text.status = #additional
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient na dlouhodobé antikoagulační léčbě.</div>"
 * section[sectionAlerts].entry[0] = Reference(urn:uuid:90482ba4-9384-428a-a384-5b09f1293a0e) // Reference to Flag instance
@@ -174,7 +170,6 @@ Usage: #example
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí/příchodu"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
 * section[sectionAdmissionEvaluation].code.coding[0].code = #67851-6 // Admission evaluation (assessment at admission)
-* section[sectionAdmissionEvaluation].code.coding[0].display = "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #additional
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient přichází do ambulance s bolestí na hrudi, dušností a kašlem. Při vyšetření je zjištěna tachykardie, hypotenze a cyanóza.</div>"
 
@@ -182,14 +177,12 @@ Usage: #example
 * section[sectionPatientHistory].title = "Anamnéza"
 * section[sectionPatientHistory].code.coding[0].system = $loinc
 * section[sectionPatientHistory].code.coding[0].code = #35090-0
-* section[sectionPatientHistory].code.coding[0].display = "Patient history"
 * section[sectionPatientHistory].text.status = #generated
 * section[sectionPatientHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History</div>"
 // Patient History - subsekce Past Illness History
 * section[sectionPatientHistory].section[PastIllnessHx].title = "Historie zdravotních problémů"
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].code = #11348-0
-* section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].display = "History of Past illness note"
 * section[sectionPatientHistory].section[PastIllnessHx].text.status = #additional
 * section[sectionPatientHistory].section[PastIllnessHx].text.div = """<div xmlns="http://www.w3.org/1999/xhtml">
   <ul>
@@ -207,7 +200,6 @@ Usage: #example
 * section[sectionPatientHistory].section[HistoryMedicalDevices].title = "Historie zdravotnických prostředků"
 * section[sectionPatientHistory].section[HistoryMedicalDevices].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[HistoryMedicalDevices].code.coding[0].code = #46264-8
-* section[sectionPatientHistory].section[HistoryMedicalDevices].code.coding[0].display = "History of medical device use"
 * section[sectionPatientHistory].section[HistoryMedicalDevices].text.status = #additional
 * section[sectionPatientHistory].section[HistoryMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient má v anamnéze implantaci kardiostimulátoru pro fibrilaci síní.</div>"
 // entry Cardiac pacemaker
@@ -217,7 +209,6 @@ Usage: #example
 * section[sectionPatientHistory].section[ProceduresHx].title = "Historie výkonů"
 * section[sectionPatientHistory].section[ProceduresHx].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[ProceduresHx].code.coding[0].code = #47519-4
-* section[sectionPatientHistory].section[ProceduresHx].code.coding[0].display = "History of Procedures Document"
 * section[sectionPatientHistory].section[ProceduresHx].text.status = #additional
 * section[sectionPatientHistory].section[ProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient prodělal v minulosti několik kardiologických výkonů, včetně implantace kardiostimulátoru a katetrizačního vyšetření koronárních tepen.</div>"
 * section[sectionPatientHistory].section[ProceduresHx].entry[0] = Reference(urn:uuid:2510420d-1f7c-40b9-a76b-8afb31a52334) // Reference to Procedure resource for cardiac pacemaker implantation
@@ -226,7 +217,6 @@ Usage: #example
 * section[sectionPatientHistory].section[ImmunizationHx].title = "Historie očkování"
 * section[sectionPatientHistory].section[ImmunizationHx].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[ImmunizationHx].code.coding[0].code = #11369-6
-* section[sectionPatientHistory].section[ImmunizationHx].code.coding[0].display = "History of Immunization note"
 * section[sectionPatientHistory].section[ImmunizationHx].text.status = #additional
 * section[sectionPatientHistory].section[ImmunizationHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient je očkován proti chřipce, pneumokokům a COVID-19.</div>"
 * section[sectionPatientHistory].section[ImmunizationHx].entry[0] = Reference(urn:uuid:d3667639-8502-47ee-bb4d-dc6ecc161442)
@@ -245,7 +235,6 @@ Usage: #example
 * section[sectionPatientHistory].section[TravelHx].title = "Cestovní anamnéza"
 * section[sectionPatientHistory].section[TravelHx].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[TravelHx].code.coding[0].code = #10182-4
-* section[sectionPatientHistory].section[TravelHx].code.coding[0].display = "History of Travel note"
 * section[sectionPatientHistory].section[TravelHx].text.status = #additional
 * section[sectionPatientHistory].section[TravelHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient v posledních 6 měsících necestoval do zahraničí.</div>"
 
@@ -253,7 +242,6 @@ Usage: #example
 * section[sectionPatientHistory].section[FamilyHistory].title = "Rodinná anamnéza"
 * section[sectionPatientHistory].section[FamilyHistory].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[FamilyHistory].code.coding[0].code = #10157-6
-* section[sectionPatientHistory].section[FamilyHistory].code.coding[0].display = "History of family member diseases note"
 * section[sectionPatientHistory].section[FamilyHistory].text.status = #additional
 * section[sectionPatientHistory].section[FamilyHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">V rodinné anamnéze je uvedena hypertenze u matky a diabetes mellitus 2. typu u otce.</div>"
 * section[sectionPatientHistory].section[FamilyHistory].entry[0] = Reference(urn:uuid:9f7292db-b310-4594-ae46-1881131621d1) // Reference to FamilyMemberHistory resource for family history of hypertension 
@@ -263,7 +251,6 @@ Usage: #example
 * section[sectionPatientHistory].section[SocialHistory].title = "Sociální anamnéza"
 * section[sectionPatientHistory].section[SocialHistory].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[SocialHistory].code.coding[0].code = #29762-2
-* section[sectionPatientHistory].section[SocialHistory].code.coding[0].display = "Social history note"
 * section[sectionPatientHistory].section[SocialHistory].text.status = #additional
 * section[sectionPatientHistory].section[SocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient je vdaná, žije s manželem a dvěma dětmi. Pracuje jako učitelka.</div>"
 
@@ -271,7 +258,6 @@ Usage: #example
 * section[sectionPatientHistory].section[AlcoholUse].title = "Anamnéza - Alkohol"
 * section[sectionPatientHistory].section[AlcoholUse].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[AlcoholUse].code.coding[0].code = #11331-6 
-* section[sectionPatientHistory].section[AlcoholUse].code.coding[0].display = "History of Alcohol use"
 * section[sectionPatientHistory].section[AlcoholUse].text.status = #additional
 * section[sectionPatientHistory].section[AlcoholUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka příležitostně konzumuje alkoholické nápoje, přibližně 1-2 skleničky vína týdně.</div>"
 * section[sectionPatientHistory].section[AlcoholUse].entry[0] = Reference(urn:uuid:c9ad92cd-0bb5-4332-9a9c-033ea6a71ec2) // Reference to AlcoholUse resource for alcohol use details
@@ -280,7 +266,6 @@ Usage: #example
 * section[sectionPatientHistory].section[TobaccoUse].title = "Anamnéza - Tabák"
 * section[sectionPatientHistory].section[TobaccoUse].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[TobaccoUse].code.coding[0].code = #11367-0
-* section[sectionPatientHistory].section[TobaccoUse].code.coding[0].display = "History of Tobacco use"
 * section[sectionPatientHistory].section[TobaccoUse].text.status = #additional
 * section[sectionPatientHistory].section[TobaccoUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka nekouří a nikdy nekouřila.</div>"
 
@@ -288,7 +273,6 @@ Usage: #example
 * section[sectionPatientHistory].section[DrugUse].title = "Anamnéza - Drogy"
 * section[sectionPatientHistory].section[DrugUse].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[DrugUse].code.coding[0].code = #11343-1
-* section[sectionPatientHistory].section[DrugUse].code.coding[0].display = "History of Other nonmedical drug use"
 * section[sectionPatientHistory].section[DrugUse].text.status = #additional
 * section[sectionPatientHistory].section[DrugUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka neužívá žádné nelegální drogy a nikdy neužívala.</div>"
 
@@ -296,7 +280,6 @@ Usage: #example
 * section[sectionPatientHistory].section[SubstanceUse].title = "Anamnéza - Užívání návykových látek"
 * section[sectionPatientHistory].section[SubstanceUse].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[SubstanceUse].code.coding[0].code = #108229-6
-* section[sectionPatientHistory].section[SubstanceUse].code.coding[0].display = "Use of substance note"
 * section[sectionPatientHistory].section[SubstanceUse].text.status = #additional
 * section[sectionPatientHistory].section[SubstanceUse].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka neužívá žádné návykové látky a nikdy neužívala.</div>"
 
@@ -304,14 +287,12 @@ Usage: #example
 * section[sectionEncounterSummary].title = "Souhrn vyšetření"
 * section[sectionEncounterSummary].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].code.coding[0].code = #67781-5
-* section[sectionEncounterSummary].code.coding[0].display = "Summarization of encounter note"
 * section[sectionEncounterSummary].text.status = #additional
 * section[sectionEncounterSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Při vyšetření je pacientka orientovaná, spolupracující, bez známek akutního ohrožení. Fyziologické nálezy jsou zjištěny na srdci a plicích, bez edémů dolních končetin. EKG ukazuje fibrilaci síní s rychlou komorovou odpovědí.</div>"
 // subsekce Problem list
 * section[sectionEncounterSummary].section[ProblemList].title = "Aktuální problémy"
 * section[sectionEncounterSummary].section[ProblemList].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].section[ProblemList].code.coding[0].code = #11450-4
-* section[sectionEncounterSummary].section[ProblemList].code.coding[0].display = "Problem list - Reported"
 * section[sectionEncounterSummary].section[ProblemList].text.status = #additional
 * section[sectionEncounterSummary].section[ProblemList].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">1. Fibrilace síní<br/>2. Hypertenze<br/>3. Astma bronchiale</div>"
 * section[sectionEncounterSummary].section[ProblemList].entry[0] = Reference(urn:uuid:63c03dc8-9a79-4406-a6ee-1df6db699772) // Reference to Condition resource for atrial fibrillation
@@ -321,7 +302,6 @@ Usage: #example
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].title = "Výkony a léčba"
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].code.coding[0].code = #29554-3
-* section[sectionEncounterSummary].section[ProceduresAndTreatments].code.coding[0].display = "Procedure Narrative"
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].text.status = #additional
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Během vyšetření byla provedena spirometrie, která potvrdila přítomnost obstrukční poruchy dýchacích cest. Dále byla provedena echokardiografie, která ukázala dilataci levé síně a normální funkci levé komory.</div>"
 * section[sectionEncounterSummary].section[ProceduresAndTreatments].entry[0] = Reference(urn:uuid:4c407f39-3d66-4415-8309-7b3fdf856921) // Reference to Procedure resource for spirometry
@@ -330,7 +310,6 @@ Usage: #example
 * section[sectionEncounterSummary].section[MedicalDevices].title = "Zdravotnické prostředky"
 * section[sectionEncounterSummary].section[MedicalDevices].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].section[MedicalDevices].code.coding[0].code = #57080-4
-* section[sectionEncounterSummary].section[MedicalDevices].code.coding[0].display = "Implanted medical device Narrative"
 * section[sectionEncounterSummary].section[MedicalDevices].text.status = #additional
 * section[sectionEncounterSummary].section[MedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka má implantovaný kardiostimulátor pro fibrilaci síní, který byl implantován v roce 2015.</div>"
 * section[sectionEncounterSummary].section[MedicalDevices].entry[0] = Reference(urn:uuid:d9e665b2-2a09-4d69-af36-68c4378f41c5) // Reference to Device resource for cardiac pacemaker
@@ -339,7 +318,6 @@ Usage: #example
 * section[sectionEncounterSummary].section[MedicationDuring].title = "Medikace během vyšetření"
 * section[sectionEncounterSummary].section[MedicationDuring].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].section[MedicationDuring].code.coding[0].code = #29549-3
-* section[sectionEncounterSummary].section[MedicationDuring].code.coding[0].display = "Medication administered Narrative"
 * section[sectionEncounterSummary].section[MedicationDuring].text.status = #additional
 * section[sectionEncounterSummary].section[MedicationDuring].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -360,7 +338,6 @@ Usage: #example
 * section[sectionEncounterSummary].section[Results].title = "Výsledky vyšetření"
 * section[sectionEncounterSummary].section[Results].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].section[Results].code.coding[0].code = #30954-2
-* section[sectionEncounterSummary].section[Results].code.coding[0].display = "Relevant diagnostic tests/laboratory data note"
 * section[sectionEncounterSummary].section[Results].text.status = #additional
 * section[sectionEncounterSummary].section[Results].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Laboratorní výsledky ukazují zvýšené hodnoty NT-proBNP, což je konzistentní s dekompenzací srdečního selhání. Dále jsou přítomny známky hypoxémie v arteriální krevní plynů.</div>"
 * section[sectionEncounterSummary].section[Results].entry[0] = Reference(urn:uuid:b5e21d0a-3249-447f-9a8f-e249c9ffbd62) // Reference to Observation resource for NT-proBNP result
@@ -370,7 +347,6 @@ Usage: #example
 * section[sectionEncounterSummary].section[ClinicalSummary].title = "Klinický souhrn"
 * section[sectionEncounterSummary].section[ClinicalSummary].code.coding[0].system = $loinc
 * section[sectionEncounterSummary].section[ClinicalSummary].code.coding[0].code = #51848-0
-* section[sectionEncounterSummary].section[ClinicalSummary].code.coding[0].display = "Evaluation note"
 * section[sectionEncounterSummary].section[ClinicalSummary].text.status = #additional
 * section[sectionEncounterSummary].section[ClinicalSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacientka přichází s dekompenzací srdečního selhání, pravděpodobně vyvolanou fibrilací síní s rychlou komorovou odpovědí. Dále je přítomna obstrukční porucha dýchacích cest, pravděpodobně zhoršená astmatem bronchiale. Plán péče zahrnuje úpravu medikace, sledování a další diagnostické testy.</div>"
 
@@ -378,7 +354,6 @@ Usage: #example
 * section[sectionMedicationSummary].title = "Souhrn medikace"
 * section[sectionMedicationSummary].code.coding[0].system = $loinc
 * section[sectionMedicationSummary].code.coding[0].code = #10160-0
-* section[sectionMedicationSummary].code.coding[0].display = "History of Medication use Narrative"
 * section[sectionMedicationSummary].text.status = #additional
 * section[sectionMedicationSummary].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient užívá následující medikaci: Warfarin 5 mg denně, Metoprolol 50 mg denně, Salbutamol inhalátor podle potřeby.</div>" 
 * section[sectionMedicationSummary].entry[0] = Reference(urn:uuid:2f37f3a7-8424-4344-b9e7-2b3c504d96b6) 
@@ -389,7 +364,6 @@ Usage: #example
 * section[sectionPlanOfCare].title = "Plán péče"
 * section[sectionPlanOfCare].code.coding[0].system = $loinc
 * section[sectionPlanOfCare].code.coding[0].code = #18776-5
-* section[sectionPlanOfCare].code.coding[0].display = "Plan of care note"
 * section[sectionPlanOfCare].text.status = #additional
 * section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">1. Úprava medikace: zvýšení dávky Metoprololu, přidání diuretika pro kontrolu tekutin, úprava dávkování Warfarinu podle INR.<br/>2. Sledování: pravidelné kontroly INR, monitorování srdečního rytmu a funkce plic.<br/>3. Další diagnostické testy: plánované echokardiografie a spirometrie za 3 měsíce.</div>"
 
@@ -397,7 +371,6 @@ Usage: #example
 * section[sectionAttachments].title = "Přílohy"
 * section[sectionAttachments].code.coding[0].system = $loinc
 * section[sectionAttachments].code.coding[0].code = #77599-9
-* section[sectionAttachments].code.coding[0].display = "Additional documentation"
 * section[sectionAttachments].text.status = #additional
 * section[sectionAttachments].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Obsahuje přílohu z vyšetření xy.</div>"
 * section[sectionAttachments].entry[0] = Reference(urn:uuid:f884a976-86c5-4149-94dd-75f5fd48c029)
@@ -590,7 +563,7 @@ Description: "MedicalDevice resource for cardiac pacemaker for patient Mrakomoro
 * identifier[=].value = "device-001"
 * manufacturer = "Medtronic"
 * modelNumber = "W1DR01"
-* type = $sct#14106009 "Cardiac pacemaker"
+* type = $sct#14106009 "kardiostimulátor"
 * patient = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 
 // Entry pro procedure v subsekci Historie výkonů
@@ -838,7 +811,7 @@ Description: "Observation resource for NT-proBNP result for patient Mrakomorová
 * status = #final
 * code.coding[0].system = $loinc
 * code.coding[0].code = #33762-6
-* code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
+//* code.coding[0].display = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
 * effectiveDateTime = "2025-11-01T12:00:00+01:00"
@@ -856,7 +829,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 * status = #final
 * code.coding[0].system = $loinc
 * code.coding[0].code = #24336-0
-* code.coding[0].display = "Gas panel - Arterial blood"
+//* code.coding[0].display = "Gas panel - Arterial blood"
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
 * effectiveDateTime = "2025-11-01T12:30:00+01:00"
@@ -869,7 +842,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[1].code.coding[0].system = $loinc
 * component[1].code.coding[0].code = #2019-8
-* component[1].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
+//* component[1].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[1].valueQuantity.value = 50
 * component[1].valueQuantity.unit = "mmHg"
 * component[1].valueQuantity.system = $ucum
@@ -877,7 +850,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[2].code.coding[0].system = $loinc
 * component[2].code.coding[0].code = #2019-8
-* component[2].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
+//* component[2].code.coding[0].display = "Carbon dioxide [Partial pressure] in Arterial blood"
 * component[2].valueQuantity.value = 60
 * component[2].valueQuantity.unit = "mmHg"
 * component[2].valueQuantity.system = $ucum
@@ -885,7 +858,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 
 * component[3].code.coding[0].system = $loinc
 * component[3].code.coding[0].code = #1960-4
-* component[3].code.coding[0].display = "Bicarbonate [Moles/volume] in Arterial blood"
+//* component[3].code.coding[0].display = "Bicarbonate [Moles/volume] in Arterial blood"
 * component[3].valueQuantity.value = 22
 * component[3].valueQuantity.unit = "mmol/L"
 * component[3].valueQuantity.system = $ucum
@@ -901,8 +874,6 @@ Description: "DocumentReference resource representing an ambulatory report with 
 * status = #current
 * type.coding[0].system = $loinc
 * type.coding[0].code = #77599-9
-* type.coding[0].display = "Additional documentation"
-
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * date = "2025-03-11T08:00:00+02:00"
 
