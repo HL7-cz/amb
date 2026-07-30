@@ -122,6 +122,8 @@ Description: "Example Composition for Outpatient Report for patient Mrakomorová
 Usage: #example
 * id = "418da506-19c3-4e00-94d5-31a15f8c7860"
 * status = #final
+* identifier.system = "http://hospital.example.org/ambulatory-report"
+* identifier.value = "AR123460"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
 * type.coding[0].display = "Summarization of encounter note"
@@ -181,7 +183,8 @@ Usage: #example
 * section[sectionPatientHistory].code.coding[0].system = $loinc
 * section[sectionPatientHistory].code.coding[0].code = #35090-0
 * section[sectionPatientHistory].code.coding[0].display = "Patient history"
-
+* section[sectionPatientHistory].text.status = #generated
+* section[sectionPatientHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History</div>"
 // Patient History - subsekce Past Illness History
 * section[sectionPatientHistory].section[PastIllnessHx].title = "Historie zdravotních problémů"
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].system = $loinc

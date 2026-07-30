@@ -52,6 +52,8 @@ Description: "Example Composition for Outpatient Report for patient Novák Jan -
 Usage: #example
 * id = "d2f3a4b5-c6d7-48e9-ab01-a1b2c3d4e5f6"
 * status = #final
+* identifier.system = "http://hospital.example.org/ambulatory-report"
+* identifier.value = "AR123461"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
 * subject = Reference(urn:uuid:a62559b6-14bc-4bc6-ae50-a0eb75357e63) // Reference to Patient-Novak-L3
@@ -110,7 +112,8 @@ Usage: #example
 * section[sectionPatientHistory].code.coding[0].system = $loinc
 * section[sectionPatientHistory].code.coding[0].code = #35090-0
 * section[sectionPatientHistory].code.coding[0].display = "Patient history"
-
+* section[sectionPatientHistory].text.status = #generated
+* section[sectionPatientHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient History</div>"
 * section[sectionPatientHistory].section[PastIllnessHx].title = "Historie zdravotních problémů"
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].system = $loinc
 * section[sectionPatientHistory].section[PastIllnessHx].code.coding[0].code = #11348-0

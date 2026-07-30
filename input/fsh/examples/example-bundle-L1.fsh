@@ -22,6 +22,8 @@ Description: "Example Composition for Outpatient Report for patient Mrakomorová
 Usage: #example
 * id = "698056a8-57a6-49ed-909e-ea4216b18a6d"
 * status = #final
+* identifier.system = "http://hospital.example.org/ambulatory-report"
+* identifier.value = "AR123459"
 * type.coding[0].system = $loinc
 * type.coding[0].code = #67781-5
 * type.coding[0].display = "Summarization of encounter note"

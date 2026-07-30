@@ -26,13 +26,6 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-* meta
-  * security 0..* MS
-
-* identifier 0..1
-  * ^short = "Report identifier"
-  * ^definition = "Identifiers assigned to this report by the performer or other systems. It shall be common to several report versions"
-
 * status 1..1
   * ^short = "Status of the report"
 
@@ -133,7 +126,6 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionPatientHistory].title 1..
 * section[sectionPatientHistory].code 1..
 * section[sectionPatientHistory].code = $loinc#35090-0 "Patient history"
-* section[sectionPatientHistory].text 0..
 
 // SLICING PRO VNOŘENÉ SECTION
 * section[sectionPatientHistory].section ^slicing.discriminator[0].type = #pattern
