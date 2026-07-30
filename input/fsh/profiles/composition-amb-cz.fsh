@@ -2,7 +2,7 @@
 // PROFILE
 //==========================
 Profile: CZ_CompositionAmb
-Parent: Composition
+Parent: CZ_CompositionCore
 Id: cz-composition-amb
 Title: "Composition: Outpatient Encounter Report (CZ)"
 Description: "Clinical document used to represent an Outpatient Encounter Report for the scope of this guide."
@@ -306,7 +306,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
   * code = $loinc#29549-3 "Medication administered Narrative"
   * text 1..1
   * entry 0..*
-  * entry only Reference(MedicationAdministration or MedicationStatement or CZ_Medication)
+  * entry only Reference(MedicationAdministration or MedicationStatement or CZ_MedicationCore)
 
 // Pozn.: Medikace doporučená po propuštění patří typicky do bloku Medication Summary.
 
@@ -340,7 +340,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionMedicationSummary].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedicationSummary].text 1..
 * section[sectionMedicationSummary].entry 0..*
-* section[sectionMedicationSummary].entry only Reference(CZ_Medication or CZ_MedicationStatement or MedicationStatement or MedicationRequest or DocumentReference)
+* section[sectionMedicationSummary].entry only Reference(CZ_MedicationCore or CZ_MedicationStatementCore or CZ_MedicationRequestCore or CZ_MedicationDispenseCore or DocumentReference)
 
 // -------------------------------
 // Plan of Care

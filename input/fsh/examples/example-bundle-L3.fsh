@@ -545,7 +545,7 @@ Description: "Condition resource for past illness history - Astma bronchiale for
 
 // Entry pro medication summary
 Instance: Medication-Warfarin
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Warfarin for patient Mrakomorová Mračena - L3"
 * id = "2f37f3a7-8424-4344-b9e7-2b3c504d96b6"
@@ -556,7 +556,7 @@ Description: "Medication resource for Warfarin for patient Mrakomorová Mračena
 * code.coding[0].display = "WARFARIN ORION 3MG TBL NOB 100"
 
 Instance: Medication-Metoprolol
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Metoprolol for patient Mrakomorová Mračena - L3"
 * id = "f615bb73-a121-4783-bcdc-e48a82db87d9"
@@ -567,7 +567,7 @@ Description: "Medication resource for Metoprolol for patient Mrakomorová Mrače
 * code.coding[0].display = "METOPROLOL MEDREG 100MG TBL FLM 50"
 
 Instance: Medication-Salbutamol
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Salbutamol for patient Mrakomorová Mračena - L3"
 * id = "ddb09fb9-9560-4735-ac04-95a4beb833b6"
@@ -816,7 +816,7 @@ Description: "MedicationAdministration resource for Salbutamol administration du
 
 // Entry pro subsekci Medication During - lék podaný během vyšetření - Paracetamol
 Instance: Medication-Paracetamol
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Paracetamol for patient Mrakomorová Mračena - L3"
 * id = "4313f24b-bf88-4439-9430-297bcc86f59a"

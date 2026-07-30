@@ -301,7 +301,7 @@ Description: "Condition resource for past illness history - Overweight for patie
 
 // Entry pro medication summary
 Instance: Medication-Metformin
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Metformin for patient Novák Jan - L3"
 * id = "0fe6504c-cd44-4d46-9468-5e8c2f2ff469"
@@ -312,7 +312,7 @@ Description: "Medication resource for Metformin for patient Novák Jan - L3"
 * code.coding[0].display = "METFORMIN MEDREG 850MG TBL NOB 100"
 
 Instance: Medication-Atorvastatin
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Atorvastatin for patient Novák Jan - L3"
 * id = "ac6dc5de-cda3-43dc-8046-3912e1a8f042"
@@ -323,7 +323,7 @@ Description: "Medication resource for Atorvastatin for patient Novák Jan - L3"
 * code.coding[0].display = "ATORVASTATIN KRKA 20MG TBL FLM 100"
 
 Instance: Medication-Lisinopril
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #inline
 Description: "Medication resource for Lisinopril for patient Novák Jan - L3"
 * id = "4dec7ef4-e0a3-4d7c-9270-b430f339ec0e"

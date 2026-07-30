@@ -90,9 +90,9 @@
 
                 <li>
                     <strong>Main target profile:</strong>
-                    <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-Medication.html">CZ_Medication</a>
-                    <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-medicationDispense-hdr.html">CZ_MedicationDispenseHdr</a>
-                    <a href="https://build.fhir.org/ig/HL7-cz/hdr/en/StructureDefinition-cz-medicationRequest-hdr.html">CZ_MedicationRequestHdr</a>
+                    <a href="https://hl7.cz/fhir/core/StructureDefinition-medication-cz-core.html">CZ_MedicationCore</a>
+                    <a href="https://hl7.cz/fhir/core/StructureDefinition/medicationDispense-cz-core.html">CZ_MedicationDispenseCore</a>
+                    <a href="https://hl7.cz/fhir/core/StructureDefinition/medicationRequest-cz-core.html">CZ_MedicationRequestCore</a>
                     <a href="https://hl7.org/fhir/R4/dosage.html#Dosage">Dosage</a>
                 </li>
 

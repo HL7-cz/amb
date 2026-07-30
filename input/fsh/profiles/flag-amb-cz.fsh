@@ -1,5 +1,5 @@
 Profile: CZ_FlagAmb
-Parent: CZ_FlagHdr
+Parent: CZ_FlagPatientCore
 Id: cz-flag-amb
 Title: "Flag: Outpatient Encounter Report (CZ)"
 Description: "Flag resource to represent important clinical or administrative information about the patient relevant to ambulatory

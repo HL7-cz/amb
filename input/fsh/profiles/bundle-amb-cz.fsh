@@ -75,11 +75,11 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[imagingStudy].resource only ImagingStudy // TODO CZ_StudyImaging až bude fungovat dependenci na hl7.fhir.cz.img
 * entry[immunization].resource only CZ_ImmunizationHdr // TODO to AMB?
 * entry[media].resource only Media // $Media-observation-uv-ips
-* entry[medication].resource only CZ_Medication
-* entry[medicationRequest].resource only CZ_MedicationRequestHdr //TODO to AMB?
-* entry[medicationStatement].resource only CZ_MedicationStatement
-* entry[medicationAdministration].resource only MedicationAdministration
-* entry[medicationDispense].resource only MedicationDispense
+* entry[medication].resource only CZ_MedicationCore
+* entry[medicationRequest].resource only CZ_MedicationRequestCore 
+* entry[medicationStatement].resource only CZ_MedicationStatementCore
+* entry[medicationAdministration].resource only CZ_MedicationAdministrationCore
+* entry[medicationDispense].resource only CZ_MedicationDispenseCore
 * entry[practitioner].resource only CZ_PractitionerCore
 * entry[practitionerRole].resource only CZ_PractitionerRoleCore
 * entry[procedure].resource only CZ_ProcedureHdr //TODO to AMB?
