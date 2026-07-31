@@ -833,7 +833,7 @@ Description: "Observation resource for arterial blood gas results for patient Mr
 * subject = Reference(urn:uuid:f21b91f9-5e7a-47b9-a884-cbc720257590) // Reference to Patient-Mracena-L3
 * performer[0] = Reference(urn:uuid:77fa78d2-154c-4d38-824e-3c38b39c6a42) // Reference to Practitioner-Jansky
 * effectiveDateTime = "2025-11-01T12:30:00+01:00"
-* component[0].code.coding[0] = $loinc#2744-1 "pH of Arterial blood"
+* component[0].code.coding[0] = $loinc#2744-1 //"pH of Arterial blood"
 * component[0].valueQuantity.value = 7.30
 * component[0].valueQuantity.system = $ucum
 * component[0].valueQuantity.code = #1

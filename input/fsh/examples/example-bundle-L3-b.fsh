@@ -313,8 +313,8 @@ Description: "Medication resource for Atorvastatin for patient Novák Jan - L3"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-002"
 * code.coding[0].system = $dlp_lec_pripravky
-* code.coding[0].code = #0313509
-* code.coding[0].display = "ATORVASTATIN KRKA 20MG TBL FLM 100"
+* code.coding[0].code = #0208616
+* code.coding[0].display = "ATORVASTATIN KRKA 20MG TBL FLM 98"
 
 Instance: Medication-Lisinopril
 InstanceOf: CZ_MedicationCore
@@ -324,8 +324,8 @@ Description: "Medication resource for Lisinopril for patient Novák Jan - L3"
 * identifier[+].system = "http://example.org/medications"
 * identifier[=].value = "medication-003"
 * code.coding[0].system = $dlp_lec_pripravky
-* code.coding[0].code = #0010685
-* code.coding[0].display = "LISINOPRIL-RATIOPHARM 10 MG"
+* code.coding[0].code = #0011006
+* code.coding[0].display = "DIROTON 10MG TBL NOB 100"
 
 Instance: cz-pdfamb-example-L3-b
 InstanceOf: Attachment
