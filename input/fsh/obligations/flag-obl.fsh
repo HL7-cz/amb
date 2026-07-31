@@ -1,8 +1,8 @@
 Profile: CZ_FlagObligationsAmb
-Parent: CZ_FlagAmb
+Parent: CZ_FlagPatientCore
 Id: cz-flag-obl-amb
 Title: "Flag Obligations (AMB CZ)"
-Description: "This profile defines the obligations for the CZ_FlagAmb profile used in the Amb CZ project."
+Description: "This profile defines the obligations for the CZ_FlagPatientCore profile used in the Amb CZ project."
 
 // Creator Obligations L2 ============>
 * code.text insert OblCreator(#SHOULD:able-to-populate,L2)

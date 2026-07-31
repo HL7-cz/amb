@@ -199,7 +199,7 @@ Description: "Advance Directive for patient Novák Jan - L3"
 
 /// AllergyIntolerance - Aspirin ///
 Instance: AllergyIntolerance-Aspirin
-InstanceOf: CZ_AllergyIntoleranceAmb
+InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
 Description: "AllergyIntolerance resource for intolerance to Aspirin for patient Novák Jan - L3"
 * id = "f4b5c6d7-e8f9-40ab-ad23-c3d4e5f6a7b8"
@@ -214,7 +214,7 @@ Description: "AllergyIntolerance resource for intolerance to Aspirin for patient
 
 /// AllergyIntolerance - Penicillin ///
 Instance: AllergyIntolerance-Penicillin
-InstanceOf: CZ_AllergyIntoleranceAmb
+InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
 Description: "AllergyIntolerance resource for allergy to Penicillin for patient Novák Jan - L3"
 * id = "a5c6d7e8-f9a0-41bc-ae34-d4e5f6a7b8c9"
@@ -231,7 +231,7 @@ Description: "AllergyIntolerance resource for allergy to Penicillin for patient 
 
 /// AllergyIntolerance - Shellfish ///
 Instance: AllergyIntolerance-Shellfish
-InstanceOf: CZ_AllergyIntoleranceAmb
+InstanceOf: CZ_AllergyIntolerance
 Usage: #inline
 Description: "AllergyIntolerance resource for allergy to Shellfish for patient Novák Jan - L3"
 * id = "b6d7e8f9-a0b1-42cd-af45-e5f6a7b8c9da"
@@ -248,7 +248,7 @@ Description: "AllergyIntolerance resource for allergy to Shellfish for patient N
 
 /// Alert - Flag ///
 Instance: Alert-Diabetes
-InstanceOf: CZ_FlagAmb
+InstanceOf: CZ_FlagPatientCore
 Usage: #inline
 Description: "Flag resource for alert about diabetes mellitus for patient Novák Jan - L3"
 * id = "c7e8f9a0-b1c2-43de-a056-f6a7b8c9deb1"

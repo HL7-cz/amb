@@ -98,7 +98,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAllergies].code = $loinc#48765-2 //"Allergies and adverse reactions Document"
 * section[sectionAllergies].text 1..
 * section[sectionAllergies].entry 0..*
-* section[sectionAllergies].entry only Reference(CZ_AllergyIntoleranceAmb or CZ_AllergyIntolerance or AllergyIntolerance or DocumentReference)
+* section[sectionAllergies].entry only Reference(CZ_AllergyIntolerance or CZ_AllergyIntolerance or AllergyIntolerance or DocumentReference)
 
 // -------------------------------
 // Alerts
@@ -108,7 +108,7 @@ Description: "Clinical document used to represent an Outpatient Encounter Report
 * section[sectionAlerts].code = $loinc#104605-1 //"Alert"
 * section[sectionAlerts].text 1..
 * section[sectionAlerts].entry 0..*
-* section[sectionAlerts].entry only Reference(CZ_FlagAmb or Flag or DocumentReference)
+* section[sectionAlerts].entry only Reference(CZ_FlagPatientCore or Flag or DocumentReference)
 
 // -------------------------------
 // Admission Evaluation

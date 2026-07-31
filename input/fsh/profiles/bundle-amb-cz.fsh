@@ -66,7 +66,7 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
   
 * entry[composition].resource only CZ_CompositionAmb
 * entry[patient].resource only CZ_PatientCore
-* entry[allergyIntolerance].resource only CZ_AllergyIntoleranceAmb
+* entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 * entry[condition].resource only CZ_ConditionHdr //TODO to AMB?
 * entry[device].resource only CZ_MedicalDevice
 * entry[deviceUseStatement].resource only CZ_DeviceUseStatementHdr // TODO to AMB?
@@ -86,7 +86,7 @@ Description: "Clinical document used to represent a Outpatient Encounter Report 
 * entry[organization].resource only CZ_OrganizationCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only CZ_Specimen
-* entry[flag].resource only CZ_FlagAmb
+* entry[flag].resource only CZ_FlagPatientCore
 * entry[familyMemberHistory].resource only CZ_FamilyMemberHistoryHdr
 * entry[documentReference].resource only DocumentReference
 * entry[carePlan].resource only CZ_CarePlanHdr //TODO to AMB?

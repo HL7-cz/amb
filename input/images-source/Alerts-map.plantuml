@@ -16,8 +16,8 @@ class "Alerts" <<LogicalModel>> [[StructureDefinition-AlertsCz.html]]
 
 ' --- Profiles mapping Alerts ---
 class "composition-cz-amb" <<Profile>> [[StructureDefinition-cz-composition-amb.html]]
-class "allergyIntolerance-cz-amb" <<Profile>> [[StructureDefinition-cz-allergyIntolerance-amb.html]]
-class "flag-cz-amb" <<Profile>> [[StructureDefinition-cz-flag-amb.html]]
+class "allergyIntolerance-cz-amb" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/en/StructureDefinition-allergyIntolerance-cz-core.html]]
+class "flag-cz-amb" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/en/StructureDefinition-flag-patient-cz-core.html]]
 
 ' --- Realization links ---
 "Alerts" <|. "composition-cz-amb"
